@@ -1,204 +1,431 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleksei Bondarev | Computer Science Department - AIU</title>
 
-<html>
-
-<head lang="en">
-
-	<meta charset="UTF-8">
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Aleksei Bondarev | CS AIU</title>
-
-	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
-	<link rel="stylesheet" type="text/css" href="../css/text.css" />
-	<link rel="stylesheet" type="text/css" href="../css/960.css" />
-	<link rel="stylesheet" type="text/css" href="../css/style.css" />
-
+    <!-- Modern CSS Framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/modern-style.css">
+    <link rel="stylesheet" href="../css/stylePeople.css">
 </head>
 
 <body>
+    <!-- Animated Background -->
+    <div class="animated-grid"></div>
+    <div class="background-glows">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+    </div>
 
-	<div id="container">
-
-	<!-- HEADER -->
-	<div id="header-wrap">
-		<div id="header" class="container_16">
-			<div id="logo" class="grid_5">
-				<img alt="Computer Science Department" src="../images/logo.png" />
-			</div>
-
-			<!--Navigation-->
-			<div id="nav" class="grid_11">
-				<ul>
-					<li><a href="../index.html">Home</a></li>
-					<li>
-						<a href="javascript:void(0)">Department</a>
-						<ul id="department">
-							<li><a href="../department/news.html">News</a></li>
-							<li><a href="../department/developments.html">Developments</a></li>
-							<li><a href="http://ic.iaau.edu.kg" target="_blank">Exchange Programs</a></li>
-							<li><a href="../department/prospective-students.html">Prospective Students</a></li>
-							<li><a href="../department/alumni.html">Alumni</a></li>
-							<li><a href="../department/contact-us.html" >Contact Us</a></li>
-							<li><a href="../department/info.html" >Info</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="javascript:void(0)">Bachelor Program</a>
-						<ul id="program">
-							<li><a href="../program/courses.html">Courses</a></li>
-							<li><a href="../program/research.html">Research</a></li>
-							<li><a href="../program/degree-guide.html">Degree Guide</a></li>
-							<li><a href="../program/recent-diplomas.html">Recent Diplomas</a></li>
-							<li><a href="../program/exam_rules.html">Exam Rules</a></li>
-							<li><a href="../program/admission.html">Admission</a></li>
-							<li><a href="../program/faq.html">FAQ</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="javascript:void(0)">Master Degree</a>
-						<ul id="master">
-                            <li><a href="../grad/overview.html">Overview</a></li>
-                            <li><a href="../grad/grad-courses.html">Courses</a></li>
-                            <li><a href="../grad/grad-research.html">Graduate Research</a></li>
-                            <li><a href="../grad/grad-admission.html">Admission</a></li>
-                        </ul>
-					</li>
-					<li>
-						<a href="javascript:void(0)" >Calendar</a>
-						<ul id="calendar">
-							<li><a href="http://iaau.edu.kg/view/public/pages/page.xhtml;jsessionid=TCIdhbOa1D1eOGAldtBq-N1i_kOX5KHgKE593l4n.sites?id=281" target="_blank">Academic Calendar</a></li>
-							<li><a href="../calendar/schedule-of-lectures.html">Schedule of Lectures</a></li>
-							<li><a href="../calendar/midterms.html">Midterms Schedule</a></li>
-							<li><a href="../calendar/finals.html">Finals Schedule</a></li>
-							<li><a href="../calendar/labs.html">Labs Schedule</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="../faculty/faculty.html">Faculty</a>
-					</li>
-					<li>
-						<a href="../labs/labs.html">Labs</a>
-						<ul id="labs">
-							<li><a href="http://its.iaau.edu.kg/policies/lab-rules.html" target="_blank">Policy &amp;
-								Regulations</a></li>
-							<li><a href="../labs/software.html">Software</a></li>
-							<li><a href="../department/contact-us.html">Contacts</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-
-	<!-- CONTENT -->
-	<div id="wrap-content">
-	
-	<div id="content" class="container_12">
-	
-		<div>
-
-			<div id="avatar" class="grid_2">
-				<img src="../images/faculty/a.bondarev.jpg" width="138px" height="189"/>
-			</div>
-
-			<h3 id="fullname" class="grid_6 page-heading">Aleksey Bondarev</h3>			
-			
-            <!-- Short Info -->
-			<div id="short-info" class="grid_6">
-
-				<h5 id="postion">Position: Lecturer</h5>
-
-				<div id="contacts" class="m-top">
-
-					<div id="office">
-						<p><img src="../images/location.png"/>Office: Student Service, A-Block, 1<sup>st</sup> floor</p>
-					</div>
-					<div id="phone">
-						<p><img src="../images/phone.png"/> +996 772 18 38 84</p>
-					</div>
-
-					<div id="mail">
-						<a href="mailto:aleksey.bondarev@iaau.edu.kg"><img src="../images/mail.png"/> aleksey.bondarev@iaau.edu.kg</a>
-					</div>
-                    <div id="update">
-                    	<p>Last Update: November 26, 2013</p>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <div class="logo-effect">
+                        <img src="../images/logo.png" alt="Computer Science Department" class="logo">
+                        <div class="glitch-effect"></div>
                     </div>
-				</div>
-
-			</div>
-            <!--Research-->
-			<div id="research" class="grid_4">
-				<h5>Areas of Study</h5>
-				<ul class="p-top">
-					<li>Automation Systems</li>
-				</ul>
-			</div>
-            <!--Given Courses-->
-			<div id="courses" class="grid_4 p-top">
-				<div id="given-courses"> 
-
-					<h4>Given Courses</h4>
-					<ul class="p-top">
-						<li><a href="../faculty/include/syllas-aleksey/DSSyllabusFall2013-2014.pdf" target="_blank">Data Structure</a> (pdf)</li>
-						<li><a href="../faculty/include/syllas-aleksey/PLSyllabusFall2013-2014.pdf" target="_blank">Programming Languages</a> (pdf)</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="clear"></div>
-            
-            <!-- Biography -->
-			<div id="bio" class="grid_8 m-top p-top">
-            	<!--Biography-->
-				<h4>Biography</h4>
-				<p>Holds a bachelor's and master's degrees from <a href="http://iaau.edu.kg" target="_blank">International Ataturk Alatoo University</a>.</p>
-				<p>PhD at <a href="http://www.ibu.edu.ba/" target="_blank">International Black Sea University</a> </p>
-                <p>Working at International Ataturk-Alatoo university for 2 years</p>
-
-                <!-- Publications -->
-                <div id="publications" class="p-top">
-                    <h4>Publications</h4>
-					<p>"Students Time Table Organizer" IKECCO'2011 8th International Conference on Electronics and Computer, 2011</p>
+                    <div class="brand-text">
+                        <h1>COMPUTER SCIENCE</h1>
+                        <span>Ala-Too International University</span>
+                        <div class="accent-line"></div>
+                    </div>
                 </div>
-			</div>
-		</div>
-		
-	</div>
 
-</div>
-	<!-- END OF CONTENT -->
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <div class="menu-bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
 
-	<!-- FOOTER -->
-	<div id="footer-wrap" >
+                <!-- Navigation -->
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../index.html" class="nav-link">
+                        <i class="fas fa-terminal"></i>
+                        <span>Home</span>
+                        <div class="nav-pulse"></div>
+                    </a></li>
 
-			<div id="footer" class="container_12">
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Department</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../department/news.html"><i class="fas fa-broadcast-tower"></i> News Feed</a></li>
+                            <li><a href="../department/developments.html"><i class="fas fa-chart-network"></i> Developments</a></li>
+                            <li><a href="http://ic.iaau.edu.kg" target="_blank"><i class="fas fa-sync-alt"></i> Exchange Programs</a></li>
+                            <li><a href="../department/prospective-students.html"><i class="fas fa-user-astronaut"></i> Prospective Students</a></li>
+                            <li><a href="../department/alumni.html"><i class="fas fa-users-cog"></i> Alumni Network</a></li>
+                            <li><a href="../department/contact-us.html"><i class="fas fa-satellite-dish"></i> Contact Hub</a></li>
+                            <li><a href="../department/info.html"><i class="fas fa-database"></i> System Info</a></li>
+                        </ul>
+                    </li>
 
-				<p class="f-left">&copy; 2015 CS Dept. IAAU</p>
-				<p class="f-right">Developed & Designed by Azamat Turgunbaev COM08</p>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-microchip"></i>
+                            <span>Bachelor Program</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../program/courses.html"><i class="fas fa-code"></i> Courses</a></li>
+                            <li><a href="../program/research.html"><i class="fas fa-brain"></i> AI Research</a></li>
+                            <li><a href="../program/degree-guide.html"><i class="fas fa-map-marked-alt"></i> Degree Guide</a></li>
+                            <li><a href="../program/recent-diplomas.html"><i class="fas fa-certificate"></i> Recent Diplomas</a></li>
+                            <li><a href="../program/exam_rules.html"><i class="fas fa-shield-alt"></i> Exam Protocols</a></li>
+                            <li><a href="../program/admission.html"><i class="fas fa-user-lock"></i> Admission</a></li>
+                            <li><a href="../program/faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                        </ul>
+                    </li>
 
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-robot"></i>
+                            <span>Master Degree</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../grad/overview.html"><i class="fas fa-eye"></i> System Overview</a></li>
+                            <li><a href="../grad/grad-courses.html"><i class="fas fa-cogs"></i> Program Modules</a></li>
+                            <li><a href="../grad/grad-research.html"><i class="fas fa-flask"></i> Advanced Research</a></li>
+                            <li><a href="../grad/grad-admission.html"><i class="fas fa-user-shield"></i> Secure Admission</a></li>
+                        </ul>
+                    </li>
 
-			</div>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Calendar</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://iaau.edu.kg/view/public/pages/page.xhtml" target="_blank"><i class="fas fa-calendar"></i> Academic Calendar</a></li>
+                            <li><a href="../calendar/schedule-of-lectures.html"><i class="fas fa-clock"></i> Lecture Schedule</a></li>
+                            <li><a href="../calendar/midterms.html"><i class="fas fa-file-code"></i> Midterms Schedule</a></li>
+                            <li><a href="../calendar/finals.html"><i class="fas fa-graduation-cap"></i> Finals Schedule</a></li>
+                            <li><a href="../calendar/labs.html"><i class="fas fa-desktop"></i> Labs Schedule</a></li>
+                        </ul>
+                    </li>
 
-		</div>
-	<!-- END OF FOOTER -->
-	
-	<!-- Scripts -->
-	<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>	
-	<script type="text/javascript" src="../js/highlight.js"></script>
-	
-	<!--Google-->
-	<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                    <li>
+                        <a href="../faculty/faculty.html" class="nav-link active">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Faculty</span>
+                            <div class="nav-pulse"></div>
+                        </a>
+                    </li>
 
-		  ga('create', 'UA-46202546-1', 'iaau.edu.kg');
-		  ga('send', 'pageview');
-	</script>
-	
-</div>
+                    <li class="nav-dropdown">
+                        <a href="../labs/labs.html" class="nav-link">
+                            <i class="fas fa-server"></i>
+                            <span>Data Labs</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://its.iaau.edu.kg/policies/lab-rules.html" target="_blank"><i class="fas fa-clipboard-list"></i> Security Protocols</a></li>
+                            <li><a href="../labs/software.html"><i class="fas fa-download"></i> Software Repository</a></li>
+                            <li><a href="../department/contact-us.html"><i class="fas fa-address-book"></i> Lab Contacts</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Profile Header -->
+            <section class="profile-header">
+                <div class="profile-main">
+                    <div class="profile-avatar">
+                        <div class="avatar-frame">
+                            <img src="../images/faculty/a.bondarev.jpg" alt="Aleksei Bondarev">
+                            <div class="avatar-glow"></div>
+                        </div>
+                        <div class="profile-status">
+                            <span class="status-dot online"></span>
+                            <span>Currently Active</span>
+                        </div>
+                    </div>
+
+                    <div class="profile-info">
+                        <h1 class="profile-name">ALEKSEI BONDAREV</h1>
+                        <p class="profile-title">Senior Lecturer</p>
+                        <div class="profile-expertise">
+                            <span class="expertise-tag">Software Engineering</span>
+                            <span class="expertise-tag">Web Technologies</span>
+                            <span class="expertise-tag">Automation Systems</span>
+                        </div>
+
+                        <div class="profile-contacts">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Student Service, A-Block, 1<sup>st</sup> floor</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+996 772 18 38 84</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:aleksey.bondarev@iaau.edu.kg">aleksey.bondarev@iaau.edu.kg</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>Last Updated: November 26, 2013</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-researchgate"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-google-scholar"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Content Grid -->
+            <div class="content-grid profile-content">
+                <!-- Left Column - Biography & Publications -->
+                <div class="left-column">
+                    <!-- Biography -->
+                    <section class="info-section">
+                        <h3 class="section-heading">
+                            <i class="fas fa-user-graduate"></i>
+                            ACADEMIC BIOGRAPHY
+                        </h3>
+                        <div class="card">
+                            <div class="card-glow"></div>
+                            <div class="bio-content">
+                                <div class="education-timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-icon">
+                                            <i class="fas fa-graduation-cap"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <h4>PhD Candidate</h4>
+                                            <p class="institution">International Black Sea University</p>
+                                            <span class="timeline-date">Current</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-icon">
+                                            <i class="fas fa-university"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <h4>Master's Degree</h4>
+                                            <p class="institution">International Ataturk Alatoo University</p>
+                                            <span class="timeline-date">Completed</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-icon">
+                                            <i class="fas fa-university"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <h4>Bachelor's Degree</h4>
+                                            <p class="institution">International Ataturk Alatoo University</p>
+                                            <span class="timeline-date">Completed</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="experience-section">
+                                    <h5>Professional Experience</h5>
+                                    <p>Working at International Ataturk-Alatoo University for 2+ years, specializing in software engineering and automation systems.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Publications -->
+                    <section class="info-section">
+                        <h3 class="section-heading">
+                            <i class="fas fa-file-alt"></i>
+                            RESEARCH PUBLICATIONS
+                        </h3>
+                        <div class="card">
+                            <div class="card-glow"></div>
+                            <div class="publications-list">
+                                <div class="publication-item">
+                                    <div class="pub-icon">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                    <div class="pub-content">
+                                        <h4>"Students Time Table Organizer"</h4>
+                                        <p class="pub-conference">IKECCO'2011 8th International Conference on Electronics and Computer, 2011</p>
+                                        <div class="pub-meta">
+                                            <span class="pub-category">Conference Paper</span>
+                                            <span class="pub-year">2011</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right Column - Courses & Research -->
+                <div class="right-column">
+                    <!-- Courses -->
+                    <section class="info-section">
+                        <h3 class="section-heading">
+                            <i class="fas fa-book-open"></i>
+                            COURSE PORTFOLIO
+                        </h3>
+                        <div class="card">
+                            <div class="card-glow"></div>
+                            <div class="courses-list">
+                                <div class="course-item">
+                                    <div class="course-icon">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <div class="course-info">
+                                        <h4>Data Structures</h4>
+                                        <p>Advanced data organization and algorithm analysis</p>
+                                        <a href="../faculty/include/syllas-aleksey/DSSyllabusFall2013-2014.pdf" target="_blank" class="course-link">
+                                            <i class="fas fa-download"></i>
+                                            Download Syllabus
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="course-item">
+                                    <div class="course-icon">
+                                        <i class="fas fa-laptop-code"></i>
+                                    </div>
+                                    <div class="course-info">
+                                        <h4>Programming Languages</h4>
+                                        <p>Comparative study of programming paradigms and languages</p>
+                                        <a href="../faculty/include/syllas-aleksey/PLSyllabusFall2013-2014.pdf" target="_blank" class="course-link">
+                                            <i class="fas fa-download"></i>
+                                            Download Syllabus
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Research Areas -->
+                    <section class="info-section">
+                        <h3 class="section-heading">
+                            <i class="fas fa-flask"></i>
+                            RESEARCH DOMAINS
+                        </h3>
+                        <div class="card">
+                            <div class="card-glow"></div>
+                            <div class="research-areas">
+                                <div class="research-area">
+                                    <div class="area-icon">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <div class="area-content">
+                                        <h4>Automation Systems</h4>
+                                        <p>Design and implementation of automated solutions for educational and administrative processes</p>
+                                    </div>
+                                </div>
+
+                                <div class="research-area">
+                                    <div class="area-icon">
+                                        <i class="fas fa-cogs"></i>
+                                    </div>
+                                    <div class="area-content">
+                                        <h4>Software Engineering</h4>
+                                        <p>Modern software development methodologies and best practices</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Quick Stats -->
+                    <section class="info-section">
+                        <h3 class="section-heading">
+                            <i class="fas fa-chart-bar"></i>
+                            ACADEMIC METRICS
+                        </h3>
+                        <div class="card">
+                            <div class="card-glow"></div>
+                            <div class="stats-mini">
+                                <div class="stat-mini">
+                                    <div class="stat-number">2+</div>
+                                    <div class="stat-label">Years Experience</div>
+                                </div>
+                                <div class="stat-mini">
+                                    <div class="stat-number">2</div>
+                                    <div class="stat-label">Courses</div>
+                                </div>
+                                <div class="stat-mini">
+                                    <div class="stat-number">1</div>
+                                    <div class="stat-label">Publication</div>
+                                </div>
+                                <div class="stat-mini">
+                                    <div class="stat-number">3</div>
+                                    <div class="stat-label">Research Areas</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <h5>FACULTY PROFILE</h5>
+                        <div class="status-line">
+                            <span class="status-dot online"></span>
+                            <span>Profile Active</span>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h5>QUICK ACCESS</h5>
+                        <a href="../faculty/faculty.html">Faculty Directory</a>
+                        <a href="../program/courses.html">All Courses</a>
+                        <a href="../program/research.html">Research Portal</a>
+                    </div>
+                    <div class="footer-section">
+                        <p class="copyright">&copy; 2024 COMPUTER SCIENCE DEPARTMENT</p>
+                        <p class="university">ALA-TOO INTERNATIONAL UNIVERSITY</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/modern-script.js"></script>
 </body>
-
 </html>
