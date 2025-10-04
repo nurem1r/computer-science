@@ -1,35 +1,1126 @@
-#wrapper {width:978px;margin:0 auto;padding:0;background:url(../images/people/bg.png) top center repeat-y;height:50%}
+/* Profile Page Specific Styles */
+.profile-header {
+    background: var(--bg-secondary);
+    border: 1px solid var(--graphite);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+}
 
-.divider {background:url(../images/people/divider.gif) top left no-repeat;width:473px;height:15px;margin-left:25px;margin-top:10px}
-.dividerR {background:url(../images/people/dividerR.gif) top right no-repeat;width:430px; height:15px;margin-right:25px;margin-top:10px}
-<!--             -->
-#right-content {float:right;clear:none;margin-top:15px;margin-left:10px;margin-right:20px}
-#left-content {float:right;clear:none;width:427px;margin-right:0;margin-top:15px;height:280px;margin-left:10px}
-#news-rg {background:url(../images/people/boxR.png) top right no-repeat;width:430px;margin-top:1px}
-#welcome-rg {background:url(../images/people/boxR.png) top right no-repeat;width:430px}
-#welcome-bg {background:url(../images/people/box.png) top left no-repeat;width:480px}
-#news-bg {background:url(../images/people/box.png) top left no-repeat;width:480px;margin-top:1px}
-<!--             -->
-#sright-content {float:right;clear:none;margin-top:15px;margin-left:10px;margin-right:20px}
-#sleft-content {float:right;clear:none;width:427px;margin-right:0;margin-top:15px;height:280px;margin-left:10px}
-#snews-rg {background:url(../images/people/boxR.png) top right no-repeat;width:430px;margin-top:1px}
-#swelcome-rg {background:url(../images/people/boxR.png) top right no-repeat;width:430px}
-#swelcome-bg {background:url(../images/people/box.png) top left no-repeat;width:480px}
-#snews-bg {background:url(../images/people/box.png) top left no-repeat;width:480px;margin-top:1px}
-<!--             -->
-#tright-content {float:right;clear:none;margin-top:15px;margin-left:10px;margin-right:20px}
-#tleft-content {float:right;clear:none;width:427px;margin-right:0;margin-top:15px;height:280px;margin-left:10px}
-#tnews-rg {background:url(../images/people/boxR.png) top right no-repeat;width:430px;margin-top:1px}
-#twelcome-rg {background:url(../images/people/boxR.png) top right no-repeat;width:430px}
-#twelcome-bg {background:url(../images/people/box.png) top left no-repeat;width:480px}
-#tnews-bg {background:url(../images/people/box.png) top left no-repeat;width:480px;margin-top:1px}
+.profile-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--success));
+}
 
-#fright-content {float:right;clear:none;margin-top:15px;margin-left:10px;margin-right:20px}
-#fleft-content {float:right;clear:none;width:427px;margin-right:0;margin-top:15px;height:280px;margin-left:10px}
-#fnews-rg {background:url(../images/people/boxR.png) top right no-repeat;width:430px;margin-top:1px}
-#fwelcome-rg {background:url(../images/people/boxR.png) top right no-repeat;width:430px}
-#fwelcome-bg {background:url(../images/people/box.png) top left no-repeat;width:480px}
-#fnews-bg {background:url(../images/people/box.png) top left no-repeat;width:480px;margin-top:1px}
+.profile-main {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    align-items: start;
+}
 
-#footer div {padding:10px 25px 0 20px}
-a {color:#fff}
+.profile-avatar {
+    text-align: center;
+}
+
+.avatar-frame {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid var(--graphite);
+    overflow: hidden;
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+.avatar-frame:hover {
+    border-color: var(--accent-blue);
+    transform: scale(1.05);
+}
+
+.avatar-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, var(--accent-transparent), transparent);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.avatar-frame:hover .avatar-glow {
+    opacity: 1;
+}
+
+.profile-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--success);
+    font-size: 0.9rem;
+}
+
+.profile-info {
+    padding-top: 1rem;
+}
+
+.profile-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.profile-title {
+    font-size: 1.3rem;
+    color: var(--accent-blue);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.profile-expertise {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.profile-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-secondary);
+}
+
+.contact-item i {
+    color: var(--accent-blue);
+    width: 20px;
+}
+
+.contact-item a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-item a:hover {
+    color: var(--accent-blue);
+}
+
+.profile-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--graphite);
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    background: var(--bg-primary);
+    border: 1px solid var(--graphite);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    background: var(--accent-blue);
+    color: var(--bg-primary);
+    border-color: var(--accent-blue);
+    transform: translateY(-2px);
+}
+
+/* Profile Content */
+.profile-content {
+    margin: 3rem 0;
+}
+
+/* Education Timeline */
+.education-timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.education-timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--graphite);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.timeline-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--accent-transparent);
+    border: 2px solid var(--accent-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+    z-index: 2;
+    flex-shrink: 0;
+}
+
+.timeline-content {
+    flex: 1;
+}
+
+.timeline-content h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.3rem;
+}
+
+.institution {
+    color: var(--accent-blue);
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.timeline-date {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.experience-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--graphite);
+}
+
+.experience-section h5 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Publications */
+.publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.publication-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--bg-primary);
+    border-radius: 8px;
+    border: 1px solid var(--graphite);
+    transition: var(--transition);
+}
+
+.publication-item:hover {
+    border-color: var(--accent-blue);
+    transform: translateX(5px);
+}
+
+.pub-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--accent-transparent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.pub-content {
+    flex: 1;
+}
+
+.pub-content h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.pub-conference {
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+.pub-meta {
+    display: flex;
+    gap: 1rem;
+}
+
+.pub-category, .pub-year {
+    background: var(--graphite);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Courses */
+.courses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.course-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--bg-primary);
+    border-radius: 8px;
+    border: 1px solid var(--graphite);
+    transition: var(--transition);
+}
+
+.course-item:hover {
+    border-color: var(--accent-blue);
+    transform: translateX(5px);
+}
+
+.course-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--accent-transparent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.course-info {
+    flex: 1;
+}
+
+.course-info h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.course-info p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.course-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.course-link:hover {
+    gap: 0.8rem;
+}
+
+/* Research Areas */
+.research-areas {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.research-area {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--bg-primary);
+    border-radius: 8px;
+    border: 1px solid var(--graphite);
+    transition: var(--transition);
+}
+
+.research-area:hover {
+    border-color: var(--accent-blue);
+    transform: translateX(5px);
+}
+
+.area-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--accent-transparent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.area-content {
+    flex: 1;
+}
+
+.area-content h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.area-content p {
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Mini Stats */
+.stats-mini {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.stat-mini {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--bg-primary);
+    border-radius: 8px;
+    border: 1px solid var(--graphite);
+    transition: var(--transition);
+}
+
+.stat-mini:hover {
+    border-color: var(--accent-blue);
+    transform: translateY(-3px);
+}
+
+.stat-mini .stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    margin-bottom: 0.5rem;
+}
+
+.stat-mini .stat-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive Design for Profile Page */
+@media (max-width: 968px) {
+    .profile-main {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .profile-expertise {
+        justify-content: center;
+    }
+
+    .profile-contacts {
+        align-items: center;
+    }
+
+    .profile-meta {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .stats-mini {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-header {
+        padding: 1.5rem;
+    }
+
+    .profile-name {
+        font-size: 2rem;
+    }
+
+    .avatar-frame {
+        width: 140px;
+        height: 140px;
+    }
+
+    .education-timeline {
+        padding-left: 1rem;
+    }
+
+    .education-timeline::before {
+        left: 25px;
+    }
+
+    .timeline-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-header {
+        padding: 1rem;
+    }
+
+    .profile-name {
+        font-size: 1.5rem;
+    }
+
+    .publication-item,
+    .course-item,
+    .research-area {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pub-meta {
+        justify-content: center;
+    }
+}
+
+/* Additional Styles for Dr. Musa Profile */
+.course-status {
+    background: var(--success);
+    color: var(--bg-primary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.expertise-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.skill-category h5 {
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background: var(--accent-transparent);
+    color: var(--accent-blue);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    border: 1px solid var(--accent-blue);
+    transition: var(--transition);
+}
+
+.skill-tag:hover {
+    background: var(--accent-blue);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
+}
+
+/* Enhanced course items for multiple courses */
+.courses-list .course-item {
+    position: relative;
+}
+
+.courses-list .course-item::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 0;
+    background: var(--accent-blue);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.courses-list .course-item:hover::before {
+    height: 80%;
+}
+
+/* Doctor title highlight */
+.profile-name {
+    position: relative;
+}
+
+.profile-name::after {
+    content: 'PhD';
+    position: absolute;
+    top: -10px;
+    right: -50px;
+    background: var(--success);
+    color: var(--bg-primary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Enhanced research areas for Dr. Musa */
+.research-area .area-content h4 {
+    background: linear-gradient(135deg, var(--accent-blue), var(--success));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Responsive adjustments for multiple courses */
+@media (max-width: 768px) {
+    .courses-list .course-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skill-items {
+        justify-content: center;
+    }
+
+    .profile-name::after {
+        position: static;
+        display: inline-block;
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .expertise-grid {
+        gap: 1rem;
+    }
+
+    .skill-category h5 {
+        text-align: center;
+    }
+}
+
+/* Leadership & Department Head Specific Styles */
+.leadership-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--warning));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-primary);
+    font-size: 1rem;
+    border: 3px solid var(--bg-secondary);
+    animation: pulse-gold 2s infinite;
+}
+
+@keyframes pulse-gold {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.profile-title {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-title::after {
+    content: 'HEAD OF DEPARTMENT';
+    position: absolute;
+    top: -20px;
+    right: -120px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--warning));
+    color: var(--bg-primary);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Achievements Section */
+.achievements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.achievement-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--bg-primary);
+    border-radius: 8px;
+    border: 1px solid var(--graphite);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.achievement-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--accent-transparent), transparent);
+    transition: var(--transition);
+}
+
+.achievement-item:hover::before {
+    left: 100%;
+}
+
+.achievement-item:hover {
+    border-color: var(--accent-blue);
+    transform: translateX(5px);
+}
+
+.achievement-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--accent-transparent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    border: 2px solid var(--accent-blue);
+}
+
+.achievement-content {
+    flex: 1;
+}
+
+.achievement-content h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.achievement-content p {
+    color: var(--text-secondary);
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+/* Enhanced publication styles for leadership profile */
+.publication-item .pub-icon .fa-gem {
+    color: var(--warning);
+}
+
+.publication-item .pub-icon .fa-graduation-cap {
+    color: var(--success);
+}
+
+.pub-collaboration {
+    background: var(--success);
+    color: var(--bg-primary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+/* Enhanced course links for Moodle integration */
+.course-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--success);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    background: rgba(0, 255, 136, 0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid var(--success);
+}
+
+.course-link:hover {
+    background: var(--success);
+    color: var(--bg-primary);
+    gap: 0.8rem;
+}
+
+/* Leadership status in profile header */
+.profile-status .status-dot {
+    background: var(--warning);
+    animation: pulse-gold 2s infinite;
+}
+
+/* Enhanced accent links for biography */
+.accent-link {
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    border-bottom: 1px solid transparent;
+}
+
+.accent-link:hover {
+    border-bottom-color: var(--accent-blue);
+}
+
+/* Department head specific responsive adjustments */
+@media (max-width: 968px) {
+    .profile-title::after {
+        position: static;
+        display: block;
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+
+    .leadership-badge {
+        width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .achievement-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .achievement-icon {
+        margin: 0 auto;
+    }
+
+    .profile-title::after {
+        font-size: 0.6rem;
+        padding: 0.3rem 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .leadership-badge {
+        width: 30px;
+        height: 30px;
+        font-size: 0.7rem;
+    }
+
+    .stats-mini .stat-number {
+        font-size: 1.5rem;
+    }
+}
+
+/* Dual Role & Extensive Publications Styles */
+.dual-role-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--success));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-primary);
+    font-size: 0.9rem;
+    border: 3px solid var(--bg-secondary);
+    animation: dual-pulse 3s infinite;
+}
+
+.dual-role-badge i:first-child {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 0.7rem;
+}
+
+.dual-role-badge i:last-child {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-size: 0.7rem;
+}
+
+@keyframes dual-pulse {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.05) rotate(5deg); }
+    50% { transform: scale(1.1) rotate(0deg); }
+    75% { transform: scale(1.05) rotate(-5deg); }
+}
+
+.dual-roles {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.role-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.primary-role {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-blue));
+    color: var(--bg-primary);
+    border: 2px solid var(--accent-blue);
+}
+
+.secondary-role {
+    background: transparent;
+    color: var(--success);
+    border: 2px solid var(--success);
+}
+
+/* Enhanced publications for extensive list */
+.publications-list.extensive {
+    position: relative;
+}
+
+.pub-badge {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--success));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-right: 1rem;
+}
+
+.publications-more {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--graphite);
+}
+
+/* Roles Grid for Dual Responsibilities */
+.roles-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.role-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--bg-primary);
+    border-radius: 8px;
+    border: 1px solid var(--graphite);
+    transition: var(--transition);
+}
+
+.role-card:hover {
+    border-color: var(--accent-blue);
+    transform: translateY(-3px);
+}
+
+.role-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--accent-transparent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    border: 2px solid var(--accent-blue);
+}
+
+.role-content {
+    flex: 1;
+}
+
+.role-content h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.role-content p {
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+}
+
+.role-tenure {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--success);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Enhanced contact info for dual roles */
+.contact-item span {
+    position: relative;
+}
+
+.contact-item span::after {
+    content: 'Library';
+    position: absolute;
+    top: -15px;
+    right: -50px;
+    background: var(--success);
+    color: var(--bg-primary);
+    padding: 0.2rem 0.6rem;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+/* Special styling for extensive publication list */
+.publication-item {
+    position: relative;
+    transition: var(--transition);
+}
+
+.publication-item:hover .pub-badge {
+    transform: scale(1.1);
+    transition: var(--transition);
+}
+
+/* Responsive design for dual roles */
+@media (max-width: 968px) {
+    .dual-roles {
+        justify-content: center;
+    }
+
+    .role-tag {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .dual-role-badge {
+        width: 35px;
+        height: 35px;
+        font-size: 0.7rem;
+    }
+
+    .role-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .role-icon {
+        margin: 0 auto;
+    }
+
+    .contact-item span::after {
+        position: static;
+        display: inline-block;
+        margin-left: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .dual-role-badge {
+        width: 30px;
+        height: 30px;
+    }
+
+    .role-tag {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .pub-badge {
+        width: 25px;
+        height: 25px;
+        font-size: 0.7rem;
+        margin-right: 0.8rem;
+    }
+}
