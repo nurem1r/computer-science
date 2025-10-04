@@ -1,240 +1,458 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty | Computer Science Department - AIU</title>
 
-<html>
-
-<head lang="en">
-
-	<meta charset="UTF-8">
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Faculty | CS AIU</title>
-
-	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
-	<link rel="stylesheet" type="text/css" href="../css/text.css" />
-	<link rel="stylesheet" type="text/css" href="../css/960.css" />
-	<link rel="stylesheet" type="text/css" href="../css/style.css" />
-	<link rel="stylesheet" type="text/css" href="../css/mosaic.css" />
+    <!-- Modern CSS Framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/modern-style.css">
 </head>
 
 <body>
+    <!-- Animated Background -->
+    <div class="animated-grid"></div>
+    <div class="background-glows">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+    </div>
 
-	<div id="container">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <div class="logo-effect">
+                        <img src="../images/logo.png" alt="Computer Science Department" class="logo">
+                        <div class="glitch-effect"></div>
+                    </div>
+                    <div class="brand-text">
+                        <h1>COMPUTER SCIENCE</h1>
+                        <span>Ala-Too International University</span>
+                        <div class="accent-line"></div>
+                    </div>
+                </div>
 
-		<!-- HEADER -->
-		<div id="header-wrap">
-			<div id="header" class="container_16">
-				<div id="logo" class="grid_5">
-					<img alt="Computer Science Department" src="../images/logo.png" />
-				</div>
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <div class="menu-bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
 
-				<!--Navigation-->
-				<div id="nav" class="grid_11">
-					<ul>
-						<li><a href="../index.html">Home</a></li>
-						<li>
-							<a href="javascript:void(0)">Department</a>
-							<ul id="department">
-								<li><a href="../department/news.html">News</a></li>
-								<li><a href="../department/developments.html">Developments</a></li>
-								<li><a href="http://ic.iaau.edu.kg" target="_blank">Exchange Programs</a></li>
-								<li><a href="../department/prospective-students.html">Prospective Students</a></li>
-								<li><a href="../department/alumni.html">Alumni</a></li>
-								<li><a href="../department/contact-us.html" >Contact Us</a></li>
-								<li><a href="../department/info.html" >Info</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="javascript:void(0)">Bachelor Program</a>
-							<ul id="program">
-								<li><a href="../program/courses.html">Courses</a></li>
-								<li><a href="../program/research.html">Research</a></li>
-								<li><a href="../program/degree-guide.html">Degree Guide</a></li>
-								<li><a href="../program/recent-diplomas.html">Recent Diplomas</a></li>
-								<li><a href="../program/exam_rules.html">Exam Rules</a></li>
-								<li><a href="../program/admission.html">Admission</a></li>
-								<li><a href="../program/faq.html">FAQ</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="javascript:void(0)">Master Degree</a>
-							<ul id="master">
-	                            <li><a href="../grad/overview.html">Overview</a></li>
-	                            <li><a href="../grad/grad-courses.html">Courses</a></li>
-	                            <li><a href="../grad/grad-research.html">Graduate Research</a></li>
-	                            <li><a href="../grad/grad-admission.html">Admission</a></li>
-	                        </ul>
-						</li>
-						<li>
-							<a href="javascript:void(0)" >Calendar</a>
-							<ul id="calendar">
-								<li><a href="http://iaau.edu.kg/view/public/pages/page.xhtml;jsessionid=TCIdhbOa1D1eOGAldtBq-N1i_kOX5KHgKE593l4n.sites?id=281" target="_blank">Academic Calendar</a></li>
-								<li><a href="../calendar/schedule-of-lectures.html">Schedule of Lectures</a></li>
-								<li><a href="../calendar/midterms.html">Midterms Schedule</a></li>
-								<li><a href="../calendar/finals.html">Finals Schedule</a></li>
-								<li><a href="../calendar/labs.html">Labs Schedule</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="../faculty/faculty.html">Faculty</a>
-						</li>
-						<li>
-							<a href="../labs/labs.html">Labs</a>
-							<ul id="labs">
-								<li><a href="http://its.iaau.edu.kg/policies/lab-rules.html" target="_blank">Policy &amp;
-									Regulations</a></li>
-								<li><a href="../labs/software.html">Software</a></li>
-								<li><a href="../department/contact-us.html">Contacts</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
+                <!-- Navigation -->
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../index.html" class="nav-link">
+                        <i class="fas fa-terminal"></i>
+                        <span>Home</span>
+                        <div class="nav-pulse"></div>
+                    </a></li>
 
-		<!-- CONTENT -->
-		<div id="wrap-content">
-			<div id="content" class="container_12">
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Department</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../department/news.html"><i class="fas fa-broadcast-tower"></i> News Feed</a></li>
+                            <li><a href="../department/developments.html"><i class="fas fa-chart-network"></i> Developments</a></li>
+                            <li><a href="http://ic.iaau.edu.kg" target="_blank"><i class="fas fa-sync-alt"></i> Exchange Programs</a></li>
+                            <li><a href="../department/prospective-students.html"><i class="fas fa-user-astronaut"></i> Prospective Students</a></li>
+                            <li><a href="../department/alumni.html"><i class="fas fa-users-cog"></i> Alumni Network</a></li>
+                            <li><a href="../department/contact-us.html"><i class="fas fa-satellite-dish"></i> Contact Hub</a></li>
+                            <li><a href="../department/info.html"><i class="fas fa-database"></i> System Info</a></li>
+                        </ul>
+                    </li>
 
-				<div class="mosaic-block bar grid_2">
-					<div class="mosaic-overlay">
-					<div class="details">
-						<h6>Sanjar<br/>Erdolatov</h6>
-						<p>Lecturer</p>
-						<p>Library Administrator</p>
-						<a href="s.erdolatov.html">&laquo; more &raquo;</a>
-					</div>
-				</div>
-					<div class="mosaic-backdrop">
-						<img src="../images/faculty/s.erdolatov.jpg" width="140" height="189"/></div>
-				</div>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-microchip"></i>
+                            <span>Bachelor Program</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../program/courses.html"><i class="fas fa-code"></i> Courses</a></li>
+                            <li><a href="../program/research.html"><i class="fas fa-brain"></i> AI Research</a></li>
+                            <li><a href="../program/degree-guide.html"><i class="fas fa-map-marked-alt"></i> Degree Guide</a></li>
+                            <li><a href="../program/recent-diplomas.html"><i class="fas fa-certificate"></i> Recent Diplomas</a></li>
+                            <li><a href="../program/exam_rules.html"><i class="fas fa-shield-alt"></i> Exam Protocols</a></li>
+                            <li><a href="../program/admission.html"><i class="fas fa-user-lock"></i> Admission</a></li>
+                            <li><a href="../program/faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                        </ul>
+                    </li>
 
-				<div class="mosaic-block bar grid_2">
-					<div class="mosaic-overlay">
-					<div class="details">
-						<h6>Nurlan<br/>Shaidullaev</h6>
-						<p>Head Of Computer Science Department</p><br/>
-						<a href="n.shaidullaev.html">&laquo; more &raquo;</a>
-					</div>
-				</div>
-					<div class="mosaic-backdrop">
-						<img src="../images/faculty/n.shaidullaev.jpg" width="140" height="189"/>
-					</div>
-				</div>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-robot"></i>
+                            <span>Master Degree</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../grad/overview.html"><i class="fas fa-eye"></i> System Overview</a></li>
+                            <li><a href="../grad/grad-courses.html"><i class="fas fa-cogs"></i> Program Modules</a></li>
+                            <li><a href="../grad/grad-research.html"><i class="fas fa-flask"></i> Advanced Research</a></li>
+                            <li><a href="../grad/grad-admission.html"><i class="fas fa-user-shield"></i> Secure Admission</a></li>
+                        </ul>
+                    </li>
 
-				<div class="mosaic-block bar grid_2">
-					<div class="mosaic-overlay">
-					<div class="details">
-						<h6>Aleksei<br/>Bondarev</h6>
-						<p>Lecturer</p></br>
-						<a href="a.bondarev.html">&laquo; more &raquo;</a>
-					</div>
-				</div>
-					<div class="mosaic-backdrop">
-						<img src="../images/faculty/a.bondarev.jpg" width="140" height="189"/></div>
-				</div>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Calendar</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://iaau.edu.kg/view/public/pages/page.xhtml" target="_blank"><i class="fas fa-calendar"></i> Academic Calendar</a></li>
+                            <li><a href="../calendar/schedule-of-lectures.html"><i class="fas fa-clock"></i> Lecture Schedule</a></li>
+                            <li><a href="../calendar/midterms.html"><i class="fas fa-file-code"></i> Midterms Schedule</a></li>
+                            <li><a href="../calendar/finals.html"><i class="fas fa-graduation-cap"></i> Finals Schedule</a></li>
+                            <li><a href="../calendar/labs.html"><i class="fas fa-desktop"></i> Labs Schedule</a></li>
+                        </ul>
+                    </li>
 
-				<div class="mosaic-block bar grid_2">
-					<div class="mosaic-overlay">
-						<div class="details">
-							<h6>Dilshad<br/>Anarbaev</h6>
-							<p>Lecturer</p><br />
-							<a href="../template/under-construction.html">&laquo; more &raquo;</a>
-						</div>
-					</div>
-					<div class="mosaic-backdrop">
-						<img src="../images/silhouette.png" width="140" height="189"/></div>
-				</div>
+                    <li>
+                        <a href="../faculty/faculty.html" class="nav-link active">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Faculty</span>
+                            <div class="nav-pulse"></div>
+                        </a>
+                    </li>
 
-				<div class="mosaic-block bar grid_2">
-					<div class="mosaic-overlay">
-						<div class="details">
-							<h6>Ulan<br/>Sadybakasov</h6>
-							<p>Lecturer</p><br />
-							<a href="../template/under-construction.html">&laquo; more &raquo;</a>
-						</div>
-					</div>
-					<div class="mosaic-backdrop">
-						<img src="../images/silhouette.png" width="140" height="189"/></div>
-				</div>
+                    <li class="nav-dropdown">
+                        <a href="../labs/labs.html" class="nav-link">
+                            <i class="fas fa-server"></i>
+                            <span>Data Labs</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://its.iaau.edu.kg/policies/lab-rules.html" target="_blank"><i class="fas fa-clipboard-list"></i> Security Protocols</a></li>
+                            <li><a href="../labs/software.html"><i class="fas fa-download"></i> Software Repository</a></li>
+                            <li><a href="../department/contact-us.html"><i class="fas fa-address-book"></i> Lab Contacts</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-				<div class="mosaic-block bar grid_2">
-					<div class="mosaic-overlay">
-						<div class="details">
-							<h6>Andrei<br/>Galkin</h6>
-							<p>Lecturer</p><br />
-							<a href="../template/under-construction.html">&laquo; more &raquo;</a>
-						</div>
-					</div>
-					<div class="mosaic-backdrop">
-						<img src="../images/silhouette.png" width="140" height="189"/></div>
-				</div>
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="main-header">
+                <div class="scanline"></div>
+                <h2 class="main-title">ACADEMIC FACULTY</h2>
+                <p class="main-subtitle">MEET OUR EXPERT EDUCATORS & RESEARCHERS</p>
+                <div class="terminal-prompt">
+                    <span class="prompt-sign">></span>
+                    <span class="prompt-text">Loading faculty database...</span>
+                    <span class="cursor">|</span>
+                </div>
+            </div>
 
-				<div class="mosaic-block bar grid_2">
-					<div class="mosaic-overlay">
-						<div class="details">
-							<h6>Beishenov<br/>Erkin</h6>
-							<p>Lecturer</p><br />
-							<a href="../template/under-construction.html">&laquo; more &raquo;</a>
-						</div>
-					</div>
-					<div class="mosaic-backdrop">
-						<img src="../images/silhouette.png" width="140" height="189"/></div>
-				</div>
+            <!-- Faculty Grid -->
+            <section class="faculty-section">
+                <div class="section-header">
+                    <div class="header-line"></div>
+                    <h3>ACADEMIC STAFF</h3>
+                    <div class="header-line"></div>
+                </div>
 
-				<div class="mosaic-block bar grid_2">
-					<div class="mosaic-overlay">
-						<div class="details">
-							<h6>Mirbek<br/>Samiev</h6>
-							<p>Lecturer</p><br />
-							<a href="../template/under-construction.html">&laquo; more &raquo;</a>
-						</div>
-					</div>
-					<div class="mosaic-backdrop">
-						<img src="../images/silhouette.png" width="140" height="189"/></div>
-				</div>
+                <div class="faculty-grid">
+                    <!-- Faculty Member 1 -->
+                    <div class="faculty-card">
+                        <div class="card-glow"></div>
+                        <div class="faculty-image">
+                            <img src="../images/faculty/n.shaidullaev.jpg" alt="Nurlan Shaidullaev">
+                            <div class="image-overlay">
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fas fa-envelope"></i></a>
+                                    <a href="#"><i class="fas fa-graduation-cap"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-info">
+                            <h4>NURLAN SHAIDULLAEV</h4>
+                            <p class="faculty-title">Head of Computer Science Department</p>
+                            <div class="faculty-expertise">
+                                <span class="expertise-tag">AI & Machine Learning</span>
+                                <span class="expertise-tag">Data Science</span>
+                            </div>
+                            <p class="faculty-bio">Leading the department with expertise in artificial intelligence and data-driven solutions.</p>
+                            <a href="n.shaidullaev.html" class="accent-button small">
+                                <span class="button-text">VIEW PROFILE</span>
+                                <i class="fas fa-arrow-right button-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
 
-			</div>
-		</div>
-		<!-- END OF CONTENT -->
+                    <!-- Faculty Member 2 -->
+                    <div class="faculty-card">
+                        <div class="card-glow"></div>
+                        <div class="faculty-image">
+                            <img src="../images/faculty/s.erdolatov.jpg" alt="Sanjar Erdolatov">
+                            <div class="image-overlay">
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fas fa-envelope"></i></a>
+                                    <a href="#"><i class="fas fa-graduation-cap"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-info">
+                            <h4>SANJAR ERDOLATOV</h4>
+                            <p class="faculty-title">Lecturer & Library Administrator</p>
+                            <div class="faculty-expertise">
+                                <span class="expertise-tag">Database Systems</span>
+                                <span class="expertise-tag">Information Systems</span>
+                            </div>
+                            <p class="faculty-bio">Specialized in database management and information system architecture.</p>
+                            <a href="s.erdolatov.html" class="accent-button small">
+                                <span class="button-text">VIEW PROFILE</span>
+                                <i class="fas fa-arrow-right button-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
 
-		<!-- FOOTER -->
-		<div id="footer-wrap" >
+                    <!-- Faculty Member 3 -->
+                    <div class="faculty-card">
+                        <div class="card-glow"></div>
+                        <div class="faculty-image">
+                            <img src="../images/faculty/a.bondarev.jpg" alt="Aleksei Bondarev">
+                            <div class="image-overlay">
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fas fa-envelope"></i></a>
+                                    <a href="#"><i class="fas fa-graduation-cap"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-info">
+                            <h4>ALEKSEI BONDAREV</h4>
+                            <p class="faculty-title">Senior Lecturer</p>
+                            <div class="faculty-expertise">
+                                <span class="expertise-tag">Software Engineering</span>
+                                <span class="expertise-tag">Web Technologies</span>
+                            </div>
+                            <p class="faculty-bio">Expert in modern software development methodologies and web application architecture.</p>
+                            <a href="a.bondarev.html" class="accent-button small">
+                                <span class="button-text">VIEW PROFILE</span>
+                                <i class="fas fa-arrow-right button-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
 
-			<div id="footer" class="container_12">
+                    <!-- Faculty Member 4 -->
+                    <div class="faculty-card">
+                        <div class="card-glow"></div>
+                        <div class="faculty-image">
+                            <img src="../images/faculty/m.muhammed.jpg" alt="Dilshad Anarbaev">
+                            <div class="image-overlay">
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fas fa-envelope"></i></a>
+                                    <a href="#"><i class="fas fa-graduation-cap"></i></a>
+                                </div>
+                            </div>
+                        </div>
 
-				<p class="f-left">&copy; 2015 CS Dept. IAAU</p>
-				<p class="f-right">Developed & Designed by Azamat Turgunbaev COM08</p>
 
+                        <div class="faculty-info">
+                            <h4>DR. ENG. MUSA MUHAMMED</h4>
+                            <p class="faculty-title">Senior Lecturer</p>
+                            <div class="faculty-expertise">
+                            <span class="expertise-tag">Content Management Systems</span>
+                            <span class="expertise-tag">Automation</span>
+                            <span class="expertise-tag">Programming Languages</span>
+                            <span class="expertise-tag">Software Engineering</span>
+                            </div>
+                            <p class="faculty-bio">Focus on network infrastructure and cybersecurity principles.</p>
+                            <a href="m.muhammed.html" class="accent-button small">
+                                <span class="button-text">VIEW PROFILE</span>
+                                <i class="fas fa-arrow-right button-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
 
-			</div>
+                    <!-- Add more faculty members following the same pattern -->
+                    <!-- Faculty Member 5 -->
+                    <div class="faculty-card">
+                        <div class="card-glow"></div>
+                        <div class="faculty-image">
+                            <img src="../images/faculty/m.omuraliev.jpg" alt="Ulan Sadybakasov">
+                            <div class="image-overlay">
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fas fa-envelope"></i></a>
+                                    <a href="#"><i class="fas fa-graduation-cap"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-info">
+                            <h4>Miradil Omuraliev</h4>
+                            <p class="faculty-title">System administrator</p>
+                            <div class="faculty-expertise">
+                                <span class="expertise-tag">Networking</span>
+                                <span class="expertise-tag">Server management</span>
+                                <span class="expertise-tag">System infrastructure</span>
+                                <span class="expertise-tag">Network Technologies</span>
+                            </div>
+                            <p class="faculty-bio">Specialized in algorithm design and computational theory.</p>
+                            <a href="m.omuraliev.html" class="accent-button small">
+                                <span class="button-text">VIEW PROFILE</span>
+                                <i class="fas fa-arrow-right button-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
 
-		</div>
-		<!-- END OF FOOTER -->
+                    <!-- Faculty Member 6 -->
+                    <div class="faculty-card">
+                        <div class="card-glow"></div>
+                        <div class="faculty-image">
+                            <img src="../images/silhouette.png" alt="Andrei Galkin">
+                            <div class="image-overlay">
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fas fa-envelope"></i></a>
+                                    <a href="#"><i class="fas fa-graduation-cap"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-info">
+                            <h4>ANDREI GALKIN</h4>
+                            <p class="faculty-title">Lecturer</p>
+                            <div class="faculty-expertise">
+                                <span class="expertise-tag">Mobile Development</span>
+                                <span class="expertise-tag">UI/UX Design</span>
+                            </div>
+                            <p class="faculty-bio">Expert in mobile application development and user experience design.</p>
+                            <a href="../template/under-construction.html" class="accent-button small">
+                                <span class="button-text">VIEW PROFILE</span>
+                                <i class="fas fa-arrow-right button-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-	</div>
-	
-	<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="../js/mosaic.1.0.1.min.js"></script>
-	<script type="text/javascript" src="../js/highlight.js"></script>
-	
-	<script type="text/javascript">  
-		jQuery(function($){
-			$('.bar').mosaic({
-				animation	:	'slide'
-			});
-		});
-	</script>
-	
-	<!--Google-->
-	<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            <!-- Research Areas -->
+            <section class="research-section">
+                <div class="section-header">
+                    <div class="header-line"></div>
+                    <h3>RESEARCH DOMAINS</h3>
+                    <div class="header-line"></div>
+                </div>
 
-		  ga('create', 'UA-46202546-1', 'iaau.edu.kg');
-		  ga('send', 'pageview');
-	</script>
-	
+                <div class="research-grid">
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>Artificial Intelligence</h4>
+                        <p>Machine learning, neural networks, and intelligent systems research.</p>
+                    </div>
+
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4>Data Science</h4>
+                        <p>Big data analytics, data mining, and predictive modeling.</p>
+                    </div>
+
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Cybersecurity</h4>
+                        <p>Network security, cryptography, and threat analysis.</p>
+                    </div>
+
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h4>Cloud Computing</h4>
+                        <p>Distributed systems and cloud infrastructure development.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <h5>FACULTY STATUS</h5>
+                        <div class="status-line">
+                            <span class="status-dot online"></span>
+                            <span>All Faculty Active</span>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h5>QUICK ACCESS</h5>
+                        <a href="../department/contact-us.html">Contact Faculty</a>
+                        <a href="../program/courses.html">View Courses</a>
+                        <a href="../program/research.html">Research Portal</a>
+                    </div>
+                    <div class="footer-section">
+                        <p class="copyright">&copy; 2024 COMPUTER SCIENCE DEPARTMENT</p>
+                        <p class="university">ALA-TOO INTERNATIONAL UNIVERSITY</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/modern-script.js"></script>
+
+    <script>
+        // Faculty page specific animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate faculty cards on scroll
+            const facultyCards = document.querySelectorAll('.faculty-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            facultyCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+
+            // Animate research cards
+            const researchCards = document.querySelectorAll('.research-card');
+            researchCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateX(-20px)';
+                card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                observer.observe(card);
+            });
+        });
+    </script>
 </body>
-
 </html>
