@@ -1,0 +1,516 @@
+/* admission.css - Modern Admission Page Styles */
+
+/* Import main theme variables */
+:root {
+    --bg-primary: #0A0E17;
+    --bg-secondary: #0F1623;
+    --accent-blue: #00F0FF;
+    --accent-glow: rgba(0, 240, 255, 0.5);
+    --accent-transparent: rgba(0, 240, 255, 0.1);
+    --graphite: #1F2937;
+    --graphite-light: #374151;
+    --text-primary: #F9FAFB;
+    --text-secondary: #D1D5DB;
+    --text-muted: #9CA3AF;
+    --success: #00FF88;
+    --warning: #FFAA00;
+    --danger: #FF0066;
+}
+
+/* Admission Page Specific Styles */
+.admission-content {
+    padding: 2rem 0;
+    min-height: 80vh;
+}
+
+.admission-header {
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.admission-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--accent-blue);
+    border-radius: 2px;
+}
+
+.admission-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px var(--accent-glow);
+}
+
+.admission-subtitle {
+    font-size: 1.1rem;
+    color: var(--accent-blue);
+    letter-spacing: 1px;
+}
+
+/* Content Sections */
+.admission-section {
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--accent-blue);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--graphite);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-title::before {
+    content: '>';
+    color: var(--success);
+    font-weight: bold;
+}
+
+/* Cards for different sections */
+.info-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--graphite);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 20px var(--accent-transparent);
+    transform: translateY(-2px);
+}
+
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--accent-blue);
+    border-radius: 4px 0 0 4px;
+}
+
+/* Dates Section */
+.dates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.date-item {
+    background: var(--bg-primary);
+    border: 1px solid var(--graphite);
+    border-radius: 6px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.date-item:hover {
+    border-color: var(--accent-blue);
+    transform: translateY(-2px);
+}
+
+.date-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.date-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--accent-blue);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Documents List */
+.documents-list {
+    list-style: none;
+    counter-reset: document-counter;
+}
+
+.documents-list li {
+    counter-increment: document-counter;
+    padding: 1rem 1rem 1rem 3rem;
+    margin-bottom: 0.5rem;
+    background: var(--bg-primary);
+    border: 1px solid var(--graphite);
+    border-radius: 6px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.documents-list li:hover {
+    border-color: var(--accent-blue);
+    transform: translateX(5px);
+}
+
+.documents-list li::before {
+    content: counter(document-counter);
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: var(--accent-blue);
+    color: var(--bg-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Tables */
+.admission-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: var(--bg-primary);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--graphite);
+}
+
+.admission-table th,
+.admission-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--graphite);
+}
+
+.admission-table th {
+    background: var(--accent-transparent);
+    color: var(--accent-blue);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.admission-table tr:last-child td {
+    border-bottom: none;
+}
+
+.admission-table tr:hover {
+    background: var(--accent-transparent);
+}
+
+/* Financial Aid Sections */
+.financial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.financial-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--graphite);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.financial-card:hover {
+    border-color: var(--accent-blue);
+    transform: translateY(-3px);
+}
+
+.financial-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.financial-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--accent-transparent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+}
+
+.financial-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Nested Lists */
+.discount-list {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.discount-list li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--graphite);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.discount-list li:last-child {
+    border-bottom: none;
+}
+
+.discount-list li::before {
+    content: '▸';
+    color: var(--accent-blue);
+    font-weight: bold;
+}
+
+/* Important Notes */
+.important-note {
+    background: linear-gradient(135deg, var(--bg-primary), var(--graphite));
+    border: 1px solid var(--warning);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.important-note::before {
+    content: '!';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    background: var(--warning);
+    color: var(--bg-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.note-header {
+    color: var(--warning);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Scholarship Section */
+.scholarship-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.scholarship-item {
+    background: var(--bg-primary);
+    border: 1px solid var(--graphite);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.scholarship-item:hover {
+    border-color: var(--success);
+    transform: scale(1.05);
+}
+
+.scholarship-rank {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.scholarship-amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--success);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Contact Information */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.contact-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--graphite);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    border-color: var(--accent-blue);
+    transform: translateY(-2px);
+}
+
+.contact-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent-blue);
+    margin-bottom: 1rem;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.contact-detail i {
+    color: var(--accent-blue);
+    width: 16px;
+}
+
+/* Status Indicators */
+.status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    background: var(--success);
+    color: var(--bg-primary);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.status-indicator.closed {
+    background: var(--danger);
+}
+
+.status-indicator.open {
+    background: var(--success);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admission-title {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+    
+    .dates-grid,
+    .financial-grid,
+    .scholarship-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-card {
+        padding: 1.5rem;
+    }
+    
+    .documents-list li {
+        padding: 1rem 1rem 1rem 2.5rem;
+    }
+    
+    .admission-table {
+        font-size: 0.9rem;
+    }
+    
+    .admission-table th,
+    .admission-table td {
+        padding: 0.75rem 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .admission-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.2rem;
+    }
+    
+    .info-card {
+        padding: 1rem;
+    }
+    
+    .financial-card,
+    .scholarship-item,
+    .contact-card {
+        padding: 1rem;
+    }
+}
+
+/* Animation for counters */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-in {
+    animation: countUp 0.6s ease-out;
+}
+
+/* Print Styles */
+@media print {
+    .admission-content {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .info-card {
+        border: 1px solid #ccc !important;
+        background: white !important;
+    }
+    
+    .admission-table {
+        border: 1px solid #ccc !important;
+    }
+}
