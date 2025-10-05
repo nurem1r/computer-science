@@ -212,7 +212,7 @@ body {
     color: var(--text-primary);
     border-color: var(--accent-blue);
     box-shadow: 0 0 15px var(--accent-transparent);
-    background: var(--accent-transparent);
+    background: #0A0E17 ;
 }
 
 .nav-pulse {
