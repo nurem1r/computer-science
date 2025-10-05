@@ -1,146 +1,1222 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finals Schedule | AIU - Department of Future Technologies</title>
 
-<html>
-
-<head lang="en">
-
-	<meta charset="UTF-8">
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Finals | CS AIU</title>
-
-	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
-	<link rel="stylesheet" type="text/css" href="../css/text.css" />
-	<link rel="stylesheet" type="text/css" href="../css/960.css" />
-	<link rel="stylesheet" type="text/css" href="../css/style.css" />
-
+    <!-- Modern CSS Framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/modern-style.css">
 </head>
 
 <body>
+    <!-- Animated Background -->
+    <div class="animated-grid"></div>
+    <div class="background-glows">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+    </div>
 
-	<div id="container">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <div class="logo-effect">
+                        <img src="../images/logo.png" alt="Computer Science Department" class="logo">
+                        <div class="glitch-effect"></div>
+                    </div>
+                    <div class="brand-text">
+                        <span>Ala-Too International University</span>
+                        <div class="accent-line"></div>
+                    </div>
+                </div>
 
-		<!-- HEADER -->
-		<div id="header-wrap">
-		<div id="header" class="container_16">
-			<div id="logo" class="grid_5">
-				<img alt="Computer Science Department" src="../images/logo.png" />
-			</div>
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <div class="menu-bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
 
-			<!--Navigation-->
-			<div id="nav" class="grid_11">
-				<ul>
-					<li><a href="../index.html">Home</a></li>
-					<li>
-						<a href="javascript:void(0)">Department</a>
-						<ul id="department">
-							<li><a href="../department/news.html">News</a></li>
-							<li><a href="../department/developments.html">Developments</a></li>
-							<li><a href="http://ic.iaau.edu.kg" target="_blank">Exchange Programs</a></li>
-							<li><a href="../department/prospective-students.html">Prospective Students</a></li>
-							<li><a href="../department/alumni.html">Alumni</a></li>
-							<li><a href="../department/contact-us.html" >Contact Us</a></li>
-							<li><a href="../department/info.html" >Info</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="javascript:void(0)">Bachelor Program</a>
-						<ul id="program">
-							<li><a href="../program/courses.html">Courses</a></li>
-							<li><a href="../program/research.html">Research</a></li>
-							<li><a href="../program/degree-guide.html">Degree Guide</a></li>
-							<li><a href="../program/recent-diplomas.html">Recent Diplomas</a></li>
-							<li><a href="../program/exam_rules.html">Exam Rules</a></li>
-							<li><a href="../program/admission.html">Admission</a></li>
-							<li><a href="../program/faq.html">FAQ</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="javascript:void(0)">Master Degree</a>
-						<ul id="master">
-                            <li><a href="../grad/overview.html">Overview</a></li>
-                            <li><a href="../grad/grad-courses.html">Courses</a></li>
-                            <li><a href="../grad/grad-research.html">Graduate Research</a></li>
-                            <li><a href="../grad/grad-admission.html">Admission</a></li>
+                <!-- Navigation -->
+                <ul class="nav-menu" id="navMenu">
+                    <li>
+                        <a href="../index.html" class="nav-link">
+                            <i class="fas fa-terminal"></i>
+                            <span>Home</span>
+                            <div class="nav-pulse"></div>
+                        </a>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Department</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../department/news.html"><i class="fas fa-broadcast-tower"></i> News Feed</a>
+                            </li>
+                            <li>
+                                <a href="../department/developments.html"><i class="fas fa-chart-network"></i> Developments</a>
+                            </li>
+                            <li>
+                                <a href="http://ic.iaau.edu.kg" target="_blank"><i class="fas fa-sync-alt"></i> Exchange Programs</a>
+                            </li>
+                            <li>
+                                <a href="../department/prospective-students.html"><i class="fas fa-user-astronaut"></i> Prospective Students</a>
+                            </li>
+                            <li>
+                                <a href="../department/alumni.html"><i class="fas fa-users-cog"></i> Alumni Network</a>
+                            </li>
+                            <li>
+                                <a href="../department/contact-us.html"><i class="fas fa-satellite-dish"></i> Contact Hub</a>
+                            </li>
+                            <li>
+                                <a href="../department/info.html"><i class="fas fa-database"></i> System Info</a>
+                            </li>
                         </ul>
-					</li>
-					<li>
-						<a href="javascript:void(0)" >Calendar</a>
-						<ul id="calendar">
-							<li><a href="calendar/academic-calendar.html" target="_blank">Academic Calendar</a></li>
-							<li><a href="../calendar/schedule-of-lectures.html">Schedule of Lectures</a></li>
-							<li><a href="../calendar/midterms.html">Midterms Schedule</a></li>
-							<li><a href="../calendar/finals.html">Finals Schedule</a></li>
-							<li><a href="../calendar/labs.html">Labs Schedule</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="../faculty/faculty.html">Faculty</a>
-					</li>
-					<li>
-						<a href="../labs/labs.html">Labs</a>
-						<ul id="labs">
-							<li><a href="http://its.iaau.edu.kg/policies/lab-rules.html" target="_blank">Policy &amp;
-								Regulations</a></li>
-							<li><a href="../labs/software.html">Software</a></li>
-							<li><a href="../department/contact-us.html">Contacts</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
+                    </li>
 
-		<!-- CONTENT -->
-		<div id="wrap-content">
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-microchip"></i>
+                            <span>Bachelor Program</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../program/courses.html"><i class="fas fa-code"></i> Courses</a>
+                            </li>
+                            <li>
+                                <a href="../program/research.html"><i class="fas fa-brain"></i> AI Research</a>
+                            </li>
+                            <li>
+                                <a href="../program/degree-guide.html"><i class="fas fa-map-marked-alt"></i> Degree Guide</a>
+                            </li>
+                            <li>
+                                <a href="../program/recent-diplomas.html"><i class="fas fa-certificate"></i> Recent Diplomas</a>
+                            </li>
+                            <li>
+                                <a href="../program/exam_rules.html"><i class="fas fa-shield-alt"></i> Exam Protocols</a>
+                            </li>
+                            <li>
+                                <a href="../program/admission.html"><i class="fas fa-user-lock"></i> Admission</a>
+                            </li>
+                            <li>
+                                <a href="../program/faq.html"><i class="fas fa-question-circle"></i> FAQ</a>
+                            </li>
+                        </ul>
+                    </li>
 
-        <div id="content" class="container_12">
-            <!--<h5 class="center-text">Class - SCHEDULE SPRING-15</h5>-->
-             <p align="right">Download as pdf file:
-                <a href="files/cs-finals-schedule.pdf"  target="_blank" >
-                    Schedule of Final Exams 16-17</a></p>
-            <iframe width='1068' height='1600' frameborder='0' src='https://docs.google.com/spreadsheets/d/17uojWxnj6dpATBBsdfndOIYhj7id46QTI_tTszR5gb4/pubhtml?gid=157992629&single=true'>
-            </iframe>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-robot"></i>
+                            <span>Master Degree</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../grad/overview.html"><i class="fas fa-eye"></i> System Overview</a>
+                            </li>
+                            <li>
+                                <a href="../grad/grad-courses.html"><i class="fas fa-cogs"></i> Program Modules</a>
+                            </li>
+                            <li>
+                                <a href="../grad/grad-research.html"><i class="fas fa-flask"></i> Advanced Research</a>
+                            </li>
+                            <li>
+                                <a href="../grad/grad-admission.html"><i class="fas fa-user-shield"></i> Secure Admission</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link active">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Calendar</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../calendar/academic-calendar.html" target="_blank"><i class="fas fa-calendar"></i> Academic Calendar</a>
+                            </li>
+                            <li>
+                                <a href="../calendar/schedule-of-lectures.html"><i class="fas fa-clock"></i> Lecture Schedule</a>
+                            </li>
+                            <li>
+                                <a href="../calendar/midterms.html"><i class="fas fa-file-code"></i> Midterms Schedule</a>
+                            </li>
+                            <li>
+                                <a href="../calendar/finals.html"><i class="fas fa-graduation-cap"></i> Finals Schedule</a>
+                            </li>
+                            <li>
+                                <a href="../calendar/labs.html"><i class="fas fa-desktop"></i> Labs Schedule</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="../faculty/faculty.html" class="nav-link">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Faculty</span>
+                            <div class="nav-pulse"></div>
+                        </a>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="../labs/labs.html" class="nav-link">
+                            <i class="fas fa-server"></i>
+                            <span>Data Labs</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="http://its.iaau.edu.kg/policies/lab-rules.html" target="_blank"><i class="fas fa-clipboard-list"></i> Security Protocols</a>
+                            </li>
+                            <li>
+                                <a href="../labs/software.html"><i class="fas fa-download"></i> Software Repository</a>
+                            </li>
+                            <li>
+                                <a href="../department/contact-us.html"><i class="fas fa-address-book"></i> Lab Contacts</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
-		<!-- END OF CONTENT -->
+    </header>
 
-		<!-- FOOTER -->
-		<div id="footer-wrap">
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Main Header -->
+            <div class="main-header">
+                <div class="scanline"></div>
+                <h2 class="main-title">FINALS SCHEDULE</h2>
+                <div class="terminal-prompt">
+                    <span class="prompt-sign">></span>
+                    <span class="prompt-text">Accessing final examination database...</span>
+                    <span class="cursor">|</span>
+                </div>
+            </div>
 
-			<div id="footer" class="container_12">
+            <!-- Critical Countdown -->
+            <section class="info-section">
+                <div class="card full-width critical-card">
+                    <div class="card-glow"></div>
+                    <div class="critical-header">
+                        <h3 class="section-heading">
+                            <span class="heading-icon"><i class="fas fa-hourglass-end"></i></span>
+                            FINALS COUNTDOWN
+                        </h3>
+                        <div class="countdown-timer" id="countdownTimer">
+                            <div class="countdown-item">
+                                <div class="countdown-number" id="days">00</div>
+                                <div class="countdown-label">DAYS</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-number" id="hours">00</div>
+                                <div class="countdown-label">HOURS</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-number" id="minutes">00</div>
+                                <div class="countdown-label">MINUTES</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-number" id="seconds">00</div>
+                                <div class="countdown-label">SECONDS</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="critical-info">
+                        <div class="critical-item">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <div class="critical-text">
+                                <strong>Final Exams Period:</strong> January 13-25, 2025
+                            </div>
+                        </div>
+                        <div class="critical-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div class="critical-text">
+                                <strong>Graduation Requirements:</strong> All final exams must be completed
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-				<p class="f-left">&copy; 2017 CS Dept. AIU</p>
+            <!-- Content Grid -->
+            <div class="content-grid">
+                <!-- Left Column - Critical Info -->
+                <div class="left-column">
+                    <!-- Exam Status Overview -->
+                    <section class="info-section">
+                        <div class="card">
+                            <div class="card-glow"></div>
+                            <h3 class="section-heading">
+                                <span class="heading-icon"><i class="fas fa-tachometer-alt"></i></span>
+                                EXAMINATION STATUS
+                            </h3>
 
-			</div>
+                            <div class="status-mini-grid">
+                                <div class="status-mini critical">
+                                    <div class="status-mini-icon">
+                                        <i class="fas fa-skull-crossbones"></i>
+                                    </div>
+                                    <div class="status-mini-info">
+                                        <div class="status-mini-number">18</div>
+                                        <div class="status-mini-label">Final Exams</div>
+                                    </div>
+                                </div>
+                                <div class="status-mini warning">
+                                    <div class="status-mini-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="status-mini-info">
+                                        <div class="status-mini-number">5</div>
+                                        <div class="status-mini-label">This Week</div>
+                                    </div>
+                                </div>
+                                <div class="status-mini info">
+                                    <div class="status-mini-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="status-mini-info">
+                                        <div class="status-mini-number">0</div>
+                                        <div class="status-mini-label">Completed</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
-		</div>
-		<!-- END OF FOOTER -->
-	</div>
+                    <!-- Critical Actions -->
+                    <section class="info-section">
+                        <div class="card">
+                            <div class="card-glow"></div>
+                            <h3 class="section-heading">
+                                <span class="heading-icon"><i class="fas fa-first-aid"></i></span>
+                                CRITICAL ACTIONS
+                            </h3>
 
-	<!-- JAVASCRIPT -->
-	<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="../js/jquery.accordion.js"></script>
-	<script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="../js/highlight.js"></script>
+                            <div class="critical-actions">
+                                <a href="files/cs-finals-schedule.pdf" target="_blank" class="action-button critical">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Download PDF Schedule</span>
+                                    <small>Fall 2024-2025</small>
+                                </a>
+                                <a href="../program/exam_rules.html" class="action-button warning">
+                                    <i class="fas fa-scroll"></i>
+                                    <span>Final Exam Rules</span>
+                                    <small>Required Reading</small>
+                                </a>
+                                <a href="#" class="action-button info">
+                                    <i class="fas fa-calendar-check"></i>
+                                    <span>Add to Calendar</span>
+                                    <small>All Finals Dates</small>
+                                </a>
+                                <a href="../department/contact-us.html" class="action-button urgent">
+                                    <i class="fas fa-life-ring"></i>
+                                    <span>Emergency Contact</span>
+                                    <small>Exam Issues</small>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
 
-	<script type="text/javascript">
-		$(function() {
+                    <!-- This Week's Finals -->
+                    <section class="info-section">
+                        <div class="card">
+                            <div class="card-glow"></div>
+                            <h3 class="section-heading">
+                                <span class="heading-icon"><i class="fas fa-calendar-week"></i></span>
+                                THIS WEEK'S FINALS
+                            </h3>
 
-			$('#st-accordion').accordion();
+                            <div class="week-finals">
+                                <div class="final-item urgent">
+                                    <div class="final-date">
+                                        <div class="final-day">MON</div>
+                                        <div class="final-date-num">13</div>
+                                    </div>
+                                    <div class="final-details">
+                                        <div class="final-course">CS-401: AI Systems</div>
+                                        <div class="final-time">09:00 - 12:00</div>
+                                        <div class="final-room">Auditorium A</div>
+                                        <div class="final-weight">40% of Grade</div>
+                                    </div>
+                                </div>
+                                <div class="final-item warning">
+                                    <div class="final-date">
+                                        <div class="final-day">TUE</div>
+                                        <div class="final-date-num">14</div>
+                                    </div>
+                                    <div class="final-details">
+                                        <div class="final-course">CS-305: Algorithms</div>
+                                        <div class="final-time">14:00 - 17:00</div>
+                                        <div class="final-room">Room 301</div>
+                                        <div class="final-weight">35% of Grade</div>
+                                    </div>
+                                </div>
+                                <div class="final-item info">
+                                    <div class="final-date">
+                                        <div class="final-day">WED</div>
+                                        <div class="final-date-num">15</div>
+                                    </div>
+                                    <div class="final-details">
+                                        <div class="final-course">CS-201: Data Structures</div>
+                                        <div class="final-time">10:00 - 13:00</div>
+                                        <div class="final-room">Room 205</div>
+                                        <div class="final-weight">30% of Grade</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
 
-		});
-	</script>
+                <!-- Right Column - Schedule -->
+                <div class="right-column">
+                    <div class="card">
+                        <div class="card-glow"></div>
+                        <div class="schedule-header">
+                            <h3 class="section-heading">
+                                <span class="heading-icon"><i class="fas fa-graduation-cap"></i></span>
+                                COMPLETE FINALS SCHEDULE
+                            </h3>
+                            <div class="schedule-actions">
+                                <button class="accent-button small" id="exportSchedule">
+                                    <span class="button-text">EXPORT</span>
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="accent-button small" id="refreshSchedule">
+                                    <span class="button-text">REFRESH</span>
+                                    <i class="fas fa-sync"></i>
+                                </button>
+                            </div>
+                        </div>
 
-	<!--Google-->
-	<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                        <!-- Google Sheets Integration -->
+                        <div class="schedule-container">
+                            <div class="iframe-overlay">
+                                <div class="loading-spinner">
+                                    <i class="fas fa-sync fa-spin"></i>
+                                    <span>Loading Finals Schedule...</span>
+                                </div>
+                            </div>
+                            <iframe
+                                id="scheduleFrame"
+                                src="https://docs.google.com/spreadsheets/d/17uojWxnj6dpATBBsdfndOIYhj7id46QTI_tTszR5gb4/pubhtml?gid=157992629&single=true"
+                                frameborder="0"
+                                loading="lazy">
+                            </iframe>
+                        </div>
 
-		  ga('create', 'UA-46202546-1', 'iaau.edu.kg');
-		  ga('send', 'pageview');
-	</script>
+                        <div class="schedule-footer">
+                            <div class="last-update">
+                                <i class="fas fa-clock"></i>
+                                Last updated: <span id="updateTime">Loading...</span>
+                            </div>
+                            <div class="data-source">
+                                <i class="fas fa-database"></i>
+                                Source: Registrar's Office Database
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Final Exam Preparation -->
+            <section class="mission-section">
+                <div class="section-header">
+                    <div class="header-line"></div>
+                    <h3>FINAL EXAM PREPARATION</h3>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="mission-grid">
+                    <div class="card mission-card">
+                        <div class="card-glow"></div>
+                        <div class="mission-icon">
+                            <i class="fas fa-brain"></i>
+                            <div class="icon-ring"></div>
+                        </div>
+                        <h4>STUDY STRATEGIES</h4>
+                        <div class="divider-small"></div>
+                        <ul class="mission-list">
+                            <li>
+                                <span class="list-bullet">></span> Create study schedule 2 weeks prior
+                            </li>
+                            <li>
+                                <span class="list-bullet">></span> Focus on comprehensive topics
+                            </li>
+                            <li>
+                                <span class="list-bullet">></span> Practice with past papers
+                            </li>
+                            <li>
+                                <span class="list-bullet">></span> Form study groups
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card mission-card">
+                        <div class="card-glow"></div>
+                        <div class="mission-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                            <div class="icon-ring"></div>
+                        </div>
+                        <h4>EXAM DAY CHECKLIST</h4>
+                        <div class="divider-small"></div>
+                        <ul class="mission-list">
+                            <li>
+                                <span class="list-bullet">></span> Student ID and materials
+                            </li>
+                            <li>
+                                <span class="list-bullet">></span> Arrive 30 minutes early
+                            </li>
+                            <li>
+                                <span class="list-bullet">></span> Review allowed resources
+                            </li>
+                            <li>
+                                <span class="list-bullet">></span> Know emergency procedures
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card mission-card">
+                        <div class="card-glow"></div>
+                        <div class="mission-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                            <div class="icon-ring"></div>
+                        </div>
+                        <h4>WELLNESS & SUPPORT</h4>
+                        <div class="divider-small"></div>
+                        <ul class="mission-list">
+                            <li>
+                                <span class="list-bullet">></span> Counseling services available
+                            </li>
+                            <li>
+                                <span class="list-bullet">></span> Extended library hours
+                            </li>
+                            <li>
+                                <span class="list-bullet">></span> 24/7 online resources
+                            </li>
+                            <li>
+                                <span class="list-bullet">></span> Peer tutoring sessions
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Emergency Protocol -->
+            <section class="info-section">
+                <div class="card full-width emergency-protocol">
+                    <div class="card-glow"></div>
+                    <h3 class="section-heading">
+                        <span class="heading-icon"><i class="fas fa-shield-alt"></i></span>
+                        FINALS EMERGENCY PROTOCOL
+                    </h3>
+                    <div class="protocol-grid">
+                        <div class="protocol-item">
+                            <div class="protocol-icon medical">
+                                <i class="fas fa-plus-square"></i>
+                            </div>
+                            <div class="protocol-info">
+                                <h4>MEDICAL EMERGENCY</h4>
+                                <p>Contact exam proctor immediately. Medical services will be arranged without penalty.</p>
+                                <div class="protocol-contact">Campus Health: ext. 911</div>
+                            </div>
+                        </div>
+                        <div class="protocol-item">
+                            <div class="protocol-icon technical">
+                                <i class="fas fa-laptop-medical"></i>
+                            </div>
+                            <div class="protocol-info">
+                                <h4>TECHNICAL ISSUES</h4>
+                                <p>For computer-based exams, notify proctor immediately. Backup systems available.</p>
+                                <div class="protocol-contact">ITS Support: ext. 100</div>
+                            </div>
+                        </div>
+                        <div class="protocol-item">
+                            <div class="protocol-icon academic">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="protocol-info">
+                                <h4>ACADEMIC CONCERNS</h4>
+                                <p>Contact Department Chair for urgent academic matters during finals period.</p>
+                                <div class="protocol-contact">Chair Office: ext. 300</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <h5>SYSTEM STATUS</h5>
+                        <div class="status-line">
+                            <span class="status-dot online"></span>
+                            <span>Finals System Operational</span>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h5>QUICK LINKS</h5>
+                        <a href="../department/contact-us.html">Contact Hub</a>
+                        <a href="../program/admission.html">Join System</a>
+                        <a href="../labs/labs.html">Access Labs</a>
+                    </div>
+                    <div class="footer-section">
+                        <p class="copyright">&copy; 2024 COMPUTER SCIENCE DEPARTMENT</p>
+                        <p class="university">ALA-TOO INTERNATIONAL UNIVERSITY</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/modern-script.js"></script>
+
+    <style>
+        /* Additional styles for finals page */
+        .critical-card {
+            border-left: 4px solid var(--danger);
+            background: linear-gradient(135deg, rgba(255, 0, 102, 0.05), transparent);
+        }
+
+        .critical-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .countdown-timer {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .countdown-item {
+            text-align: center;
+        }
+
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--danger);
+            text-shadow: 0 0 20px rgba(255, 0, 102, 0.5);
+            line-height: 1;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .countdown-label {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.25rem;
+        }
+
+        .critical-info {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .critical-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(255, 0, 102, 0.1);
+            border-radius: 6px;
+            border: 1px solid rgba(255, 0, 102, 0.3);
+        }
+
+        .critical-item i {
+            color: var(--danger);
+            font-size: 1.2rem;
+        }
+
+        .critical-text {
+            color: var(--text-primary);
+            font-size: 0.9rem;
+        }
+
+        .status-mini-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .status-mini {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border-radius: 6px;
+            border: 1px solid;
+            transition: var(--transition);
+        }
+
+        .status-mini:hover {
+            transform: translateX(5px);
+        }
+
+        .status-mini.critical {
+            background: rgba(255, 0, 102, 0.1);
+            border-color: var(--danger);
+        }
+
+        .status-mini.warning {
+            background: rgba(255, 170, 0, 0.1);
+            border-color: var(--warning);
+        }
+
+        .status-mini.info {
+            background: rgba(0, 240, 255, 0.1);
+            border-color: var(--accent-blue);
+        }
+
+        .status-mini-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .status-mini.critical .status-mini-icon {
+            background: rgba(255, 0, 102, 0.2);
+            color: var(--danger);
+        }
+
+        .status-mini.warning .status-mini-icon {
+            background: rgba(255, 170, 0, 0.2);
+            color: var(--warning);
+        }
+
+        .status-mini.info .status-mini-icon {
+            background: rgba(0, 240, 255, 0.2);
+            color: var(--accent-blue);
+        }
+
+        .status-mini-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1;
+        }
+
+        .status-mini-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .critical-actions {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .action-button {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: var(--transition);
+            border: 1px solid;
+        }
+
+        .action-button.critical {
+            background: rgba(255, 0, 102, 0.1);
+            border-color: var(--danger);
+            color: var(--text-primary);
+        }
+
+        .action-button.warning {
+            background: rgba(255, 170, 0, 0.1);
+            border-color: var(--warning);
+            color: var(--text-primary);
+        }
+
+        .action-button.info {
+            background: rgba(0, 240, 255, 0.1);
+            border-color: var(--accent-blue);
+            color: var(--text-primary);
+        }
+
+        .action-button.urgent {
+            background: rgba(255, 0, 102, 0.2);
+            border-color: var(--danger);
+            color: var(--text-primary);
+        }
+
+        .action-button:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .action-button i {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .action-button.critical i {
+            color: var(--danger);
+        }
+
+        .action-button.warning i {
+            color: var(--warning);
+        }
+
+        .action-button.info i {
+            color: var(--accent-blue);
+        }
+
+        .action-button.urgent i {
+            color: var(--danger);
+        }
+
+        .action-button span {
+            font-weight: 600;
+            flex: 1;
+        }
+
+        .action-button small {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            display: block;
+            margin-top: 0.25rem;
+        }
+
+        .week-finals {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .final-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 4px solid;
+            transition: var(--transition);
+        }
+
+        .final-item:hover {
+            transform: translateX(5px);
+        }
+
+        .final-item.urgent {
+            background: rgba(255, 0, 102, 0.1);
+            border-left-color: var(--danger);
+        }
+
+        .final-item.warning {
+            background: rgba(255, 170, 0, 0.1);
+            border-left-color: var(--warning);
+        }
+
+        .final-item.info {
+            background: rgba(0, 240, 255, 0.1);
+            border-left-color: var(--accent-blue);
+        }
+
+        .final-date {
+            text-align: center;
+            padding: 0.5rem;
+            border-radius: 4px;
+            min-width: 60px;
+            flex-shrink: 0;
+        }
+
+        .final-item.urgent .final-date {
+            background: rgba(255, 0, 102, 0.2);
+        }
+
+        .final-item.warning .final-date {
+            background: rgba(255, 170, 0, 0.2);
+        }
+
+        .final-item.info .final-date {
+            background: rgba(0, 240, 255, 0.2);
+        }
+
+        .final-day {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .final-item.urgent .final-day {
+            color: var(--danger);
+        }
+
+        .final-item.warning .final-day {
+            color: var(--warning);
+        }
+
+        .final-item.info .final-day {
+            color: var(--accent-blue);
+        }
+
+        .final-date-num {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1;
+        }
+
+        .final-course {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .final-time, .final-room, .final-weight {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .emergency-protocol {
+            border-left: 4px solid var(--warning);
+        }
+
+        .protocol-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .protocol-item {
+            text-align: center;
+            padding: 2rem 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--graphite);
+            transition: var(--transition);
+        }
+
+        .protocol-item:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-5px);
+        }
+
+        .protocol-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+        }
+
+        .protocol-icon.medical {
+            background: rgba(255, 0, 102, 0.1);
+            color: var(--danger);
+            border: 2px solid var(--danger);
+        }
+
+        .protocol-icon.technical {
+            background: rgba(0, 240, 255, 0.1);
+            color: var(--accent-blue);
+            border: 2px solid var(--accent-blue);
+        }
+
+        .protocol-icon.academic {
+            background: rgba(255, 170, 0, 0.1);
+            color: var(--warning);
+            border: 2px solid var(--warning);
+        }
+
+        .protocol-info h4 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .protocol-info p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .protocol-contact {
+            color: var(--accent-blue);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .schedule-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .schedule-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .accent-button.small {
+            padding: 0.6rem 1.2rem;
+            font-size: 0.8rem;
+        }
+
+        .schedule-container {
+            position: relative;
+            border: 1px solid var(--graphite);
+            border-radius: 4px;
+            overflow: hidden;
+            height: 600px;
+            background: var(--bg-primary);
+        }
+
+        .schedule-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .iframe-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--bg-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: opacity 0.3s ease;
+        }
+
+        .iframe-overlay.loaded {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loading-spinner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            color: var(--accent-blue);
+        }
+
+        .loading-spinner i {
+            font-size: 2rem;
+        }
+
+        .schedule-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--graphite);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .last-update, .data-source {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        @media (max-width: 968px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .critical-header {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+
+            .critical-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .protocol-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .countdown-timer {
+                gap: 1rem;
+            }
+
+            .countdown-number {
+                font-size: 2rem;
+            }
+
+            .schedule-header {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+
+            .schedule-footer {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: flex-start;
+            }
+
+            .schedule-container {
+                height: 400px;
+            }
+
+            .final-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+
+            .final-date {
+                align-self: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .schedule-container {
+                height: 300px;
+            }
+
+            .countdown-timer {
+                gap: 0.5rem;
+            }
+
+            .countdown-number {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+
+    <script>
+        // Finals page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Update timestamp
+            const updateTime = document.getElementById('updateTime');
+            if (updateTime) {
+                updateTime.textContent = new Date().toLocaleString();
+            }
+
+            // Handle iframe loading
+            const scheduleFrame = document.getElementById('scheduleFrame');
+            const iframeOverlay = document.querySelector('.iframe-overlay');
+
+            if (scheduleFrame && iframeOverlay) {
+                scheduleFrame.addEventListener('load', function() {
+                    setTimeout(() => {
+                        iframeOverlay.classList.add('loaded');
+                    }, 1000);
+                });
+            }
+
+            // Countdown timer
+            function updateCountdown() {
+                const finalsDate = new Date('January 13, 2025 09:00:00').getTime();
+                const now = new Date().getTime();
+                const distance = finalsDate - now;
+
+                if (distance < 0) {
+                    document.getElementById('countdownTimer').innerHTML = '<div class="countdown-ended">FINALS IN PROGRESS</div>';
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            }
+
+            // Update countdown every second
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+
+            // Export functionality
+            const exportBtn = document.getElementById('exportSchedule');
+            if (exportBtn) {
+                exportBtn.addEventListener('click', function() {
+                    alert('Finals schedule export initiated. This would download the current schedule view.');
+                });
+            }
+
+            // Refresh functionality
+            const refreshBtn = document.getElementById('refreshSchedule');
+            if (refreshBtn) {
+                refreshBtn.addEventListener('click', function() {
+                    iframeOverlay.classList.remove('loaded');
+                    iframeOverlay.querySelector('span').textContent = 'Refreshing schedule data...';
+
+                    // Reload the iframe
+                    scheduleFrame.src = scheduleFrame.src;
+
+                    // Update timestamp
+                    updateTime.textContent = new Date().toLocaleString();
+                });
+            }
+
+            // Add click handlers for action buttons
+            document.querySelectorAll('.action-button').forEach(button => {
+                if (!button.getAttribute('href') || button.getAttribute('href') === '#') {
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const action = this.querySelector('span').textContent;
+                        alert(`${action} functionality would be implemented here.`);
+                    });
+                }
+            });
+        });
+    </script>
 </body>
-
 </html>
