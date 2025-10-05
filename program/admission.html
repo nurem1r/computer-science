@@ -22,87 +22,440 @@
         <div class="glow glow-3"></div>
     </div>
 
-    <!-- Header (same as main page) -->
+    <!-- Header -->
     <header class="header">
-        <!-- Your header content from main page -->
+        <div class="container">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <div class="logo-effect">
+                        <img
+                            src="../images/logo.png"
+                            alt="Computer Science Department"
+                            class="logo"
+                        />
+                        <div class="glitch-effect"></div>
+                    </div>
+                    <div class="brand-text">
+                        <h1>COMPUTER SCIENCE</h1>
+                        <span>Ala-Too International University</span>
+                        <div class="accent-line"></div>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <div class="menu-bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+
+                <!-- Navigation -->
+                <ul class="nav-menu" id="navMenu">
+                    <li>
+                        <a href="../index.html" class="nav-link">
+                            <i class="fas fa-terminal"></i>
+                            <span>Home</span>
+                            <div class="nav-pulse"></div>
+                        </a>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Department</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../department/news.html"
+                                    ><i class="fas fa-broadcast-tower"></i> News Feed</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../department/developments.html"
+                                    ><i class="fas fa-chart-network"></i> Developments</a
+                                >
+                            </li>
+                            <li>
+                                <a href="http://ic.iaau.edu.kg" target="_blank"
+                                    ><i class="fas fa-sync-alt"></i> Exchange Programs</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../department/prospective-students.html"
+                                    ><i class="fas fa-user-astronaut"></i> Prospective
+                                    Students</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../department/alumni.html"
+                                    ><i class="fas fa-users-cog"></i> Alumni Network</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../department/contact-us.html"
+                                    ><i class="fas fa-satellite-dish"></i> Contact Hub</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../department/info.html"
+                                    ><i class="fas fa-database"></i> System Info</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link active">
+                            <i class="fas fa-microchip"></i>
+                            <span>Bachelor Program</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../program/courses.html"
+                                    ><i class="fas fa-code"></i> Courses</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../program/research.html"
+                                    ><i class="fas fa-brain"></i> AI Research</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../program/degree-guide.html"
+                                    ><i class="fas fa-map-marked-alt"></i> Degree Guide</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../program/recent-diplomas.html"
+                                    ><i class="fas fa-certificate"></i> Recent Diplomas</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../program/exam_rules.html"
+                                    ><i class="fas fa-shield-alt"></i> Exam Protocols</a
+                                >
+                            </li>
+                            <li>
+                                <a href="admission.html"
+                                    ><i class="fas fa-user-lock"></i> Admission</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../program/faq.html"
+                                    ><i class="fas fa-question-circle"></i> FAQ</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-robot"></i>
+                            <span>Master Degree</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../grad/overview.html"
+                                    ><i class="fas fa-eye"></i> System Overview</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../grad/grad-courses.html"
+                                    ><i class="fas fa-cogs"></i> Program Modules</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../grad/graduate-research.html"
+                                    ><i class="fas fa-flask"></i> Advanced Research</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../grad/grad-admission.html"
+                                    ><i class="fas fa-user-shield"></i> Secure Admission</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Calendar</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a
+                                    href="http://iaau.edu.kg/view/public/pages/page.xhtml"
+                                    target="_blank"
+                                    ><i class="fas fa-calendar"></i> Academic Calendar</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../calendar/schedule-of-lectures.html"
+                                    ><i class="fas fa-clock"></i> Lecture Schedule</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../calendar/midterms.html"
+                                    ><i class="fas fa-file-code"></i> Midterms Schedule</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../calendar/finals.html"
+                                    ><i class="fas fa-graduation-cap"></i> Finals Schedule</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../calendar/labs.html"
+                                    ><i class="fas fa-desktop"></i> Labs Schedule</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="../faculty/faculty.html" class="nav-link">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Faculty</span>
+                            <div class="nav-pulse"></div>
+                        </a>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="../labs/labs.html" class="nav-link">
+                            <i class="fas fa-server"></i>
+                            <span>Data Labs</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a
+                                    href="http://its.iaau.edu.kg/policies/lab-rules.html"
+                                    target="_blank"
+                                    ><i class="fas fa-clipboard-list"></i> Security Protocols</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../labs/software.html"
+                                    ><i class="fas fa-download"></i> Software Repository</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../department/contact-us.html"
+                                    ><i class="fas fa-address-book"></i> Lab Contacts</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- Admission Content -->
     <main class="main-content">
         <div class="container">
             <div class="admission-content">
-                <div class="admission-header">
-                    <h1 class="admission-title">ADMISSION PROCESS</h1>
-                    <p class="admission-subtitle">Join the Future of Computer Science</p>
+                <!-- Main Header -->
+                <div class="main-header">
+                    <div class="scanline"></div>
+                    <h1 class="main-title">ADMISSION PORTAL</h1>
+                    <div class="terminal-prompt">
+                        <span class="prompt-sign">></span>
+                        <span class="prompt-text">Initializing admission protocols...</span>
+                        <span class="cursor">|</span>
+                    </div>
                 </div>
 
-                <!-- Registration Dates -->
-                <section class="admission-section">
-                    <h2 class="section-title">Registration Timeline</h2>
-                    <div class="dates-grid">
-                        <div class="date-item">
-                            <div class="date-label">Registration Starts</div>
-                            <div class="date-value">July 10, 2013</div>
-                        </div>
-                        <div class="date-item">
-                            <div class="date-label">Deadline</div>
-                            <div class="date-value">August 10, 2013</div>
-                        </div>
-                        <div class="date-item">
-                            <div class="date-label">Financial Aid Deadline</div>
-                            <div class="date-value">July 20, 2013</div>
-                        </div>
+                <!-- Deadline and Requirements -->
+                <!-- Deadline and Requirements -->
+<section class="admission-section">
+    <h2 class="section-title">
+        <i class="fas fa-clock"></i>
+        DEADLINE AND REQUIREMENTS
+    </h2>
+
+    <div class="requirements-grid">
+        <!-- Left Column - Dates -->
+        <div class="left-column">
+            <div class="dates-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-label">Registration Starts</div>
+                        <div class="timeline-date">Monday, 10 July 2013</div>
                     </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker warning"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-label">Financial Aid Deadline</div>
+                        <div class="timeline-date">Saturday, 20 July 2013</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker danger"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-label">Final Deadline</div>
+                        <div class="timeline-date">Friday, 10 August 2013</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="registration-info">
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div class="info-text">Registration Hours: 08:30 – 17:30, Monday to Friday</div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div class="info-text">Financial Aid applicants deadline: 20 July 2013</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column - Documents -->
+        <div class="right-column">
+            <div class="documents-cards">
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="document-info">
+                        <h4>High School Diploma</h4>
+                        <p>Original diploma with transcript</p>
+                    </div>
+                </div>
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="document-info">
+                        <h4>ORT Certificate</h4>
+                        <p>General Republican Test results</p>
+                    </div>
+                </div>
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <div class="document-info">
+                        <h4>ID Card Copy</h4>
+                        <p>National identification document</p>
+                    </div>
+                </div>
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="document-info">
+                        <h4>Military Certificate</h4>
+                        <p>For male applicants only</p>
+                    </div>
+                </div>
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div class="document-info">
+                        <h4>ID Photos</h4>
+                        <p>8 pieces, size 3x4</p>
+                    </div>
+                </div>
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-file-medical"></i>
+                    </div>
+                    <div class="document-info">
+                        <h4>Medical Certificate</h4>
+                        <p>Official health examination № 086</p>
+                    </div>
+                </div>
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="document-info">
+                        <h4>Initial Payment</h4>
+                        <p>30% of total tuition fee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+                <!-- Registration Offices -->
+                <section class="admission-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-map-marker-alt"></i>
+                        REGISTRATION OFFICES
+                    </h2>
                     
-                    <div class="info-card">
-                        <p><strong>Registration Hours:</strong> 08:30 – 17:30, Monday to Friday</p>
-                    </div>
-                </section>
-
-                <!-- Required Documents -->
-                <section class="admission-section">
-                    <h2 class="section-title">Required Documents</h2>
-                    <div class="info-card">
-                        <ol class="documents-list">
-                            <li>Original High School Diploma of Graduation (including high school transcript)</li>
-                            <li>Original "ORT" certificate</li>
-                            <li>Copy of ID Card</li>
-                            <li>Copy of Military Registration Certificate (boys only)</li>
-                            <li>ID Photo: size 3x4 – (8 pieces)</li>
-                            <li>Medical Certificate № 086</li>
-                            <li>Initial Payment of 30% from total Tuition Fee</li>
-                        </ol>
-                    </div>
-                </section>
-
-                <!-- Contact Information -->
-                <section class="admission-section">
-                    <h2 class="section-title">Registration Offices</h2>
                     <div class="contact-grid">
                         <div class="contact-card">
-                            <h3 class="contact-name">Main Campus</h3>
-                            <div class="contact-detail">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>M. Gorkiy Street 1/8, mkr. "Tunguch", Bishkek</span>
+                            <div class="contact-header">
+                                <i class="fas fa-university"></i>
+                                <h3>Main Campus</h3>
                             </div>
-                            <div class="contact-detail">
-                                <i class="fas fa-phone"></i>
-                                <span>+996 312 63 14 25</span>
-                            </div>
-                            <div class="contact-detail">
-                                <i class="fas fa-fax"></i>
-                                <span>+996 312 63 04 09</span>
+                            <div class="contact-details">
+                                <div class="contact-item">
+                                    <i class="fas fa-map-pin"></i>
+                                    <div class="contact-info">
+                                        <strong>Address</strong>
+                                        <span>M. Gorkiy Street 1/8, mkr. "Tunguch", Bishkek city, Kyrgyzstan</span>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <div class="contact-info">
+                                        <strong>Telephone</strong>
+                                        <span>+996 312 63 14 25</span>
+                                        <span>+996 312 63 14 26</span>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-fax"></i>
+                                    <div class="contact-info">
+                                        <strong>Fax</strong>
+                                        <span>+996 312 63 04 09</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
                         <div class="contact-card">
-                            <h3 class="contact-name">Osh Campus</h3>
-                            <div class="contact-detail">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Zainabidinova 2-a, Osh city</span>
+                            <div class="contact-header">
+                                <i class="fas fa-school"></i>
+                                <h3>Sebat Kyrgyz Turkish Girls High-School</h3>
                             </div>
-                            <div class="contact-detail">
-                                <i class="fas fa-phone"></i>
-                                <span>+996 3222 5 51 31</span>
+                            <div class="contact-details">
+                                <div class="contact-item">
+                                    <i class="fas fa-map-pin"></i>
+                                    <div class="contact-info">
+                                        <strong>Address</strong>
+                                        <span>Zainabidinova 2-a, Osh city, Kyrgyzstan</span>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <div class="contact-info">
+                                        <strong>Telephone</strong>
+                                        <span>+996 3222 5 51 31</span>
+                                        <span>+996 3222 3 54 25</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -110,111 +463,273 @@
 
                 <!-- Tuition Fee -->
                 <section class="admission-section">
-                    <h2 class="section-title">Tuition Fees</h2>
+                    <h2 class="section-title">
+                        <i class="fas fa-money-bill-wave"></i>
+                        TUITION FEE
+                    </h2>
+                    
                     <div class="info-card">
-                        <table class="admission-table">
-                            <thead>
-                                <tr>
-                                    <th>Program</th>
-                                    <th>Prep. School</th>
-                                    <th>Undergraduate</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Computer Science Department</td>
-                                    <td>$1,500</td>
-                                    <td>$1,500</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="table-container">
+                            <table class="admission-table">
+                                <thead>
+                                    <tr>
+                                        <th>Department</th>
+                                        <th>Prep. School</th>
+                                        <th>1st, 2nd, 3rd, 4th Courses</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <i class="fas fa-laptop-code"></i>
+                                            Computer Science Department
+                                        </td>
+                                        <td class="price">$1,500</td>
+                                        <td class="price">$1,500</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </section>
 
                 <!-- Financial Aid -->
                 <section class="admission-section">
-                    <h2 class="section-title">Financial Aid</h2>
-                    
-                    <div class="financial-grid">
-                        <div class="financial-card">
-                            <div class="financial-header">
-                                <div class="financial-icon">
-                                    <i class="fas fa-trophy"></i>
-                                </div>
-                                <h3 class="financial-title">Olympiad Winners</h3>
-                            </div>
-                            <ul class="discount-list">
-                                <li>1st Place: 100% Scholarship</li>
-                                <li>2nd Place: 50% Discount</li>
-                                <li>3rd Place: 40% Discount</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="financial-card">
-                            <div class="financial-header">
-                                <div class="financial-icon">
-                                    <i class="fas fa-chart-line"></i>
-                                </div>
-                                <h3 class="financial-title">GRT Top Scores</h3>
-                            </div>
-                            <ul class="discount-list">
-                                <li>Top 100: 100% Scholarship</li>
-                                <li>Top 200: 50% Discount</li>
-                                <li>Top 300: 40% Discount</li>
-                                <li>Top 500: 30% Discount</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <h2 class="section-title">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        FINANCIAL AID
+                    </h2>
 
-                    <div class="important-note">
-                        <div class="note-header">Important Notice</div>
-                        <p>Applicants can benefit from only one of the available discounts. In case of poor academic performance, discounts may be revoked and reinstated based on subsequent performance.</p>
+                    <div class="info-card">
+                        <h3 class="card-title">
+                            <i class="fas fa-user-check"></i>
+                            ELIGIBILITY FOR FINANCIAL AID
+                        </h3>
+                        
+                        <div class="aid-categories">
+                            <!-- Olympiad Winners -->
+                            <div class="aid-category">
+                                <div class="category-header">
+                                    <i class="fas fa-trophy"></i>
+                                    <h4>Olympiad Winners</h4>
+                                </div>
+                                <div class="category-content">
+                                    <div class="aid-item">
+                                        <span class="aid-rank">1st Place</span>
+                                        <span class="aid-discount">100% Scholarship</span>
+                                        <span class="aid-note">Republican Olympiads in Physics, Chemistry, Biology, English, Computer, Kyrgyz, Turkish, Russian</span>
+                                    </div>
+                                    <div class="aid-item">
+                                        <span class="aid-rank">2nd Place</span>
+                                        <span class="aid-discount">50% Discount</span>
+                                    </div>
+                                    <div class="aid-item">
+                                        <span class="aid-rank">3rd Place</span>
+                                        <span class="aid-discount">40% Discount</span>
+                                    </div>
+                                    <div class="aid-note">
+                                        <i class="fas fa-info-circle"></i>
+                                        Medalists of Olympiads are free in choice of departments to study
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- GRT Scores -->
+                            <div class="aid-category">
+                                <div class="category-header">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <h4>GRT Certificate Holders</h4>
+                                </div>
+                                <div class="category-content">
+                                    <div class="grt-grid">
+                                        <div class="grt-item">
+                                            <span class="grt-rank">Top 100</span>
+                                            <span class="grt-discount">100%</span>
+                                        </div>
+                                        <div class="grt-item">
+                                            <span class="grt-rank">Top 200</span>
+                                            <span class="grt-discount">50%</span>
+                                        </div>
+                                        <div class="grt-item">
+                                            <span class="grt-rank">Top 300</span>
+                                            <span class="grt-discount">40%</span>
+                                        </div>
+                                        <div class="grt-item">
+                                            <span class="grt-rank">Top 500</span>
+                                            <span class="grt-discount">30%</span>
+                                        </div>
+                                        <div class="grt-item">
+                                            <span class="grt-rank">Top 1000</span>
+                                            <span class="grt-discount">25%</span>
+                                        </div>
+                                        <div class="grt-item">
+                                            <span class="grt-rank">Top 2000</span>
+                                            <span class="grt-discount">20%</span>
+                                        </div>
+                                        <div class="grt-item">
+                                            <span class="grt-rank">Top 3000</span>
+                                            <span class="grt-discount">15%</span>
+                                        </div>
+                                        <div class="grt-item">
+                                            <span class="grt-rank">Top 5000</span>
+                                            <span class="grt-discount">10%</span>
+                                        </div>
+                                    </div>
+                                    <div class="aid-note">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        Each discount category has limited quotas available
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Other Benefits -->
+                            <div class="aid-category">
+                                <div class="category-header">
+                                    <i class="fas fa-award"></i>
+                                    <h4>Additional Benefits</h4>
+                                </div>
+                                <div class="category-content">
+                                    <div class="aid-item">
+                                        <span class="aid-rank">Red Diploma</span>
+                                        <span class="aid-discount">15% Discount</span>
+                                        <span class="aid-note">Applicants with "Red" High School Graduation Diplomas</span>
+                                    </div>
+                                    <div class="aid-item">
+                                        <span class="aid-rank">Regional Olympiad</span>
+                                        <span class="aid-discount">20% Discount</span>
+                                        <span class="aid-note">1st place in regional Olympiad</span>
+                                    </div>
+                                    <div class="aid-item">
+                                        <span class="aid-rank">Family Discount</span>
+                                        <span class="aid-discount">10% Discount</span>
+                                        <span class="aid-note">Students from one family</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="policy-notes">
+                            <div class="policy-item">
+                                <i class="fas fa-sync-alt"></i>
+                                <p>In case of poor progress in any course student loses his discount and pays next semester's tuition fee. In the following semester, in the case of successful progress, the discount will be restored.</p>
+                            </div>
+                            <div class="policy-item">
+                                <i class="fas fa-exchange-alt"></i>
+                                <p>Benefited of any discount in case of a transfer to another department lose his/her discount and re-registered under a contract of newly applied department.</p>
+                            </div>
+                            <div class="policy-item">
+                                <i class="fas fa-ban"></i>
+                                <p>In case of withdrawal from the university, student will be required to pay 20% of the contract.</p>
+                            </div>
+                            <div class="policy-note">
+                                <strong>GRT = ОРТ (Общий Республиканский Тест)</strong>
+                            </div>
+                            <div class="policy-note">
+                                <strong>Limitation of discounts:</strong> Applicants can benefit from only one of the available discounts.
+                            </div>
+                        </div>
                     </div>
                 </section>
 
                 <!-- Scholarships -->
                 <section class="admission-section">
-                    <h2 class="section-title">Academic Scholarships</h2>
-                    <div class="scholarship-grid">
-                        <div class="scholarship-item">
-                            <div class="scholarship-rank">First Place</div>
-                            <div class="scholarship-amount">2000 SOM</div>
-                        </div>
-                        <div class="scholarship-item">
-                            <div class="scholarship-rank">Second Place</div>
-                            <div class="scholarship-amount">1500 SOM</div>
-                        </div>
-                        <div class="scholarship-item">
-                            <div class="scholarship-rank">Third Place</div>
-                            <div class="scholarship-amount">1000 SOM</div>
-                        </div>
-                    </div>
-                    
+                    <h2 class="section-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        SCHOLARSHIPS
+                    </h2>
+
                     <div class="info-card">
-                        <p><strong>Note:</strong> Scholarships are granted for one semester only and cannot be combined with 100% or 50% discounts.</p>
+                        <div class="scholarship-intro">
+                            <p>Starting from second year in case of success, three students with top three GPA, from each department awarded scholarships in amount of:</p>
+                        </div>
+                        
+                        <div class="scholarship-grid">
+                            <div class="scholarship-item">
+                                <div class="scholarship-medal gold">
+                                    <i class="fas fa-crown"></i>
+                                </div>
+                                <div class="scholarship-rank">First Place</div>
+                                <div class="scholarship-amount">2000 soms</div>
+                            </div>
+                            <div class="scholarship-item">
+                                <div class="scholarship-medal silver">
+                                    <i class="fas fa-medal"></i>
+                                </div>
+                                <div class="scholarship-rank">Second Place</div>
+                                <div class="scholarship-amount">1500 soms</div>
+                            </div>
+                            <div class="scholarship-item">
+                                <div class="scholarship-medal bronze">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div class="scholarship-rank">Third Place</div>
+                                <div class="scholarship-amount">1000 soms</div>
+                            </div>
+                        </div>
+
+                        <div class="scholarship-notes">
+                            <div class="note-item">
+                                <i class="fas fa-info-circle"></i>
+                                <p><strong>Note 1:</strong> Scholarships are granted for one semester only.</p>
+                            </div>
+                            <div class="note-item">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <p><strong>Note 2:</strong> Beside the scholarship for social activity, student can take either discount or another scholarship. For example, students who studied with a discount of 100% or 50% cannot take the scholarship.</p>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
-                <!-- Final Notes -->
+                <!-- Important Information -->
                 <section class="admission-section">
-                    <div class="important-note">
-                        <div class="note-header">System Update</div>
-                        <p>All information provided is valid for the 2013-2014 Academic Year and is subject to change in subsequent academic years.</p>
-                        <p><strong>Last Updated:</strong> February 24, 2012</p>
+                    <div class="important-notice">
+                        <div class="notice-header">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <h3>IMPORTANT SYSTEM NOTICE</h3>
+                        </div>
+                        <div class="notice-content">
+                            <p>All of the above information is valid during 2013-2014 Academic Years and is maybe different next Academic Year.</p>
+                            <div class="update-info">
+                                <i class="fas fa-sync"></i>
+                                <span>Updated on: 24.02.2012</span>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
         </div>
     </main>
 
-    <!-- Footer (same as main page) -->
+    <!-- Footer -->
     <footer class="footer">
-        <!-- Your footer content from main page -->
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <h5>SYSTEM STATUS</h5>
+                        <div class="status-line">
+                            <span class="status-dot online"></span>
+                            <span>Admission System Operational</span>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h5>QUICK LINKS</h5>
+                        <a href="../department/contact-us.html">Contact Hub</a>
+                        <a href="../program/faq.html">FAQ</a>
+                        <a href="../labs/labs.html">Access Labs</a>
+                    </div>
+                    <div class="footer-section">
+                        <p class="copyright">&copy; 2024 COMPUTER SCIENCE DEPARTMENT</p>
+                        <p class="university">ALA-TOO INTERNATIONAL UNIVERSITY</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../js/modern-script.js"></script>
-    <script src="../js/admission.js"></script>
+    <script src="admission.js"></script>
 </body>
 </html>
