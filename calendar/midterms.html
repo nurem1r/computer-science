@@ -1,148 +1,1060 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterms Schedule | AIU - Department of Future Technologies</title>
 
-<html>
-
-<head lang="en">
-
-	<meta charset="UTF-8">
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Midterms | CS AIU</title>
-
-	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
-	<link rel="stylesheet" type="text/css" href="../css/text.css" />
-	<link rel="stylesheet" type="text/css" href="../css/960.css" />
-	<link rel="stylesheet" type="text/css" href="../css/style.css" />
-
+    <!-- Modern CSS Framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/modern-style.css">
 </head>
 
 <body>
+    <!-- Animated Background -->
+    <div class="animated-grid"></div>
+    <div class="background-glows">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+    </div>
 
-	<div id="container">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <div class="logo-effect">
+                        <img src="../images/logo.png" alt="Computer Science Department" class="logo">
+                        <div class="glitch-effect"></div>
+                    </div>
+                    <div class="brand-text">
+                        <span>Ala-Too International University</span>
+                        <div class="accent-line"></div>
+                    </div>
+                </div>
 
-		<!-- HEADER -->
-		<div id="header-wrap">
-		<div id="header" class="container_16">
-			<div id="logo" class="grid_5">
-				<img alt="Computer Science Department" src="../images/logo.png" />
-			</div>
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <div class="menu-bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
 
-			<!--Navigation-->
-			<div id="nav" class="grid_11">
-				<ul>
-					<li><a href="../index.html">Home</a></li>
-					<li>
-						<a href="javascript:void(0)">Department</a>
-						<ul id="department">
-							<li><a href="../department/news.html">News</a></li>
-							<li><a href="../department/developments.html">Developments</a></li>
-							<li><a href="http://ic.iaau.edu.kg" target="_blank">Exchange Programs</a></li>
-							<li><a href="../department/prospective-students.html">Prospective Students</a></li>
-							<li><a href="../department/alumni.html">Alumni</a></li>
-							<li><a href="../department/contact-us.html" >Contact Us</a></li>
-							<li><a href="../department/info.html" >Info</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="javascript:void(0)">Bachelor Program</a>
-						<ul id="program">
-							<li><a href="../program/courses.html">Courses</a></li>
-							<li><a href="../program/research.html">Research</a></li>
-							<li><a href="../program/degree-guide.html">Degree Guide</a></li>
-							<li><a href="../program/recent-diplomas.html">Recent Diplomas</a></li>
-							<li><a href="../program/exam_rules.html">Exam Rules</a></li>
-							<li><a href="../program/admission.html">Admission</a></li>
-							<li><a href="../program/faq.html">FAQ</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="javascript:void(0)">Master Degree</a>
-						<ul id="master">
-                            <li><a href="../grad/overview.html">Overview</a></li>
-                            <li><a href="../grad/grad-courses.html">Courses</a></li>
-                            <li><a href="../grad/grad-research.html">Graduate Research</a></li>
-                            <li><a href="../grad/grad-admission.html">Admission</a></li>
+                <!-- Navigation -->
+                <ul class="nav-menu" id="navMenu">
+                    <li>
+                        <a href="../index.html" class="nav-link">
+                            <i class="fas fa-terminal"></i>
+                            <span>Home</span>
+                            <div class="nav-pulse"></div>
+                        </a>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Department</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../department/news.html"><i class="fas fa-broadcast-tower"></i> News Feed</a>
+                            </li>
+                            <li>
+                                <a href="../department/developments.html"><i class="fas fa-chart-network"></i> Developments</a>
+                            </li>
+                            <li>
+                                <a href="http://ic.iaau.edu.kg" target="_blank"><i class="fas fa-sync-alt"></i> Exchange Programs</a>
+                            </li>
+                            <li>
+                                <a href="../department/prospective-students.html"><i class="fas fa-user-astronaut"></i> Prospective Students</a>
+                            </li>
+                            <li>
+                                <a href="../department/alumni.html"><i class="fas fa-users-cog"></i> Alumni Network</a>
+                            </li>
+                            <li>
+                                <a href="../department/contact-us.html"><i class="fas fa-satellite-dish"></i> Contact Hub</a>
+                            </li>
+                            <li>
+                                <a href="../department/info.html"><i class="fas fa-database"></i> System Info</a>
+                            </li>
                         </ul>
-					</li>
-					<li>
-						<a href="javascript:void(0)" >Calendar</a>
-						<ul id="calendar">
-							<li><a href="calendar/academic-calendar.html" target="_blank">Academic Calendar</a></li>
-							<li><a href="../calendar/schedule-of-lectures.html">Schedule of Lectures</a></li>
-							<li><a href="../calendar/midterms.html">Midterms Schedule</a></li>
-							<li><a href="../calendar/finals.html">Finals Schedule</a></li>
-							<li><a href="../calendar/labs.html">Labs Schedule</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="../faculty/faculty.html">Faculty</a>
-					</li>
-					<li>
-						<a href="../labs/labs.html">Labs</a>
-						<ul id="labs">
-							<li><a href="http://its.iaau.edu.kg/policies/lab-rules.html" target="_blank">Policy &amp;
-								Regulations</a></li>
-							<li><a href="../labs/software.html">Software</a></li>
-							<li><a href="../department/contact-us.html">Contacts</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
+                    </li>
 
-		<!-- CONTENT -->
-		<div id="wrap-content">
-			<div id="content" class="container_12">
-                <iframe width='1068' height='1600' frameborder='0' src="https://docs.google.com/spreadsheets/d/17uojWxnj6dpATBBsdfndOIYhj7id46QTI_tTszR5gb4/pubhtml?gid=157992629&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-		    </div>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-microchip"></i>
+                            <span>Bachelor Program</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../program/courses.html"><i class="fas fa-code"></i> Courses</a>
+                            </li>
+                            <li>
+                                <a href="../program/research.html"><i class="fas fa-brain"></i> AI Research</a>
+                            </li>
+                            <li>
+                                <a href="../program/degree-guide.html"><i class="fas fa-map-marked-alt"></i> Degree Guide</a>
+                            </li>
+                            <li>
+                                <a href="../program/recent-diplomas.html"><i class="fas fa-certificate"></i> Recent Diplomas</a>
+                            </li>
+                            <li>
+                                <a href="../program/exam_rules.html"><i class="fas fa-shield-alt"></i> Exam Protocols</a>
+                            </li>
+                            <li>
+                                <a href="../program/admission.html"><i class="fas fa-user-lock"></i> Admission</a>
+                            </li>
+                            <li>
+                                <a href="../program/faq.html"><i class="fas fa-question-circle"></i> FAQ</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-robot"></i>
+                            <span>Master Degree</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../grad/overview.html"><i class="fas fa-eye"></i> System Overview</a>
+                            </li>
+                            <li>
+                                <a href="../grad/grad-courses.html"><i class="fas fa-cogs"></i> Program Modules</a>
+                            </li>
+                            <li>
+                                <a href="../grad/grad-research.html"><i class="fas fa-flask"></i> Advanced Research</a>
+                            </li>
+                            <li>
+                                <a href="../grad/grad-admission.html"><i class="fas fa-user-shield"></i> Secure Admission</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link active">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Calendar</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../calendar/academic-calendar.html" target="_blank"><i class="fas fa-calendar"></i> Academic Calendar</a>
+                            </li>
+                            <li>
+                                <a href="../calendar/schedule-of-lectures.html"><i class="fas fa-clock"></i> Lecture Schedule</a>
+                            </li>
+                            <li>
+                                <a href="../calendar/midterms.html"><i class="fas fa-file-code"></i> Midterms Schedule</a>
+                            </li>
+                            <li>
+                                <a href="../calendar/finals.html"><i class="fas fa-graduation-cap"></i> Finals Schedule</a>
+                            </li>
+                            <li>
+                                <a href="../calendar/labs.html"><i class="fas fa-desktop"></i> Labs Schedule</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="../faculty/faculty.html" class="nav-link">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Faculty</span>
+                            <div class="nav-pulse"></div>
+                        </a>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="../labs/labs.html" class="nav-link">
+                            <i class="fas fa-server"></i>
+                            <span>Data Labs</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="http://its.iaau.edu.kg/policies/lab-rules.html" target="_blank"><i class="fas fa-clipboard-list"></i> Security Protocols</a>
+                            </li>
+                            <li>
+                                <a href="../labs/software.html"><i class="fas fa-download"></i> Software Repository</a>
+                            </li>
+                            <li>
+                                <a href="../department/contact-us.html"><i class="fas fa-address-book"></i> Lab Contacts</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
-                <!--<div id="st-accordion" class="st-accordion grid_12">
-						<ul id="schedule">
-							<li></li>
-						</ul>
-					</div>-->
-		<!-- END OF CONTENT -->
+    </header>
 
-		<!-- FOOTER -->
-		<div id="footer-wrap" >
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Main Header -->
+            <div class="main-header">
+                <div class="scanline"></div>
+                <h2 class="main-title">MIDTERMS SCHEDULE</h2>
+                <div class="terminal-prompt">
+                    <span class="prompt-sign">></span>
+                    <span class="prompt-text">Accessing midterm examination database...</span>
+                    <span class="cursor">|</span>
+                </div>
+            </div>
 
-			<div id="footer" class="container_12">
+            <!-- Exam Status Overview -->
+            <section class="info-section">
+                <div class="card full-width">
+                    <div class="card-glow"></div>
+                    <h3 class="section-heading">
+                        <span class="heading-icon"><i class="fas fa-tachometer-alt"></i></span>
+                        EXAMINATION STATUS OVERVIEW
+                    </h3>
+                    <div class="status-grid">
+                        <div class="status-item">
+                            <div class="status-icon upcoming">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="status-info">
+                                <div class="status-number">12</div>
+                                <div class="status-label">Upcoming Exams</div>
+                            </div>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-icon active">
+                                <i class="fas fa-running"></i>
+                            </div>
+                            <div class="status-info">
+                                <div class="status-number">3</div>
+                                <div class="status-label">Ongoing Exams</div>
+                            </div>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-icon completed">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="status-info">
+                                <div class="status-number">8</div>
+                                <div class="status-label">Completed Exams</div>
+                            </div>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-icon warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="status-info">
+                                <div class="status-number">2</div>
+                                <div class="status-label">Rescheduled</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-				<p class="f-left">&copy; 2017 CS Dept. AIU</p>
+            <!-- Content Grid -->
+            <div class="content-grid">
+                <!-- Left Column - Filters & Info -->
+                <div class="left-column">
+                    <!-- Quick Actions -->
+                    <section class="info-section">
+                        <div class="card">
+                            <div class="card-glow"></div>
+                            <h3 class="section-heading">
+                                <span class="heading-icon"><i class="fas fa-bolt"></i></span>
+                                QUICK ACTIONS
+                            </h3>
 
-			</div>
+                            <div class="quick-actions">
+                                <a href="#" class="action-button">
+                                    <i class="fas fa-print"></i>
+                                    <span>Print Schedule</span>
+                                </a>
+                                <a href="#" class="action-button">
+                                    <i class="fas fa-bell"></i>
+                                    <span>Set Reminders</span>
+                                </a>
+                                <a href="#" class="action-button">
+                                    <i class="fas fa-calendar-plus"></i>
+                                    <span>Add to Calendar</span>
+                                </a>
+                                <a href="../program/exam_rules.html" class="action-button">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>Exam Rules</span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
 
-		</div>
-		<!-- END OF FOOTER -->
-	</div>
+                    <!-- Important Dates -->
+                    <section class="info-section">
+                        <div class="card">
+                            <div class="card-glow"></div>
+                            <h3 class="section-heading">
+                                <span class="heading-icon"><i class="fas fa-exclamation-circle"></i></span>
+                                KEY DATES
+                            </h3>
 
-	<!-- JAVASCRIPT -->
-	<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="../js/jquery.accordion.js"></script>
-	<script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="../js/highlight.js"></script>
+                            <div class="key-dates">
+                                <div class="date-item">
+                                    <div class="date-badge urgent">
+                                        <i class="fas fa-fire"></i>
+                                    </div>
+                                    <div class="date-info">
+                                        <div class="date-title">Midterms Period</div>
+                                        <div class="date-range">Oct 15 - Oct 26, 2024</div>
+                                    </div>
+                                </div>
+                                <div class="date-item">
+                                    <div class="date-badge info">
+                                        <i class="fas fa-info-circle"></i>
+                                    </div>
+                                    <div class="date-info">
+                                        <div class="date-title">Grade Submission</div>
+                                        <div class="date-range">Due: Nov 2, 2024</div>
+                                    </div>
+                                </div>
+                                <div class="date-item">
+                                    <div class="date-badge warning">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="date-info">
+                                        <div class="date-title">Appeal Deadline</div>
+                                        <div class="date-range">Nov 5, 2024</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
-	<script type="text/javascript">
-			$(function() {
+                    <!-- Upcoming Exams -->
+                    <section class="info-section">
+                        <div class="card">
+                            <div class="card-glow"></div>
+                            <h3 class="section-heading">
+                                <span class="heading-icon"><i class="fas fa-hourglass-half"></i></span>
+                                NEXT 7 DAYS
+                            </h3>
 
-				$('#st-accordion').accordion();
+                            <div class="upcoming-exams">
+                                <div class="exam-item">
+                                    <div class="exam-date">
+                                        <div class="exam-day">MON</div>
+                                        <div class="exam-date-num">21</div>
+                                    </div>
+                                    <div class="exam-details">
+                                        <div class="exam-course">CS-201: Data Structures</div>
+                                        <div class="exam-time">09:00 - 11:00</div>
+                                        <div class="exam-room">Room 301</div>
+                                    </div>
+                                </div>
+                                <div class="exam-item">
+                                    <div class="exam-date">
+                                        <div class="exam-day">TUE</div>
+                                        <div class="exam-date-num">22</div>
+                                    </div>
+                                    <div class="exam-details">
+                                        <div class="exam-course">CS-305: Algorithms</div>
+                                        <div class="exam-time">14:00 - 16:00</div>
+                                        <div class="exam-room">Room 205</div>
+                                    </div>
+                                </div>
+                                <div class="exam-item">
+                                    <div class="exam-date">
+                                        <div class="exam-day">WED</div>
+                                        <div class="exam-date-num">23</div>
+                                    </div>
+                                    <div class="exam-details">
+                                        <div class="exam-course">MATH-255: Calculus II</div>
+                                        <div class="exam-time">10:00 - 12:00</div>
+                                        <div class="exam-room">Room 102</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
 
-			});
+                <!-- Right Column - Schedule -->
+                <div class="right-column">
+                    <div class="card">
+                        <div class="card-glow"></div>
+                        <div class="schedule-header">
+                            <h3 class="section-heading">
+                                <span class="heading-icon"><i class="fas fa-file-code"></i></span>
+                                COMPLETE MIDTERMS SCHEDULE
+                            </h3>
+                            <div class="schedule-actions">
+                                <button class="accent-button small" id="exportSchedule">
+                                    <span class="button-text">EXPORT</span>
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="accent-button small" id="refreshSchedule">
+                                    <span class="button-text">REFRESH</span>
+                                    <i class="fas fa-sync"></i>
+                                </button>
+                            </div>
+                        </div>
 
-			$('table tbody tr:nth-child(odd)').addClass('odd');
-			$('table tbody tr:nth-child(even)').addClass('even');
-		</script>
+                        <!-- Google Sheets Integration -->
+                        <div class="schedule-container">
+                            <div class="iframe-overlay">
+                                <div class="loading-spinner">
+                                    <i class="fas fa-sync fa-spin"></i>
+                                    <span>Loading Midterms Schedule...</span>
+                                </div>
+                            </div>
+                            <iframe
+                                id="scheduleFrame"
+                                src="https://docs.google.com/spreadsheets/d/17uojWxnj6dpATBBsdfndOIYhj7id46QTI_tTszR5gb4/pubhtml?gid=157992629&amp;single=true&amp;widget=true&amp;headers=false"
+                                frameborder="0"
+                                loading="lazy">
+                            </iframe>
+                        </div>
 
-	<!--Google-->
-	<script>
-			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                        <div class="schedule-footer">
+                            <div class="last-update">
+                                <i class="fas fa-clock"></i>
+                                Last updated: <span id="updateTime">Loading...</span>
+                            </div>
+                            <div class="data-source">
+                                <i class="fas fa-database"></i>
+                                Source: Examination Office Database
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-			  ga('create', 'UA-46202546-1', 'iaau.edu.kg');
-			  ga('send', 'pageview');
-		</script>
+            <!-- Exam Preparation Resources -->
+            <section class="mission-section">
+                <div class="section-header">
+                    <div class="header-line"></div>
+                    <h3>EXAM PREPARATION RESOURCES</h3>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="mission-grid">
+                    <div class="card mission-card">
+                        <div class="card-glow"></div>
+                        <div class="mission-icon">
+                            <i class="fas fa-book"></i>
+                            <div class="icon-ring"></div>
+                        </div>
+                        <h4>STUDY MATERIALS</h4>
+                        <div class="divider-small"></div>
+                        <ul class="mission-list">
+                            <li>
+                                <span class="list-bullet">></span> Lecture notes and slides
+                            </li>
+                            <li>
+                                <span class="list-bullet">></span> Previous exam papers
+                            </li>
+                            <li>
+                                <span class="list-bullet">></span> Practice problems
+                            </li>
+                            <li>
+                                <span class="list-bullet">></span> Reference books
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card mission-card">
+                        <div class="card-glow"></div>
+                        <div class="mission-icon">
+                            <i class="fas fa-users"></i>
+                            <div class="icon-ring"></div>
+                        </div>
+                        <h4>SUPPORT SERVICES</h4>
+                        <div class="divider-small"></div>
+                        <ul class="mission-list">
+                            <li>
+                                <span class="list-bullet">></span> Professor office hours
+                            </li>
+                            <li>
+                                <span class="list-bullet">></span> Teaching assistants
+                            </li>
+                            <li>
+                                <span class="list-bullet">></span> Study groups
+                            </li>
+                            <li>
+                                <span class="list-bullet">></span> Online forums
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card mission-card">
+                        <div class="card-glow"></div>
+                        <div class="mission-icon">
+                            <i class="fas fa-first-aid"></i>
+                            <div class="icon-ring"></div>
+                        </div>
+                        <h4>EXAM SUPPORT</h4>
+                        <div class="divider-small"></div>
+                        <ul class="mission-list">
+                            <li>
+                                <span class="list-bullet">></span> Special accommodations
+                            </li>
+                            <li>
+                                <span class="list-bullet">></span> Technical support
+                            </li>
+                            <li>
+                                <span class="list-bullet">></span> Emergency contacts
+                            </li>
+                            <li>
+                                <span class="list-bullet">></span> Counseling services
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Emergency Contact -->
+            <section class="info-section">
+                <div class="card full-width emergency-contact">
+                    <div class="card-glow"></div>
+                    <h3 class="section-heading">
+                        <span class="heading-icon"><i class="fas fa-phone-alt"></i></span>
+                        EXAMINATION SUPPORT
+                    </h3>
+                    <div class="emergency-grid">
+                        <div class="emergency-item">
+                            <i class="fas fa-user-tie"></i>
+                            <div class="emergency-info">
+                                <div class="emergency-title">Exam Coordinator</div>
+                                <div class="emergency-detail">Dr. Aisha Kumar</div>
+                                <div class="emergency-contact">ext. 245 | room 412</div>
+                            </div>
+                        </div>
+                        <div class="emergency-item">
+                            <i class="fas fa-headset"></i>
+                            <div class="emergency-info">
+                                <div class="emergency-title">Technical Support</div>
+                                <div class="emergency-detail">ITS Help Desk</div>
+                                <div class="emergency-contact">ext. 100 | help@aiu.edu.kg</div>
+                            </div>
+                        </div>
+                        <div class="emergency-item">
+                            <i class="fas fa-clipboard-check"></i>
+                            <div class="emergency-info">
+                                <div class="emergency-title">Academic Office</div>
+                                <div class="emergency-detail">Registrar's Office</div>
+                                <div class="emergency-contact">ext. 200 | registrar@aiu.edu.kg</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <h5>SYSTEM STATUS</h5>
+                        <div class="status-line">
+                            <span class="status-dot online"></span>
+                            <span>Examination System Operational</span>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h5>QUICK LINKS</h5>
+                        <a href="../department/contact-us.html">Contact Hub</a>
+                        <a href="../program/admission.html">Join System</a>
+                        <a href="../labs/labs.html">Access Labs</a>
+                    </div>
+                    <div class="footer-section">
+                        <p class="copyright">&copy; 2024 COMPUTER SCIENCE DEPARTMENT</p>
+                        <p class="university">ALA-TOO INTERNATIONAL UNIVERSITY</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/modern-script.js"></script>
+
+    <style>
+        /* Additional styles for midterms page */
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: rgba(31, 41, 55, 0.5);
+            border-radius: 8px;
+            border: 1px solid var(--graphite);
+            transition: var(--transition);
+        }
+
+        .status-item:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-2px);
+        }
+
+        .status-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .status-icon.upcoming {
+            background: rgba(255, 170, 0, 0.1);
+            color: var(--warning);
+            border: 2px solid var(--warning);
+        }
+
+        .status-icon.active {
+            background: rgba(0, 240, 255, 0.1);
+            color: var(--accent-blue);
+            border: 2px solid var(--accent-blue);
+        }
+
+        .status-icon.completed {
+            background: rgba(0, 255, 136, 0.1);
+            color: var(--success);
+            border: 2px solid var(--success);
+        }
+
+        .status-icon.warning {
+            background: rgba(255, 0, 102, 0.1);
+            color: var(--danger);
+            border: 2px solid var(--danger);
+        }
+
+        .status-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1;
+        }
+
+        .status-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .quick-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .action-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            background: rgba(31, 41, 55, 0.5);
+            border: 1px solid var(--graphite);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .action-button:hover {
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+            transform: translateY(-2px);
+        }
+
+        .action-button i {
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .action-button span {
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .key-dates {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .date-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(31, 41, 55, 0.3);
+            border-radius: 6px;
+            border-left: 4px solid transparent;
+        }
+
+        .date-item:hover {
+            background: rgba(31, 41, 55, 0.5);
+        }
+
+        .date-badge {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .date-badge.urgent {
+            background: rgba(255, 0, 102, 0.1);
+            color: var(--danger);
+            border: 2px solid var(--danger);
+        }
+
+        .date-badge.info {
+            background: rgba(0, 240, 255, 0.1);
+            color: var(--accent-blue);
+            border: 2px solid var(--accent-blue);
+        }
+
+        .date-badge.warning {
+            background: rgba(255, 170, 0, 0.1);
+            color: var(--warning);
+            border: 2px solid var(--warning);
+        }
+
+        .date-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .date-range {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .upcoming-exams {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .exam-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(31, 41, 55, 0.3);
+            border-radius: 6px;
+            border-left: 4px solid var(--accent-blue);
+            transition: var(--transition);
+        }
+
+        .exam-item:hover {
+            background: rgba(31, 41, 55, 0.5);
+            transform: translateX(5px);
+        }
+
+        .exam-date {
+            text-align: center;
+            padding: 0.5rem;
+            background: var(--accent-transparent);
+            border-radius: 4px;
+            min-width: 60px;
+        }
+
+        .exam-day {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .exam-date-num {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1;
+        }
+
+        .exam-course {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .exam-time, .exam-room {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .emergency-contact {
+            border-left: 4px solid var(--danger);
+        }
+
+        .emergency-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .emergency-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .emergency-item i {
+            font-size: 2rem;
+            color: var(--accent-blue);
+            margin-top: 0.25rem;
+        }
+
+        .emergency-title {
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.9rem;
+        }
+
+        .emergency-detail {
+            color: var(--accent-blue);
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .emergency-contact {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .schedule-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .schedule-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .accent-button.small {
+            padding: 0.6rem 1.2rem;
+            font-size: 0.8rem;
+        }
+
+        .schedule-container {
+            position: relative;
+            border: 1px solid var(--graphite);
+            border-radius: 4px;
+            overflow: hidden;
+            height: 600px;
+            background: var(--bg-primary);
+        }
+
+        .schedule-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .iframe-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--bg-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: opacity 0.3s ease;
+        }
+
+        .iframe-overlay.loaded {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loading-spinner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            color: var(--accent-blue);
+        }
+
+        .loading-spinner i {
+            font-size: 2rem;
+        }
+
+        .schedule-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--graphite);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .last-update, .data-source {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        @media (max-width: 968px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .status-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .emergency-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .quick-actions {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .status-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .schedule-header {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+
+            .schedule-footer {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: flex-start;
+            }
+
+            .schedule-container {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .schedule-container {
+                height: 300px;
+            }
+
+            .exam-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+
+            .exam-date {
+                align-self: center;
+            }
+        }
+    </style>
+
+    <script>
+        // Midterms page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Update timestamp
+            const updateTime = document.getElementById('updateTime');
+            if (updateTime) {
+                updateTime.textContent = new Date().toLocaleString();
+            }
+
+            // Handle iframe loading
+            const scheduleFrame = document.getElementById('scheduleFrame');
+            const iframeOverlay = document.querySelector('.iframe-overlay');
+
+            if (scheduleFrame && iframeOverlay) {
+                scheduleFrame.addEventListener('load', function() {
+                    setTimeout(() => {
+                        iframeOverlay.classList.add('loaded');
+                    }, 1000);
+                });
+            }
+
+            // Export functionality
+            const exportBtn = document.getElementById('exportSchedule');
+            if (exportBtn) {
+                exportBtn.addEventListener('click', function() {
+                    alert('Midterms schedule export initiated. This would download the current schedule view.');
+                });
+            }
+
+            // Refresh functionality
+            const refreshBtn = document.getElementById('refreshSchedule');
+            if (refreshBtn) {
+                refreshBtn.addEventListener('click', function() {
+                    iframeOverlay.classList.remove('loaded');
+                    iframeOverlay.querySelector('span').textContent = 'Refreshing schedule data...';
+
+                    // Reload the iframe
+                    scheduleFrame.src = scheduleFrame.src;
+
+                    // Update timestamp
+                    updateTime.textContent = new Date().toLocaleString();
+                });
+            }
+
+            // Add click handlers for action buttons
+            document.querySelectorAll('.action-button').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    if (!this.getAttribute('href')) {
+                        e.preventDefault();
+                        const action = this.querySelector('span').textContent;
+                        alert(`${action} functionality would be implemented here.`);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
-
 </html>
