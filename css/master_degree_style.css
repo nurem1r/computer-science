@@ -280,3 +280,323 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #00F0FF;
 }
+
+
+
+/* =============================================================================
+   MAIN CSS FILE FOR MASTER DEGREE PAGE
+   ========================================================================== */
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0A0E17;
+    color: #F9FAFB;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+#container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+#header-wrap {
+    background: linear-gradient(135deg, #0A0E17 0%, #1F2937 100%);
+    border-bottom: 2px solid #00F0FF;
+    box-shadow: 0 4px 20px rgba(0, 240, 255, 0.1);
+}
+
+#header {
+    padding: 20px 0;
+}
+
+#logo img {
+    max-height: 60px;
+    filter: brightness(0) invert(1);
+}
+
+/* Navigation Styles */
+#nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+}
+
+#nav > ul > li {
+    position: relative;
+}
+
+#nav > ul > li > a {
+    display: block;
+    padding: 12px 20px;
+    color: #F9FAFB;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+#nav > ul > li > a:hover {
+    background-color: rgba(0, 240, 255, 0.1);
+    color: #00F0FF;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+}
+
+/* Dropdown Menus */
+#nav ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #1F2937;
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    border: 1px solid #00F0FF;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+#nav ul li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#nav ul ul li {
+    width: 100%;
+}
+
+#nav ul ul a {
+    display: block;
+    padding: 12px 15px;
+    color: #F9FAFB;
+    border-bottom: 1px solid rgba(31, 41, 55, 0.8);
+    transition: all 0.3s ease;
+}
+
+#nav ul ul a:hover {
+    background-color: rgba(0, 240, 255, 0.1);
+    color: #00F0FF;
+    padding-left: 20px;
+}
+
+#nav ul ul li:last-child a {
+    border-bottom: none;
+}
+
+/* Content Styles */
+#wrap-content {
+    flex: 1;
+    background-color: #0A0E17;
+    padding: 40px 0;
+}
+
+#content {
+    background: rgba(31, 41, 55, 0.3);
+    border-radius: 12px;
+    padding: 40px;
+    border: 1px solid #1F2937;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* University Logos */
+#content img {
+    margin: 10px 20px 20px 0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+#content img:hover {
+    border-color: #00F0FF;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Main Heading */
+#content h1:first-of-type {
+    font-size: 36px;
+    margin-bottom: 5px;
+    text-shadow: 0 0 15px rgba(0, 240, 255, 0.7);
+}
+
+#content h2:first-of-type {
+    font-size: 20px;
+    text-align: center;
+    color: #F9FAFB;
+    margin-bottom: 30px;
+    border: none;
+    padding: 0;
+    opacity: 0.9;
+}
+
+/* Program Sections */
+#content h2 {
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.1) 0%, transparent 100%);
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #1F2937;
+    margin: 40px 0 20px 0;
+    position: relative;
+}
+
+#content h2:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: #00F0FF;
+    border-radius: 2px;
+}
+
+/* Paragraph Styling */
+#content p {
+    background: rgba(31, 41, 55, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#content p:hover {
+    border-left-color: #00F0FF;
+    background: rgba(31, 41, 55, 0.4);
+}
+
+/* Support Section */
+#content h3 {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 22px;
+    border: none;
+    padding: 0;
+}
+
+#content h3 + img {
+    display: block;
+    margin: 20px auto;
+}
+
+/* Support Logos */
+#content img[alt*="DAAD"],
+#content img[alt*="BMBF"] {
+    margin: 15px;
+    border: 2px solid #1F2937;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#content img[alt*="DAAD"]:hover,
+#content img[alt*="BMBF"]:hover {
+    border-color: #00F0FF;
+    background: rgba(0, 240, 255, 0.05);
+}
+
+/* Footer Styles */
+#footer-wrap {
+    background: linear-gradient(135deg, #1F2937 0%, #0A0E17 100%);
+    border-top: 2px solid #00F0FF;
+    margin-top: auto;
+    padding: 25px 0;
+}
+
+#footer {
+    text-align: center;
+    color: #F9FAFB;
+}
+
+.f-left {
+    color: #00F0FF;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 959px) {
+    #nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    #nav > ul > li > a {
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(31, 41, 55, 0.5);
+    }
+    
+    #nav ul ul {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        background: rgba(31, 41, 55, 0.5);
+    }
+    
+    #content {
+        padding: 20px;
+    }
+    
+    #content img {
+        max-width: 100%;
+        height: auto;
+        margin: 10px auto;
+        display: block;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1F2937;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00F0FF;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0088cc;
+}
+
+/* Animation for important elements */
+@keyframes subtle-glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(0, 240, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+    }
+}
+
+.highlight {
+    animation: subtle-glow 3s ease-in-out infinite;
+}
+
+/* Separator line */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00F0FF, transparent);
+    margin: 40px 0;
+}
