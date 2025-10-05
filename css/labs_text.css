@@ -66,3 +66,113 @@ a:hover {
     font-family: 'JetBrains Mono', monospace;
     font-weight: 700;
 }
+
+
+
+
+
+
+
+
+
+/* =============================================================================
+   CSS TYPOGRAPHY
+   ========================================================================== */
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #F9FAFB;
+    background-color: #0A0E17;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    color: #00F0FF;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 22px;
+    border-bottom: 2px solid #1F2937;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 18px;
+    color: #F9FAFB;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h5 {
+    font-size: 14px;
+    color: #00F0FF;
+    font-weight: 400;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #F9FAFB;
+}
+
+a {
+    color: #00F0FF;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #F9FAFB;
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.7);
+}
+
+strong {
+    font-weight: 600;
+    color: #00F0FF;
+}
+
+em {
+    font-style: italic;
+}
+
+code {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: #1F2937;
+    padding: 2px 6px;
+    border-radius: 3px;
+    color: #00F0FF;
+    font-size: 12px;
+}
+
+pre {
+    background-color: #1F2937;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    border-left: 3px solid #00F0FF;
+    margin-bottom: 20px;
+}
+
+blockquote {
+    border-left: 4px solid #00F0FF;
+    padding-left: 20px;
+    margin-left: 0;
+    margin-bottom: 20px;
+    color: #F9FAFB;
+    background-color: rgba(31, 41, 55, 0.5);
+    padding: 15px 20px;
+    border-radius: 0 5px 5px 0;
+}
