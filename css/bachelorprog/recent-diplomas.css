@@ -1,164 +1,243 @@
 /* Recent Diplomas Specific Styles */
-#wrap-content {
-    margin-top: 2rem;
+.main-content {
+    padding: 2rem 0;
 }
 
-#content {
+.main-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.page-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Diplomas Container */
+.diplomas-container {
     background: var(--bg-secondary);
     border: 1px solid var(--graphite);
-    border-radius: 8px;
-    padding: 2rem;
+    border-radius: 16px;
     overflow: hidden;
-    transition: var(--transition);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
 }
 
-#content:hover {
-    border-color: var(--accent-blue);
-    box-shadow: 0 0 30px var(--accent-transparent);
+.diplomas-header {
+    background: linear-gradient(135deg, var(--graphite) 0%, var(--graphite-dark) 100%);
+    padding: 2rem;
+    border-bottom: 2px solid var(--accent-blue);
+    position: relative;
+    overflow: hidden;
 }
 
-#content table {
+.diplomas-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--accent-blue), var(--accent-purple));
+}
+
+.diplomas-header h3 {
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.diplomas-header h3 i {
+    color: var(--accent-blue);
+    font-size: 1.6rem;
+}
+
+/* Table Styles */
+.diplomas-table {
     width: 100%;
     border-collapse: collapse;
-    background: var(--bg-secondary);
+    font-family: 'Inter', sans-serif;
 }
 
-#content thead {
-    background: var(--graphite);
+.diplomas-table thead {
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 3px solid var(--accent-blue);
 }
 
-#content thead td {
-    padding: 1.5rem 1rem;
-    font-weight: 600;
+.diplomas-table thead tr {
+    height: 70px;
+}
+
+.diplomas-table thead td {
+    padding: 1.5rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
     color: var(--accent-blue);
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 0.9rem;
-    border-bottom: 2px solid var(--accent-blue);
+    position: relative;
 }
 
-#content tbody tr {
-    transition: var(--transition);
+.diplomas-table thead td:nth-child(1) {
+    width: 80px;
+    text-align: center;
+}
+
+.diplomas-table thead td:nth-child(2) {
+    text-align: center;
+    width: 60%;
+}
+
+.diplomas-table thead td:nth-child(3) {
+    width: 40%;
+}
+
+/* Table Body */
+.diplomas-table tbody tr {
+    transition: all 0.3s ease;
     border-bottom: 1px solid var(--graphite-light);
+    position: relative;
 }
 
-#content tbody tr:last-child {
+.diplomas-table tbody tr:last-child {
     border-bottom: none;
 }
 
-#content tbody tr:hover {
-    background: var(--accent-transparent);
-}
-
-#content tbody td {
-    padding: 1.2rem 1rem;
-    transition: var(--transition);
-}
-
-#content tbody tr:hover td {
+.diplomas-table tbody tr:hover {
+    background: linear-gradient(90deg, var(--accent-transparent) 0%, transparent 100%);
     transform: translateX(5px);
 }
 
-/* Column specific styles */
-#content tbody td:first-child {
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 600;
-    color: var(--accent-blue);
-    text-align: center;
-    width: 60px;
+.diplomas-table tbody tr:nth-child(even) {
+    background: rgba(0, 0, 0, 0.05);
 }
 
-#content tbody td:nth-child(2) {
+.diplomas-table tbody tr:nth-child(even):hover {
+    background: linear-gradient(90deg, var(--accent-transparent) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.diplomas-table tbody td {
+    padding: 1.5rem 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Column Specific Styles */
+.diplomas-table tbody td:first-child {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    color: var(--accent-blue);
+    text-align: center;
+    font-size: 1.1rem;
+    border-right: 1px solid var(--graphite-light);
+}
+
+.diplomas-table tbody td:nth-child(2) {
     font-weight: 500;
     color: var(--text-primary);
     text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-right: 1px solid var(--graphite-light);
 }
 
-#content tbody td:nth-child(3) {
+.diplomas-table tbody td:last-child {
     color: var(--text-secondary);
     font-style: italic;
+    font-size: 0.95rem;
 }
 
-/* Special row styling */
+/* Special Row Styling */
 .other-table-elements {
-    background: var(--accent-transparent);
+    background: linear-gradient(90deg, var(--accent-transparent) 0%, transparent 50%);
+    border-left: 4px solid var(--accent-blue);
 }
 
-.other-table-elements td {
-    border-left: 3px solid var(--accent-blue);
+.other-table-elements td:first-child {
+    color: var(--accent-purple);
+    font-weight: 800;
 }
 
-/* Responsive Design */
-@media (max-width: 968px) {
-    #content {
-        padding: 1.5rem;
-    }
-    
-    #content thead td,
-    #content tbody td {
-        padding: 1rem 0.75rem;
-        font-size: 0.85rem;
-    }
+/* Project Number Highlight */
+.project-number {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 12px rgba(0, 168, 255, 0.3);
 }
 
-@media (max-width: 768px) {
-    #content {
-        padding: 1rem;
-        border-radius: 6px;
-    }
-    
-    #content table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-    
-    #content thead td,
-    #content tbody td {
-        padding: 0.8rem 0.6rem;
-        font-size: 0.8rem;
-    }
+/* Hover Effects */
+.diplomas-table tbody tr:hover td:first-child {
+    transform: scale(1.1);
 }
 
-@media (max-width: 480px) {
-    #content {
-        padding: 0.5rem;
-    }
-    
-    #content thead td,
-    #content tbody td {
-        padding: 0.6rem 0.4rem;
-        font-size: 0.75rem;
-    }
-    
-    #content tbody td:first-child {
-        width: 40px;
-    }
+.diplomas-table tbody tr:hover td:nth-child(2) {
+    color: var(--accent-blue);
+    font-weight: 600;
 }
 
-/* Scrollbar styling */
-#content::-webkit-scrollbar {
-    height: 8px;
+.diplomas-table tbody tr:hover td:last-child {
+    color: var(--text-primary);
+    transform: translateX(5px);
 }
 
-#content::-webkit-scrollbar-track {
+/* Table Footer */
+.table-footer {
+    background: var(--graphite);
+    padding: 1.5rem 2rem;
+    border-top: 1px solid var(--graphite-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.pagination-info {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Scrollbar Styling */
+.diplomas-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.diplomas-container::-webkit-scrollbar-track {
     background: var(--bg-primary);
 }
 
-#content::-webkit-scrollbar-thumb {
-    background: var(--graphite);
+.diplomas-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--accent-blue), var(--accent-purple));
     border-radius: 4px;
 }
 
-#content::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-blue);
+.diplomas-container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--accent-purple), var(--accent-blue));
 }
 
-/* Animation for table rows */
-@keyframes fadeInRow {
+/* Animation for rows */
+@keyframes slideIn {
     from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -166,15 +245,109 @@
     }
 }
 
-#content tbody tr {
-    animation: fadeInRow 0.3s ease-out forwards;
+.diplomas-table tbody tr {
+    animation: slideIn 0.5s ease-out forwards;
 }
 
-/* Stagger animation for better visual effect */
-#content tbody tr:nth-child(odd) {
-    animation-delay: 0.05s;
-}
-
-#content tbody tr:nth-child(even) {
+/* Stagger animation */
+.diplomas-table tbody tr:nth-child(odd) {
     animation-delay: 0.1s;
+}
+
+.diplomas-table tbody tr:nth-child(even) {
+    animation-delay: 0.2s;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .diplomas-table thead td,
+    .diplomas-table tbody td {
+        padding: 1.25rem 1.5rem;
+    }
+}
+
+@media (max-width: 968px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .diplomas-container {
+        border-radius: 12px;
+        margin: 0 1rem;
+    }
+    
+    .diplomas-header {
+        padding: 1.5rem;
+    }
+    
+    .diplomas-table thead td,
+    .diplomas-table tbody td {
+        padding: 1rem 1.25rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .diplomas-container {
+        border-radius: 8px;
+        overflow-x: auto;
+    }
+    
+    .diplomas-table {
+        min-width: 800px;
+    }
+    
+    .diplomas-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .table-footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.8rem;
+    }
+    
+    .diplomas-header {
+        padding: 1rem;
+    }
+    
+    .diplomas-header h3 {
+        font-size: 1.1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .project-number {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .diplomas-container {
+        box-shadow: none;
+        border: 2px solid #000;
+    }
+    
+    .diplomas-table tbody tr {
+        break-inside: avoid;
+    }
 }
