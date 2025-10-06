@@ -15,7 +15,264 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="../css/modern-style.css" />
-        <link rel="stylesheet" href="../css/degree-guide.css" />
+        <style>
+            /* Degree Guide Specific Styles */
+            .content-grid-tables {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+                margin-bottom: 4rem;
+            }
+
+            .table-container {
+                background: var(--bg-secondary);
+                border: 1px solid var(--graphite);
+                border-radius: 12px;
+                overflow: hidden;
+                transition: var(--transition);
+                position: relative;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            }
+
+            .table-container:hover {
+                border-color: var(--accent-blue);
+                box-shadow: 0 0 30px var(--accent-transparent);
+                transform: translateY(-5px);
+            }
+
+            .table-header {
+                background: linear-gradient(135deg, var(--graphite) 0%, var(--graphite-dark) 100%);
+                padding: 1.5rem;
+                border-bottom: 1px solid var(--graphite-light);
+                position: relative;
+                overflow: hidden;
+            }
+
+            .table-header::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 4px;
+                height: 100%;
+                background: var(--accent-blue);
+            }
+
+            .table-header h3 {
+                color: var(--accent-blue);
+                font-size: 1.2rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin: 0;
+                position: relative;
+                z-index: 1;
+            }
+
+            .modern-table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            .modern-table td {
+                padding: 1rem 1.5rem;
+                border-bottom: 1px solid var(--graphite-light);
+                transition: var(--transition);
+                position: relative;
+            }
+
+            .modern-table tr:last-child td {
+                border-bottom: none;
+            }
+
+            .modern-table tr {
+                position: relative;
+            }
+
+            .modern-table tr::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 0;
+                background: linear-gradient(90deg, var(--accent-transparent) 0%, transparent 100%);
+                transition: width 0.3s ease;
+                z-index: 0;
+            }
+
+            .modern-table tr:hover::before {
+                width: 100%;
+            }
+
+            .modern-table tr:hover td {
+                transform: translateX(5px);
+            }
+
+            .modern-table a {
+                color: var(--text-secondary);
+                text-decoration: none;
+                transition: var(--transition);
+                display: block;
+                position: relative;
+                z-index: 1;
+            }
+
+            .modern-table a:hover {
+                color: var(--accent-blue);
+            }
+
+            /* Numbered rows */
+            .modern-table tbody tr td:first-child::before {
+                content: attr(data-number);
+                position: absolute;
+                left: 0.5rem;
+                top: 50%;
+                transform: translateY(-50%);
+                color: var(--accent-blue);
+                font-size: 0.8rem;
+                font-weight: 600;
+                opacity: 0.7;
+            }
+
+            /* Calendar Table */
+            .calendar-table th {
+                padding: 1rem 1.5rem;
+                text-align: left;
+                color: var(--accent-blue);
+                font-weight: 600;
+                border-bottom: 1px solid var(--graphite-light);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-size: 0.9rem;
+                background: rgba(0, 0, 0, 0.1);
+            }
+
+            .calendar-table td:first-child {
+                font-weight: 500;
+                color: var(--text-primary);
+            }
+
+            .calendar-table td:last-child {
+                color: var(--text-secondary);
+                font-family: 'JetBrains Mono', monospace;
+                font-size: 0.9rem;
+            }
+
+            .calendar-table a {
+                color: var(--accent-blue);
+                text-decoration: none;
+                border-bottom: 1px dashed var(--accent-blue);
+                transition: var(--transition);
+            }
+
+            .calendar-table a:hover {
+                border-bottom-style: solid;
+                background: var(--accent-transparent);
+            }
+
+            /* Status indicators for calendar */
+            .calendar-table tr:nth-child(-n+3) td:last-child::after {
+                content: 'UPCOMING';
+                background: var(--accent-blue);
+                color: white;
+                font-size: 0.7rem;
+                padding: 0.2rem 0.5rem;
+                border-radius: 4px;
+                margin-left: 0.5rem;
+                vertical-align: middle;
+            }
+
+            .calendar-table tr:nth-child(4) td:last-child::after {
+                content: 'CURRENT';
+                background: var(--accent-green);
+                color: white;
+                font-size: 0.7rem;
+                padding: 0.2rem 0.5rem;
+                border-radius: 4px;
+                margin-left: 0.5rem;
+                vertical-align: middle;
+            }
+
+            .calendar-table tr:nth-child(n+5) td:last-child::after {
+                content: 'COMPLETED';
+                background: var(--graphite);
+                color: white;
+                font-size: 0.7rem;
+                padding: 0.2rem 0.5rem;
+                border-radius: 4px;
+                margin-left: 0.5rem;
+                vertical-align: middle;
+            }
+
+            /* Responsive Design */
+            @media (max-width: 968px) {
+                .content-grid-tables {
+                    grid-template-columns: 1fr;
+                    gap: 1.5rem;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .modern-table td,
+                .calendar-table th,
+                .calendar-table td {
+                    padding: 0.75rem 1rem;
+                }
+                
+                .table-header {
+                    padding: 1rem;
+                }
+                
+                .table-header h3 {
+                    font-size: 1.1rem;
+                }
+                
+                .calendar-table tr td:last-child::after {
+                    display: block;
+                    margin-top: 0.3rem;
+                    margin-left: 0;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .modern-table td,
+                .calendar-table th,
+                .calendar-table td {
+                    padding: 0.6rem 0.75rem;
+                    font-size: 0.85rem;
+                }
+                
+                .calendar-table {
+                    display: block;
+                    overflow-x: auto;
+                }
+            }
+
+            /* Main title enhancement */
+            .main-title {
+                position: relative;
+                display: inline-block;
+            }
+
+            .main-title::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background: linear-gradient(90deg, var(--accent-blue) 0%, transparent 100%);
+                border-radius: 2px;
+            }
+
+            /* Section separators */
+            .section-separator {
+                height: 1px;
+                background: linear-gradient(90deg, transparent 0%, var(--graphite) 50%, transparent 100%);
+                margin: 2rem 0;
+            }
+        </style>
     </head>
 
     <body>
@@ -286,179 +543,178 @@
                         <table class="modern-table">
                             <tbody>
                                 <tr>
-                                    <td>
+                                    <td data-number="1">
                                         <a href="thesis/intro.html"
-                                            >1. Introduction: What is the M.Eng. Thesis</a
-                                        >?
+                                            > Introduction: What is the M.Eng. Thesis?</a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td data-number="2">
                                         <a href="thesis/adminreg.html"
-                                            >2. Administration and Registration</a
+                                            >Administration and Registration</a
                                         >
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><a href="thesis/campus.html">3. Off-Campus Theses</a></td>
+                                    <td data-number="3"><a href="thesis/campus.html">Off-Campus Theses</a></td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td data-number="4">
                                         <a href="thesis/copyright.html"
-                                            >4. Classification and Copyright</a
+                                            >Classification and Copyright</a
                                         >
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <a href="thesis/proposal.html">5. The Thesis Proposal</a>
+                                    <td data-number="5">
+                                        <a href="thesis/proposal.html">The Thesis Proposal</a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td data-number="6">
                                         <a href="thesis/grade.html"
-                                            >6. Thesis Grades: The Grade of J or the Grade of U
+                                            >Thesis Grades: The Grade of J or the Grade of U
                                         </a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><a href="thesis/start.html">7. When to Start</a></td>
+                                    <td data-number="7"><a href="thesis/start.html">When to Start</a></td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td data-number="8">
                                         <a href="thesis/supervisor-topic.html"
-                                            >8. The First Step: Finding a Topic and Supervisor</a
+                                            >The First Step: Finding a Topic and Supervisor</a
                                         >
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td data-number="9">
                                         <a href="thesis/topic.html"
-                                            >9. More Ways to Find a Thesis</a
+                                            >More Ways to Find a Thesis</a
                                         >
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td data-number="10">
                                         <a href="thesis/timing.html"
-                                            >10. Working on the Thesis and Avoiding Delay
+                                            >Working on the Thesis and Avoiding Delay
                                         </a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td data-number="11">
                                         <a href="thesis/completion.html"
-                                            >11. The Thesis Document and Finishing Up
+                                            >The Thesis Document and Finishing Up
                                         </a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td data-number="12">
                                         <a href="thesis/doc-specs.html"
-                                            >12. Other Documents: IAAU's Specifications for Thesis
+                                            >  Other Documents: IAAU's Specifications for Thesis
                                             Preparation, etc.</a
                                         >
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <a href="thesis/doc-specs.html">13. Writing an Abstract</a>
+                                    <td data-number="13">
+                                        <a href="thesis/doc-specs.html">Writing an Abstract</a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td data-number="14">
                                         <a href="thesis/doc-specs.html"
-                                            >14. Word Processors, Printers, and Paper</a
+                                            >Word Processors, Printers, and Paper</a
                                         >
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td data-number="15">
                                         <a href="thesis/doc-specs.html"
-                                            >15. Title Page and Copyright</a
+                                            >Title Page and Copyright</a
                                         >
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td data-number="16">
                                         <a href="thesis/doc-specs.html"
-                                            >16. Title Page, Copyright, and Patenting</a
+                                            > Title Page, Copyright, and Patenting</a
                                         >
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td data-number="17">
                                         <a href="thesis/submitting.html"
-                                            >17. Deadlines and Extensions</a
+                                            > Deadlines and Extensions</a
                                         >
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td data-number="18">
                                         <a href="thesis/submitting.html"
-                                            >18. Supervisor's Signature and Final Grade</a
+                                            > Supervisor's Signature and Final Grade</a
                                         >
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td data-number="19">
                                         <a href="thesis/submitting.html"
-                                            >19. Copies, Binders, Labels and Clips</a
+                                            > Copies, Binders, Labels and Clips</a
                                         >
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <a href="thesis/submitting.html">20. Thesis Prizes</a>
+                                    <td data-number="20">
+                                        <a href="thesis/submitting.html"> Thesis Prizes</a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td data-number="21">
                                         <a href="thesis/masterworks.html"
-                                            >21. MasterWorks: The Oral Presentation</a
+                                            > MasterWorks: The Oral Presentation</a
                                         >
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td data-number="22">
                                         <a href="thesis/proposal-agreement-letter.html"
-                                            >22. VI-A/non-VI-A Thesis Proposal Agreement Letter</a
+                                            > VI-A/non-VI-A Thesis Proposal Agreement Letter</a
                                         >
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td data-number="23">
                                         <a href="thesis/release-letter.html"
-                                            >23. Thesis Release Letter and Classification Review
+                                            > Thesis Release Letter and Classification Review
                                             Letter</a
                                         >
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td data-number="24">
                                         <a href="thesis/sample-abstract.html"
-                                            >24. Sample Abstract</a
+                                            > Sample Abstract</a
                                         >
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td data-number="25">
                                         <a href="thesis/sample-title.html"
-                                            >25. Sample Title Page and Title Page with Copyright to
+                                            > Sample Title Page and Title Page with Copyright to
                                             IAAU</a
                                         >
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td data-number="26">
                                         <a href="thesis/checklist.html"
-                                            >26. Checklist for Handing in a Thesis</a
+                                            > Checklist for Handing in a Thesis</a
                                         >
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <a href="#">27. Materials for Submitting to Department</a>
+                                    <td data-number="27">
+                                        <a href="#"> Materials for Submitting to Department</a>
                                     </td>
                                 </tr>
                             </tbody>
