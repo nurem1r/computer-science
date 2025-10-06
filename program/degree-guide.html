@@ -1,410 +1,557 @@
 <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Degree Guide | AIU - Department of Future Technologies</title>
 
-<html>
-	<head lang="en">
-		<meta charset="UTF-8" />
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title>Thesis guide | CS AIU</title>
+        <!-- Modern CSS Framework -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/modern-style.css" />
+        <link rel="stylesheet" href="../css/degree-guide.css" />
+    </head>
 
-		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
-		<link rel="stylesheet" type="text/css" href="../css/text.css" />
-		<link rel="stylesheet" type="text/css" href="../css/960.css" />
-		<link rel="stylesheet" type="text/css" href="../css/style.css" />
-	</head>
+    <body>
+        <!-- Animated Background -->
+        <div class="animated-grid"></div>
+        <div class="background-glows">
+            <div class="glow glow-1"></div>
+            <div class="glow glow-2"></div>
+            <div class="glow glow-3"></div>
+        </div>
 
-	<body>
-		<div id="container">
-			<!-- HEADER -->
-			<div id="header-wrap">
-				<div id="header" class="container_16">
-					<div id="logo" class="grid_5">
-						<img alt="Computer Science Department" src="../images/logo.png" />
-					</div>
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <nav class="navbar">
+                    <div class="nav-brand">
+                        <div class="logo-effect">
+                            <img
+                                src="../images/logo.png"
+                                alt="Computer Science Department"
+                                class="logo"
+                            />
+                            <div class="glitch-effect"></div>
+                        </div>
+                        <div class="brand-text">
+                            <span>Ala-Too International University</span>
+                            <div class="accent-line"></div>
+                        </div>
+                    </div>
 
-					<!--Navigation-->
-					<div id="nav" class="grid_11">
-						<ul>
-							<li><a href="../index.html">Home</a></li>
-							<li>
-								<a href="javascript:void(0)">Department</a>
-								<ul id="department">
-									<li><a href="../department/news.html">News</a></li>
-									<li>
-										<a href="../department/developments.html">Developments</a>
-									</li>
-									<li>
-										<a href="http://ic.iaau.edu.kg" target="_blank"
-											>Exchange Programs</a
-										>
-									</li>
-									<li>
-										<a href="../department/prospective-students.html"
-											>Prospective Students</a
-										>
-									</li>
-									<li><a href="../department/alumni.html">Alumni</a></li>
-									<li>
-										<a href="../department/contact-us.html">Contact Us</a>
-									</li>
-									<li><a href="../department/info.html">Info</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="javascript:void(0)">Bachelor Program</a>
-								<ul id="program">
-									<li><a href="../program/courses.html">Courses</a></li>
-									<li><a href="../program/research.html">Research</a></li>
-									<li>
-										<a href="../program/degree-guide.html">Degree Guide</a>
-									</li>
-									<li>
-										<a href="../program/recent-diplomas.html"
-											>Recent Diplomas</a
-										>
-									</li>
-									<li><a href="../program/exam_rules.html">Exam Rules</a></li>
-									<li><a href="../program/admission.html">Admission</a></li>
-									<li><a href="../program/faq.html">FAQ</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="javascript:void(0)">Master Degree</a>
-								<ul id="master">
-									<li><a href="../grad/overview.html">Overview</a></li>
-									<li><a href="../grad/grad-courses.html">Program</a></li>
-									<li>
-										<a href="../grad/graduate-research.html"
-											>Graduate Research</a
-										>
-									</li>
-									<li><a href="../grad/grad-admission.html">Admission</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="javascript:void(0)">Calendar</a>
-								<ul id="calendar">
-									<li>
-										<a href="calendar/academic-calendar.html" target="_blank"
-											>Academic Calendar</a
-										>
-									</li>
-									<li>
-										<a href="../calendar/schedule-of-lectures.html"
-											>Schedule of Lectures</a
-										>
-									</li>
-									<li>
-										<a href="../calendar/midterms.html">Midterms Schedule</a>
-									</li>
-									<li><a href="../calendar/finals.html">Finals Schedule</a></li>
-									<li><a href="../calendar/labs.html">Labs Schedule</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="../faculty/faculty.html">Faculty</a>
-							</li>
-							<li>
-								<a href="../labs/labs.html">Labs</a>
-								<ul id="labs">
-									<li>
-										<a
-											href="http://its.iaau.edu.kg/policies/lab-rules.html"
-											target="_blank"
-											>Policy &amp; Regulations</a
-										>
-									</li>
-									<li><a href="../labs/software.html">Software</a></li>
-									<li><a href="../department/contact-us.html">Contacts</a></li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <div class="menu-bars">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
 
-			<!-- CONTENT -->
-			<div id="wrap-content">
-				<div id="content" class="container_16">
-					<h2>Thesis Guide</h2>
+                    <!-- Navigation -->
+                    <ul class="nav-menu" id="navMenu">
+                        <li>
+                            <a href="../index.html" class="nav-link">
+                                <i class="fas fa-terminal"></i>
+                                <span>Home</span>
+                                <div class="nav-pulse"></div>
+                            </a>
+                        </li>
 
-					<!-- Table of Contents -->
-					<section class="grid_8">
-						<table id="table-contents">
-							<thead>
-								<tr>
-									<th><strong>Table of Contents</strong></th>
-								</tr>
-							</thead>
+                        <li class="nav-dropdown">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-network-wired"></i>
+                                <span>Department</span>
+                                <i class="fas fa-chevron-down dropdown-arrow"></i>
+                                <div class="nav-pulse"></div>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../department/news.html"
+                                        ><i class="fas fa-broadcast-tower"></i> News Feed</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../department/developments.html"
+                                        ><i class="fas fa-chart-network"></i> Developments</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="http://ic.iaau.edu.kg" target="_blank"
+                                        ><i class="fas fa-sync-alt"></i> Exchange Programs</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../department/prospective-students.html"
+                                        ><i class="fas fa-user-astronaut"></i> Prospective
+                                        Students</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../department/alumni.html"
+                                        ><i class="fas fa-users-cog"></i> Alumni Network</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../department/contact-us.html"
+                                        ><i class="fas fa-satellite-dish"></i> Contact Hub</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../department/info.html"
+                                        ><i class="fas fa-database"></i> System Info</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
 
-							<tbody>
-								<tr>
-									<td>
-										<a href="thesis/intro.html"
-											>1. Introduction: What is the M.Eng. Thesis</a
-										>?
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="thesis/adminreg.html"
-											>2. Administration and Registration</a
-										>
-									</td>
-								</tr>
-								<tr>
-									<td><a href="thesis/campus.html">3. Off-Campus Theses</a></td>
-								</tr>
-								<tr>
-									<td>
-										<a href="thesis/copyright.html"
-											>4. Classification and Copyright</a
-										>
-									</td>
-								</tr>
-								<!--VI-A Students-->
-								<tr>
-									<td>
-										<a href="thesis/proposal.html">5. The Thesis Proposal</a>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="thesis/grade.html"
-											>6. Thesis Grades: The Grade of J or the Grade of U
-										</a>
-									</td>
-								</tr>
-								<tr>
-									<td><a href="thesis/start.html">7. When to Start</a></td>
-								</tr>
-								<tr>
-									<td>
-										<a href="thesis/supervisor-topic.html"
-											>8. The First Step: Finding a Topic and Supervisor</a
-										>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="thesis/topic.html"
-											>9. More Ways to Find a Thesis</a
-										>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="thesis/timing.html"
-											>10. Working on the Thesis and Avoiding Delay
-										</a>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="thesis/completion.html"
-											>11. The Thesis Document and Finishing Up
-										</a>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="thesis/doc-specs.html"
-											>12. Other Documents: IAAU's Specifications for Thesis
-											Preparation, etc.</a
-										>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="thesis/doc-specs.html">13. Writing an Abstract</a>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="thesis/doc-specs.html"
-											>14. Word Processors, Printers, and Paper</a
-										>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="thesis/doc-specs.html"
-											>15. Title Page and Copyright</a
-										>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="thesis/doc-specs.html"
-											>16. Title Page, Copyright, and Patenting</a
-										>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="thesis/submitting.html"
-											>17. Deadlines and Extensions</a
-										>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="thesis/submitting.html"
-											>18. Supervisor's Signature and Final Grade</a
-										>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="thesis/submitting.html"
-											>19. Copies, Binders, Labels and Clips</a
-										>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="thesis/submitting.html">20. Thesis Prizes</a>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="thesis/masterworks.html"
-											>21. MasterWorks: The Oral Presentation</a
-										>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="thesis/proposal-agreement-letter.html"
-											>22. VI-A/non-VI-A Thesis Proposal Agreement Letter</a
-										>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="thesis/release-letter.html"
-											>23. Thesis Release Letter and Classification Review
-											Letter</a
-										>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="thesis/sample-abstract.html"
-											>24. Sample Abstract</a
-										>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="thesis/sample-title.html"
-											>25. Sample Title Page and Title Page with Copyright to
-											IAAU</a
-										>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="thesis/checklist.html"
-											>26. Checklist for Handing in a Thesis</a
-										>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="#">27. Materials for Submitting to Department</a>
-									</td>
-								</tr>
-								<!--The Library Processing Fee, Thesis Receipt/Grade Sheet and the Degree List<br/>-->
-								<!--Put Your Thesis in MIT's DSpace Thesis Collection-->
-							</tbody>
-						</table>
-					</section>
+                        <li class="nav-dropdown">
+                            <a href="#" class="nav-link active">
+                                <i class="fas fa-microchip"></i>
+                                <span>Bachelor Program</span>
+                                <i class="fas fa-chevron-down dropdown-arrow"></i>
+                                <div class="nav-pulse"></div>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../program/courses.html"
+                                        ><i class="fas fa-code"></i> Courses</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../program/research.html"
+                                        ><i class="fas fa-brain"></i> AI Research</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../program/degree-guide.html"
+                                        ><i class="fas fa-map-marked-alt"></i> Degree Guide</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../program/recent-diplomas.html"
+                                        ><i class="fas fa-certificate"></i> Recent Diplomas</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../program/exam_rules.html"
+                                        ><i class="fas fa-shield-alt"></i> Exam Protocols</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../program/admission.html"
+                                        ><i class="fas fa-user-lock"></i> Admission</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../program/faq.html"
+                                        ><i class="fas fa-question-circle"></i> FAQ</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
 
-					<!--Thesis Calendar-->
-					<section class="grid_8">
-						<table id="thesis-calendar">
-							<thead>
-								<th>Thesis Calendar</th>
-							</thead>
-							<tr>
-								<td></td>
-								<td>Deadline</td>
-							</tr>
-							<tr>
-								<td>Thesis Proposal Submission</td>
-								<td>November 7, 2014</td>
-							</tr>
-							<tr>
-								<td>
-									Thesis Pre-defense 1 (
-									<a href="degree_details.html"> details </a> )
-								</td>
-								<td>January 13, 9:30am, Lab-4, 2015</td>
-							</tr>
-							<tr>
-								<td>Thesis Pre-defense 2 ( <a href="#"> details </a> )</td>
-								<td>April 24, 9:30am, Lab-4, 2015</td>
-							</tr>
-							<tr>
-								<td>Thesis Submission [soft-copy]</td>
-								<td>April 30, 2015 [cs@iaau.edu.kg]</td>
-							</tr>
-							<tr>
-								<td>Thesis Release Letter submission</td>
-								<td>May, 2015</td>
-							</tr>
-							<tr>
-								<td>Thesis Submission [hard-copy]</td>
-								<td>May 22, between 9:30am - 15:00pm 2015</td>
-							</tr>
-							<tr>
-								<td>Thesis Defense</td>
-								<td>July 14 - 19, 2015</td>
-							</tr>
-						</table>
-					</section>
-				</div>
-			</div>
-			<!-- END OF CONTENT -->
+                        <li class="nav-dropdown">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-robot"></i>
+                                <span>Master Degree</span>
+                                <i class="fas fa-chevron-down dropdown-arrow"></i>
+                                <div class="nav-pulse"></div>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../grad/overview.html"
+                                        ><i class="fas fa-eye"></i> System Overview</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../grad/grad-courses.html"
+                                        ><i class="fas fa-cogs"></i> Program Modules</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../grad/grad-research.html"
+                                        ><i class="fas fa-flask"></i> Advanced Research</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../grad/grad-admission.html"
+                                        ><i class="fas fa-user-shield"></i> Secure Admission</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
 
-			<!-- FOOTER -->
-			<div id="footer-wrap">
-				<div id="footer" class="container_12">
-					<p class="f-left">&copy; 2015 CS Dept. IAAU</p>
-					<p class="f-right">Developed & Designed by Azamat Turgunbaev COM08</p>
-				</div>
-			</div>
-			<!-- END OF FOOTER -->
-		</div>
+                        <li class="nav-dropdown">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Calendar</span>
+                                <i class="fas fa-chevron-down dropdown-arrow"></i>
+                                <div class="nav-pulse"></div>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a
+                                        href="../calendar/academic-calendar.html"
+                                        target="_blank"
+                                        ><i class="fas fa-calendar"></i> Academic Calendar</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../calendar/schedule-of-lectures.html"
+                                        ><i class="fas fa-clock"></i> Lecture Schedule</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../calendar/midterms.html"
+                                        ><i class="fas fa-file-code"></i> Midterms Schedule</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../calendar/finals.html"
+                                        ><i class="fas fa-graduation-cap"></i> Finals Schedule</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../calendar/labs.html"
+                                        ><i class="fas fa-desktop"></i> Labs Schedule</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
 
-		<!-- Scripts -->
-		<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="../js/highlight.js"></script>
+                        <li>
+                            <a href="../faculty/faculty.html" class="nav-link">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <span>Faculty</span>
+                                <div class="nav-pulse"></div>
+                            </a>
+                        </li>
 
-		<!--Google-->
-		<script>
-			(function (i, s, o, g, r, a, m) {
-				i["GoogleAnalyticsObject"] = r;
-				(i[r] =
-					i[r] ||
-					function () {
-						(i[r].q = i[r].q || []).push(arguments);
-					}),
-					(i[r].l = 1 * new Date());
-				(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-				a.async = 1;
-				a.src = g;
-				m.parentNode.insertBefore(a, m);
-			})(
-				window,
-				document,
-				"script",
-				"//www.google-analytics.com/analytics.js",
-				"ga"
-			);
+                        <li class="nav-dropdown">
+                            <a href="../labs/labs.html" class="nav-link">
+                                <i class="fas fa-server"></i>
+                                <span>Data Labs</span>
+                                <i class="fas fa-chevron-down dropdown-arrow"></i>
+                                <div class="nav-pulse"></div>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a
+                                        href="http://its.iaau.edu.kg/policies/lab-rules.html"
+                                        target="_blank"
+                                        ><i class="fas fa-clipboard-list"></i> Security Protocols</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../labs/software.html"
+                                        ><i class="fas fa-download"></i> Software Repository</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="../department/contact-us.html"
+                                        ><i class="fas fa-address-book"></i> Lab Contacts</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-			ga("create", "UA-46202546-1", "iaau.edu.kg");
-			ga("send", "pageview");
-		</script>
-	</body>
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="container">
+                <!-- Main Header -->
+                <div class="main-header">
+                    <div class="scanline"></div>
+                    <h2 class="main-title">DEGREE GUIDE</h2>
+                    <div class="terminal-prompt">
+                        <span class="prompt-sign">></span>
+                        <span class="prompt-text"
+                            >Accessing academic pathway protocols...</span
+                        >
+                        <span class="cursor">|</span>
+                    </div>
+                </div>
+
+                <!-- Content Grid -->
+                <div class="content-grid-tables">
+                    <!-- Table of Contents -->
+                    <div class="table-container">
+                        <div class="table-header">
+                            <h3>TABLE OF CONTENTS</h3>
+                        </div>
+                        <table class="modern-table">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/intro.html"
+                                            >1. Introduction: What is the M.Eng. Thesis</a
+                                        >?
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/adminreg.html"
+                                            >2. Administration and Registration</a
+                                        >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="thesis/campus.html">3. Off-Campus Theses</a></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/copyright.html"
+                                            >4. Classification and Copyright</a
+                                        >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/proposal.html">5. The Thesis Proposal</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/grade.html"
+                                            >6. Thesis Grades: The Grade of J or the Grade of U
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="thesis/start.html">7. When to Start</a></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/supervisor-topic.html"
+                                            >8. The First Step: Finding a Topic and Supervisor</a
+                                        >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/topic.html"
+                                            >9. More Ways to Find a Thesis</a
+                                        >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/timing.html"
+                                            >10. Working on the Thesis and Avoiding Delay
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/completion.html"
+                                            >11. The Thesis Document and Finishing Up
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/doc-specs.html"
+                                            >12. Other Documents: IAAU's Specifications for Thesis
+                                            Preparation, etc.</a
+                                        >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/doc-specs.html">13. Writing an Abstract</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/doc-specs.html"
+                                            >14. Word Processors, Printers, and Paper</a
+                                        >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/doc-specs.html"
+                                            >15. Title Page and Copyright</a
+                                        >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/doc-specs.html"
+                                            >16. Title Page, Copyright, and Patenting</a
+                                        >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/submitting.html"
+                                            >17. Deadlines and Extensions</a
+                                        >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/submitting.html"
+                                            >18. Supervisor's Signature and Final Grade</a
+                                        >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/submitting.html"
+                                            >19. Copies, Binders, Labels and Clips</a
+                                        >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/submitting.html">20. Thesis Prizes</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/masterworks.html"
+                                            >21. MasterWorks: The Oral Presentation</a
+                                        >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/proposal-agreement-letter.html"
+                                            >22. VI-A/non-VI-A Thesis Proposal Agreement Letter</a
+                                        >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/release-letter.html"
+                                            >23. Thesis Release Letter and Classification Review
+                                            Letter</a
+                                        >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/sample-abstract.html"
+                                            >24. Sample Abstract</a
+                                        >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/sample-title.html"
+                                            >25. Sample Title Page and Title Page with Copyright to
+                                            IAAU</a
+                                        >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="thesis/checklist.html"
+                                            >26. Checklist for Handing in a Thesis</a
+                                        >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#">27. Materials for Submitting to Department</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Thesis Calendar -->
+                    <div class="table-container">
+                        <div class="table-header">
+                            <h3>THESIS CALENDAR</h3>
+                        </div>
+                        <table class="modern-table calendar-table">
+                            <thead>
+                                <tr>
+                                    <th>Event</th>
+                                    <th>Deadline</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Thesis Proposal Submission</td>
+                                    <td>November 7, 2014</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Thesis Pre-defense 1 (
+                                        <a href="degree_details.html"> details </a> )
+                                    </td>
+                                    <td>January 13, 9:30am, Lab-4, 2015</td>
+                                </tr>
+                                <tr>
+                                    <td>Thesis Pre-defense 2 ( <a href="#"> details </a> )</td>
+                                    <td>April 24, 9:30am, Lab-4, 2015</td>
+                                </tr>
+                                <tr>
+                                    <td>Thesis Submission [soft-copy]</td>
+                                    <td>April 30, 2015 [cs@iaau.edu.kg]</td>
+                                </tr>
+                                <tr>
+                                    <td>Thesis Release Letter submission</td>
+                                    <td>May, 2015</td>
+                                </tr>
+                                <tr>
+                                    <td>Thesis Submission [hard-copy]</td>
+                                    <td>May 22, between 9:30am - 15:00pm 2015</td>
+                                </tr>
+                                <tr>
+                                    <td>Thesis Defense</td>
+                                    <td>July 14 - 19, 2015</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-grid">
+                        <div class="footer-section">
+                            <h5>SYSTEM STATUS</h5>
+                            <div class="status-line">
+                                <span class="status-dot online"></span>
+                                <span>All Systems Operational</span>
+                            </div>
+                        </div>
+                        <div class="footer-section">
+                            <h5>QUICK LINKS</h5>
+                            <a href="../department/contact-us.html">Contact Hub</a>
+                            <a href="../program/admission.html">Join System</a>
+                            <a href="../labs/labs.html">Access Labs</a>
+                        </div>
+                        <div class="footer-section">
+                            <p class="copyright">&copy; 2024 COMPUTER SCIENCE DEPARTMENT</p>
+                            <p class="university">ALA-TOO INTERNATIONAL UNIVERSITY</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="../js/modern-script.js"></script>
+    </body>
 </html>

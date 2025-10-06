@@ -1,0 +1,155 @@
+/* Degree Guide Specific Styles */
+.content-grid-tables {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.table-container {
+    background: var(--bg-secondary);
+    border: 1px solid var(--graphite);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: var(--transition);
+    position: relative;
+}
+
+.table-container:hover {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 30px var(--accent-transparent);
+    transform: translateY(-2px);
+}
+
+.table-header {
+    background: var(--graphite);
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--graphite-light);
+    position: relative;
+}
+
+.table-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--accent-blue);
+}
+
+.table-header h3 {
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.modern-table td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--graphite-light);
+    transition: var(--transition);
+}
+
+.modern-table tr:last-child td {
+    border-bottom: none;
+}
+
+.modern-table tr:hover {
+    background: var(--accent-transparent);
+}
+
+.modern-table tr:hover td {
+    transform: translateX(5px);
+}
+
+.modern-table a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: var(--transition);
+    display: block;
+}
+
+.modern-table a:hover {
+    color: var(--accent-blue);
+}
+
+/* Calendar Table */
+.calendar-table th {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    color: var(--accent-blue);
+    font-weight: 600;
+    border-bottom: 1px solid var(--graphite-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.calendar-table td:first-child {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.calendar-table td:last-child {
+    color: var(--text-secondary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+}
+
+.calendar-table a {
+    color: var(--accent-blue);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--accent-blue);
+    transition: var(--transition);
+}
+
+.calendar-table a:hover {
+    border-bottom-style: solid;
+    background: var(--accent-transparent);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .content-grid-tables {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .modern-table td,
+    .calendar-table th,
+    .calendar-table td {
+        padding: 0.75rem 1rem;
+    }
+    
+    .table-header {
+        padding: 1rem;
+    }
+    
+    .table-header h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modern-table td,
+    .calendar-table th,
+    .calendar-table td {
+        padding: 0.6rem 0.75rem;
+        font-size: 0.85rem;
+    }
+    
+    .calendar-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
