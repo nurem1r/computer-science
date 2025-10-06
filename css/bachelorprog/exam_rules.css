@@ -1,0 +1,351 @@
+/* Exam Rules Specific Styles */
+#wrap-content {
+    margin-top: 2rem;
+}
+
+#content {
+    background: var(--bg-secondary);
+    border: 1px solid var(--graphite);
+    border-radius: 8px;
+    padding: 3rem;
+    overflow: hidden;
+    transition: var(--transition);
+    position: relative;
+}
+
+#content:hover {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 40px var(--accent-transparent);
+}
+
+#content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, var(--accent-transparent) 50%, transparent);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+#content:hover::before {
+    opacity: 0.1;
+}
+
+/* Heading Styles */
+#content h2 {
+    color: var(--accent-blue);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: 0 0 20px var(--accent-glow);
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+#content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent-blue), transparent);
+    border-radius: 2px;
+}
+
+#content h3 {
+    color: var(--warning);
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 3rem;
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(90deg, transparent, var(--accent-transparent), transparent);
+    border: 1px solid var(--warning);
+    border-radius: 6px;
+    text-shadow: 0 0 10px rgba(255, 170, 0, 0.3);
+    position: relative;
+}
+
+#content h3::before {
+    content: '⚠️';
+    margin-right: 1rem;
+    filter: drop-shadow(0 0 5px var(--warning));
+}
+
+/* List Styles */
+#ul-normal {
+    list-style: none;
+    counter-reset: rule-counter;
+    margin: 2rem 0;
+    padding: 0;
+}
+
+#ul-normal li {
+    counter-increment: rule-counter;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--graphite) 100%);
+    border: 1px solid var(--graphite-light);
+    border-radius: 8px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+#ul-normal li::before {
+    content: counter(rule-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    background: linear-gradient(135deg, var(--accent-blue), var(--graphite));
+    color: var(--text-primary);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 800;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 0 10px var(--accent-glow);
+    border-right: 2px solid var(--accent-blue);
+}
+
+#ul-normal li:hover {
+    border-color: var(--accent-blue);
+    transform: translateX(10px);
+    box-shadow: 0 5px 25px var(--accent-transparent);
+}
+
+#ul-normal li:hover::before {
+    background: linear-gradient(135deg, var(--accent-blue), var(--success));
+    box-shadow: 0 0 20px var(--accent-glow);
+}
+
+#ul-normal li p {
+    margin: 0;
+    padding-left: 4rem;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Special styling for important rules */
+#ul-normal li:nth-child(3) p,
+#ul-normal li:nth-child(7) p {
+    color: var(--warning);
+    font-weight: 600;
+}
+
+#ul-normal li:nth-child(3)::before,
+#ul-normal li:nth-child(7)::before {
+    background: linear-gradient(135deg, var(--warning), var(--graphite));
+    border-right-color: var(--warning);
+}
+
+/* Animation for list items */
+@keyframes slideInRule {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#ul-normal li {
+    animation: slideInRule 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Stagger animation for rules */
+#ul-normal li:nth-child(1) { animation-delay: 0.1s; }
+#ul-normal li:nth-child(2) { animation-delay: 0.2s; }
+#ul-normal li:nth-child(3) { animation-delay: 0.3s; }
+#ul-normal li:nth-child(4) { animation-delay: 0.4s; }
+#ul-normal li:nth-child(5) { animation-delay: 0.5s; }
+#ul-normal li:nth-child(6) { animation-delay: 0.6s; }
+#ul-normal li:nth-child(7) { animation-delay: 0.7s; }
+#ul-normal li:nth-child(8) { animation-delay: 0.8s; }
+#ul-normal li:nth-child(9) { animation-delay: 0.9s; }
+#ul-normal li:nth-child(10) { animation-delay: 1.0s; }
+#ul-normal li:nth-child(11) { animation-delay: 1.1s; }
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    #content {
+        padding: 2.5rem;
+    }
+    
+    #content h2 {
+        font-size: 2.2rem;
+    }
+    
+    #ul-normal li {
+        padding: 1.8rem;
+    }
+    
+    #ul-normal li p {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 968px) {
+    #content {
+        padding: 2rem;
+    }
+    
+    #content h2 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+    
+    #content h3 {
+        font-size: 1.2rem;
+        padding: 1.2rem;
+    }
+    
+    #ul-normal li {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    #ul-normal li::before {
+        width: 50px;
+        font-size: 1.2rem;
+    }
+    
+    #ul-normal li p {
+        padding-left: 3.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #content {
+        padding: 1.5rem;
+        border-radius: 6px;
+    }
+    
+    #content h2 {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+    
+    #content h3 {
+        font-size: 1.1rem;
+        padding: 1rem;
+        letter-spacing: 1px;
+    }
+    
+    #ul-normal li {
+        padding: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    #ul-normal li::before {
+        width: 45px;
+        font-size: 1.1rem;
+    }
+    
+    #ul-normal li p {
+        padding-left: 3rem;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    #ul-normal li:hover {
+        transform: translateX(5px);
+    }
+}
+
+@media (max-width: 480px) {
+    #content {
+        padding: 1rem;
+    }
+    
+    #content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    #content h3 {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+    
+    #ul-normal li {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    #ul-normal li::before {
+        width: 40px;
+        font-size: 1rem;
+    }
+    
+    #ul-normal li p {
+        padding-left: 2.5rem;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    
+    #content h3::before {
+        margin-right: 0.5rem;
+    }
+}
+
+/* Additional decorative elements */
+#content::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--accent-blue), transparent, var(--success), transparent, var(--accent-blue));
+    border-radius: 10px;
+    z-index: -1;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+#content:hover::after {
+    opacity: 0.3;
+    animation: rotateBorder 3s linear infinite;
+}
+
+@keyframes rotateBorder {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Warning pulse animation for important notice */
+@keyframes warningPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(255, 170, 0, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(255, 170, 0, 0);
+    }
+}
+
+#content h3 {
+    animation: warningPulse 2s infinite;
+}
