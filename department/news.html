@@ -4,157 +4,336 @@
 
 <head lang="en">
 
-	<meta charset="UTF-8">
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>News | CS AIU</title>
+ <meta charset="UTF-8">
+ <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+ <title>News | CS AIU</title>
 
-	<!-- Font Awesome Icons -->
+ <!-- Modern CSS Framework -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" type="text/css" href="../css/modern-style.css" />
 
-	<link rel="stylesheet" type="text/css" href="../css/department_reset.css"/>
-	<link rel="stylesheet" type="text/css" href="../css/department_text.css" />
-	<link rel="stylesheet" type="text/css" href="../css/960.css" />
-	<link rel="stylesheet" type="text/css" href="../css/department_style.css" />
+ <link rel="stylesheet" type="text/css" href="../css/department_reset.css"/>
+ <link rel="stylesheet" type="text/css" href="../css/department_text.css" />
+ <link rel="stylesheet" type="text/css" href="../css/960.css" />
+ <link rel="stylesheet" type="text/css" href="../css/department_style.css" />
 
 </head>
 
 <body>
 
-	<div id="container">
+ <!-- Animated Background -->
+    <div class="animated-grid"></div>
+    <div class="background-glows">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+    </div>
 
-		<!-- HEADER -->
-		<div id="header-wrap">
-			<div id="header" class="container_16">
-				<div id="logo" class="grid_5">
-					<img alt="Computer Science Department" src="../images/logo.png" />
-				</div>
+ <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <div class="logo-effect">
+                        <img
+                            src="../images/logo.png"
+                            alt="Computer Science Department"
+                            class="logo"
+                        />
+                        <div class="glitch-effect"></div>
+                    </div>
+                    <div class="brand-text">
+                        <span>Ala-Too International University</span>
+                        <div class="accent-line"></div>
+                    </div>
+                </div>
 
-				<!--Navigation-->
-				<div id="nav" class="grid_11">
-					<ul>
-						<li><a href="../index.html">Home</a></li>
-						<li>
-							<a href="javascript:void(0)">Department</a>
-							<ul id="department">
-								<li><a href="../department/news.html">News</a></li>
-								<li><a href="../department/developments.html">Developments</a></li>
-								<li><a href="http://ic.iaau.edu.kg" target="_blank">Exchange Programs</a></li>
-								<li><a href="../department/prospective-students.html">Prospective Students</a></li>
-								<li><a href="../department/alumni.html">Alumni</a></li>
-								<li><a href="../department/contact-us.html" >Contact Us</a></li>
-								<li><a href="../department/info.html" >Info</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="javascript:void(0)">Bachelor Program</a>
-							<ul id="program">
-								<li><a href="../program/courses.html">Courses</a></li>
-								<li><a href="../program/research.html">Research</a></li>
-								<li><a href="../program/degree-guide.html">Degree Guide</a></li>
-								<li><a href="../program/recent-diplomas.html">Recent Diplomas</a></li>
-								<li><a href="../program/exam_rules.html">Exam Rules</a></li>
-								<li><a href="../program/admission.html">Admission</a></li>
-								<li><a href="../program/faq.html">FAQ</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="javascript:void(0)">Master Degree</a>
-							<ul id="master">
-	                            <li><a href="../grad/overview.html">Overview</a></li>
-	                            <li><a href="../grad/grad-courses.html">Courses</a></li>
-	                            <li><a href="../grad/grad-research.html">Graduate Research</a></li>
-	                            <li><a href="../grad/grad-admission.html">Admission</a></li>
-	                        </ul>
-						</li>
-						<li>
-							<a href="javascript:void(0)" >Calendar</a>
-							<ul id="calendar">
-							<li><a href="../calendar/academic-calendar.html" target="_blank">Academic Calendar</a></li>
-								<li><a href="../calendar/schedule-of-lectures.html">Schedule of Lectures</a></li>
-								<li><a href="../calendar/midterms.html">Midterms Schedule</a></li>
-								<li><a href="../calendar/finals.html">Finals Schedule</a></li>
-								<li><a href="../calendar/labs.html">Labs Schedule</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="../faculty/faculty.html">Faculty</a>
-						</li>
-						<li>
-							<a href="../labs/labs.html">Labs</a>
-							<ul id="labs">
-								<li><a href="http://its.iaau.edu.kg/policies/lab-rules.html" target="_blank">Policy &amp;
-									Regulations</a></li>
-								<li><a href="../labs/software.html">Software</a></li>
-								<li><a href="../department/contact-us.html">Contacts</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <div class="menu-bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
 
-		<!-- CONTENT -->
-		<div id="wrap-content">
-			<div id="content" class="container_16">
-			<div id="news_img">
-				<img src="../images/news/careerday.jpg" width="100%" height="100%">
-			</div>
-			<div id="news_text">
-				<p>
-					<span class="news_header">INVITATION TO CAREER DAY</span><br>
-					<br>
-					<p>Student Council of IAAU is organizing Career Day on 21st of April 2016. Representatives of leading companies will answer all your questions concerning their companies, job and internship offers and their stages of recruitment. The company representatives will be waiting for you the whole day and you will have the chance to talk directly to them.</p><br>
-					<h6>TIPS FOR NEGOTIATING A JOB FAIR:</h6>
-					<p>- Prepare to ask questions about specific opportunities of interest.</p>
-					<p>- Inquire about referrals to other contacts if a particular recruiter does not have a position for you.</p>
-					<p>- Talk to as many contacts as possible.</p>
-					<p>- Collect information.</p>
-					<p>- Keep a positive, competitive attitude.</p>
-					<p>- Dress professionally. First impressions are important!</p>
-					<p>- Bring plenty of copies of your resume.</p>
+                <!-- Navigation -->
+                <ul class="nav-menu" id="navMenu">
+                    <li>
+                        <a href="../index.html" class="nav-link">
+                            <i class="fas fa-terminal"></i>
+                            <span>Home</span>
+                            <div class="nav-pulse"></div>
+                        </a>
+                    </li>
 
-					<br>
-					<p>Place:		A - Block / Konya Hall / 10.00 a.m.</p>
-
-				</p>
-			</div>
-
-		</div>
-		</div>
-		<!-- END OF CONTENT -->
-
-		<!-- FOOTER -->
-		<div id="footer-wrap" >
-
-			<div id="footer" class="container_12">
-
-				<p class="f-left">&copy; 2025 CS Dept. IAAU</p>
-				<p class="f-right">Developed & Designed by Nuremir Sulaimanov COMSEP-2023</p>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link active">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Department</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../department/news.html"
+                                    ><i class="fas fa-broadcast-tower"></i> News Feed</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../department/developments.html"
+                                    ><i class="fas fa-chart-network"></i> Developments</a
+                                >
+                            </li>
+                            <li>
+                                <a href="http://ic.iaau.edu.kg" target="_blank"
+                                    ><i class="fas fa-sync-alt"></i> Exchange Programs</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../department/prospective-students.html"
+                                    ><i class="fas fa-user-astronaut"></i> Prospective
+                                    Students</a
+                                >
+                            </li>
 
 
-			</div>
+                     <li>
+                                <a href="../department/alumni.html"
+                                    ><i class="fas fa-users-cog"></i> Alumni Network</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../department/contact-us.html"
+                                    ><i class="fas fa-satellite-dish"></i> Contact Hub</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../department/info.html"
+                                    ><i class="fas fa-database"></i> System Info</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
 
-		</div>
-		<!-- END OF FOOTER -->
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-microchip"></i>
+                            <span>Bachelor Program</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../program/courses.html"
+                                    ><i class="fas fa-code"></i> Courses</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../program/research.html"
+                                    ><i class="fas fa-brain"></i> AI Research</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../program/degree-guide.html"
+                                    ><i class="fas fa-map-marked-alt"></i> Degree Guide</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../program/recent-diplomas.html"
+                                    ><i class="fas fa-certificate"></i> Recent Diplomas</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../program/exam_rules.html"
+                                    ><i class="fas fa-shield-alt"></i> Exam Protocols</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../program/admission.html"
+                                    ><i class="fas fa-user-lock"></i> Admission</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../program/faq.html"
+                                    ><i class="fas fa-question-circle"></i> FAQ</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
 
-	</div>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-robot"></i>
+                            <span>Master Degree</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../grad/overview.html"
+                                    ><i class="fas fa-eye"></i> System Overview</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../grad/grad-courses.html"
+                                    ><i class="fas fa-cogs"></i> Program Modules</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../grad/grad-research.html"
+                                    ><i class="fas fa-flask"></i> Advanced Research</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../grad/grad-admission.html"
+                                    ><i class="fas fa-user-shield"></i> Secure Admission</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
 
-	<!-- Scripts -->
-	<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="../js/highlight.js"></script>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Calendar</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a
+                                    href="../calendar/academic-calendar.html"
+                                    target="_blank"
+                                    ><i class="fas fa-calendar"></i> Academic Calendar</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../calendar/schedule-of-lectures.html"
+                                    ><i class="fas fa-clock"></i> Lecture Schedule</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../calendar/midterms.html"
+                                    ><i class="fas fa-file-code"></i> Midterms Schedule</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../calendar/finals.html"
+                                    ><i class="fas fa-graduation-cap"></i> Finals Schedule</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../calendar/labs.html"
+                                    ><i class="fas fa-desktop"></i> Labs Schedule</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
 
-	<!--Google-->
-	<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                    <li>
+                        <a href="../faculty/faculty.html" class="nav-link">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Faculty</span>
+                            <div class="nav-pulse"></div>
+                        </a>
+                    </li>
 
-		  ga('create', 'UA-46202546-1', 'iaau.edu.kg');
-		  ga('send', 'pageview');
-	</script>
+                    <li class="nav-dropdown">
+                        <a href="../labs/labs.html" class="nav-link">
+                            <i class="fas fa-server"></i>
+                            <span>Data Labs</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <div class="nav-pulse"></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a
+                                    href="http://its.iaau.edu.kg/policies/lab-rules.html"
+                                    target="_blank"
+                                    ><i class="fas fa-clipboard-list"></i> Security Protocols</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../labs/software.html"
+                                    ><i class="fas fa-download"></i> Software Repository</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../department/contact-us.html"
+                                    ><i class="fas fa-address-book"></i> Lab Contacts</a
+                                >
+                            </li>
+                        </ul>
+         </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+ <div id="container">
+
+  <!-- CONTENT -->
+  <div id="wrap-content">
+   <div id="content" class="container_16">
+   <div id="news_img">
+    <img src="../images/news/careerday.jpg" width="100%" height="100%">
+   </div>
+   <div id="news_text">
+    <p>
+     <span class="news_header">INVITATION TO CAREER DAY</span><br>
+     <br>
+     <p>Student Council of IAAU is organizing Career Day on 21st of April 2016. Representatives of leading companies will answer all your questions concerning their companies, job and internship offers and their stages of recruitment. The company representatives will be waiting for you the whole day and you will have the chance to talk directly to them.</p><br>
+     <h6>TIPS FOR NEGOTIATING A JOB FAIR:</h6>
+     <p>- Prepare to ask questions about specific opportunities of interest.</p>
+     <p>- Inquire about referrals to other contacts if a particular recruiter does not have a position for you.</p>
+     <p>- Talk to as many contacts as possible.</p>
+     <p>- Collect information.</p>
+     <p>- Keep a positive, competitive attitude.</p>
+     <p>- Dress professionally. First impressions are important!</p>
+     <p>- Bring plenty of copies of your resume.</p>
+
+     <br>
+     <p>Place:  A - Block / Konya Hall / 10.00 a.m.</p>
+
+    </p>
+   </div>
+
+  </div>
+  </div>
+  <!-- END OF CONTENT -->
+
+  <!-- FOOTER -->
+  <div id="footer-wrap" >
+
+   <div id="footer" class="container_12">
+
+    <p class="f-left">&copy; 2025 CS Dept. IAAU</p>
+    <p class="f-right">Developed & Designed by Nuremir Sulaimanov COMSEP-2023</p>
+
+
+   </div>
+
+  </div>
+  <!-- END OF FOOTER -->
+
+ </div>
+
+ <!-- Scripts -->
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/modern-script.js"></script>
+
+ <!--Google-->
+ <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-46202546-1', 'iaau.edu.kg');
+    ga('send', 'pageview');
+ </script>
 
 </body>
 
