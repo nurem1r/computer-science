@@ -1,0 +1,180 @@
+/* Recent Diplomas Specific Styles */
+#wrap-content {
+    margin-top: 2rem;
+}
+
+#content {
+    background: var(--bg-secondary);
+    border: 1px solid var(--graphite);
+    border-radius: 8px;
+    padding: 2rem;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+#content:hover {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 30px var(--accent-transparent);
+}
+
+#content table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-secondary);
+}
+
+#content thead {
+    background: var(--graphite);
+}
+
+#content thead td {
+    padding: 1.5rem 1rem;
+    font-weight: 600;
+    color: var(--accent-blue);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    border-bottom: 2px solid var(--accent-blue);
+}
+
+#content tbody tr {
+    transition: var(--transition);
+    border-bottom: 1px solid var(--graphite-light);
+}
+
+#content tbody tr:last-child {
+    border-bottom: none;
+}
+
+#content tbody tr:hover {
+    background: var(--accent-transparent);
+}
+
+#content tbody td {
+    padding: 1.2rem 1rem;
+    transition: var(--transition);
+}
+
+#content tbody tr:hover td {
+    transform: translateX(5px);
+}
+
+/* Column specific styles */
+#content tbody td:first-child {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    color: var(--accent-blue);
+    text-align: center;
+    width: 60px;
+}
+
+#content tbody td:nth-child(2) {
+    font-weight: 500;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+#content tbody td:nth-child(3) {
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Special row styling */
+.other-table-elements {
+    background: var(--accent-transparent);
+}
+
+.other-table-elements td {
+    border-left: 3px solid var(--accent-blue);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    #content {
+        padding: 1.5rem;
+    }
+    
+    #content thead td,
+    #content tbody td {
+        padding: 1rem 0.75rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #content {
+        padding: 1rem;
+        border-radius: 6px;
+    }
+    
+    #content table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    #content thead td,
+    #content tbody td {
+        padding: 0.8rem 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #content {
+        padding: 0.5rem;
+    }
+    
+    #content thead td,
+    #content tbody td {
+        padding: 0.6rem 0.4rem;
+        font-size: 0.75rem;
+    }
+    
+    #content tbody td:first-child {
+        width: 40px;
+    }
+}
+
+/* Scrollbar styling */
+#content::-webkit-scrollbar {
+    height: 8px;
+}
+
+#content::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+#content::-webkit-scrollbar-thumb {
+    background: var(--graphite);
+    border-radius: 4px;
+}
+
+#content::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-blue);
+}
+
+/* Animation for table rows */
+@keyframes fadeInRow {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#content tbody tr {
+    animation: fadeInRow 0.3s ease-out forwards;
+}
+
+/* Stagger animation for better visual effect */
+#content tbody tr:nth-child(odd) {
+    animation-delay: 0.05s;
+}
+
+#content tbody tr:nth-child(even) {
+    animation-delay: 0.1s;
+}
